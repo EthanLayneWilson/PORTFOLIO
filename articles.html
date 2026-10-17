@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE ARCHIVE</title>
+    <link rel="icon" type="image/png" href="images/ew-letter.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div id="edition-shutter" class="edition-shutter"></div>
+
+    <!-- NEWSPAPER HEADER -->
+
+    <header class="newspaper-header">
+
+        <div class="top-nav">
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="articles.html" class="active">Archive</a>
+            </nav>
+
+<div class="header-right">
+
+    <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Switch to night mode"
+    >
+        <span class="theme-icon">☾</span>
+    </button>
+
+    <div class="brand-mark">
+        <strong>EW</strong>
+        <span class="divider"></span>
+        <span>EST. 2022</span>
+    </div>
+
+</div>
+
+        </div>
+
+        <div class="newspaper-info">
+
+            <span>FIELD NOTES & WORKING IDEAS.</span>
+
+            <span id="current-date"></span>
+
+            <details class="accessibility-menu">
+    <summary>Accessibility</summary>
+
+    <div class="accessibility-panel">
+        <p>Reading preferences</p>
+
+        <label>
+            <input type="checkbox" id="larger-text">
+            Larger text
+        </label>
+
+        <label>
+            <input type="checkbox" id="reduce-motion">
+            Reduce motion
+        </label>
+    </div>
+</details>
+
+        </div>
+
+    </header>
+
+
+    <!-- ARCHIVE -->
+
+    <main class="archive-page">
+
+        <section class="archive-heading">
+
+
+<div class="archive-heading-layout">
+
+    <nav class="archive-side-nav" aria-label="Explore the collection">
+        <p>Explore the collection</p>
+
+        <a href="library.html">
+            <span class="archive-side-number">01</span>
+            <span>The Library</span>
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="listening-room.html">
+            <span class="archive-side-number">02</span>
+            <span>Vinyl Room</span>
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="PT.html">
+            <span class="archive-side-number">03</span>
+            <span>Public Talks</span>
+            <span aria-hidden="true">→</span>
+        </a>
+    </nav>
+
+    <div class="archive-heading-content">
+<p class="archive-label">WRITINGS & OBSERVATIONS</p>
+
+            <h1>THE ARCHIVE</h1>
+
+            <p class="archive-description">
+                A collection of articles documenting my experiences,
+                projects, ideas, and lessons learned through my life.
+            </p>
+    </div>
+
+</div>
+
+<!-- Your existing article list stays below this wrapper. -->
+</section>
+        <!-- ARTICLE LIST -->
+         
+        <section class="article-list">
+
+            
+            <!-- ARTICLE 03 -->
+
+            <article class="archive-article">
+
+                <div class="article-number">
+                    03
+                </div>
+
+                <div class="archive-article-content">
+
+                    <p class="archive-meta">
+                        OCTOBER 12 2026 / SOFTWARE ENGINEERING
+                    </p>
+
+                    <h2>
+                        <a href="blog/blog3.html">
+                            Further Than Yesterday
+                        </a>
+                    </h2>
+
+                    <p>
+                        On reading carefully, working through difficult problems,
+            and giving understanding its needed time to develop.
+                    </p>
+
+                </div>
+
+                <div class="archive-read">
+
+                    <a href="blog/blog3.html">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICLE 02 -->
+
+            <article class="archive-article">
+
+                <div class="article-number">
+                    02
+                </div>
+
+                <div class="archive-article-content">
+
+                    <p class="archive-meta">
+                        OCTOBER 9 2026 / SOFTWARE ENGINEERING
+                    </p>
+
+                    <h2>
+                        <a href="blog/blog2.html">
+                            The Compiler Said Yes
+                        </a>
+                    </h2>
+
+                    <p>
+                        Compiler messages and their cryptic, occasionally amusing clues—and how learning to interpret them makes debugging a little less mysterious.
+                    </p>
+
+                </div>
+
+                <div class="archive-read">
+
+                    <a href="blog/blog2.html">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 01 -->
+
+            <article class="archive-article">
+
+                <div class="article-number">
+                    01
+                </div>
+
+                <div class="archive-article-content">
+
+                    <p class="archive-meta">
+                        AUGUST 12 2026 / SOFTWARE ENGINEERING
+                    </p>
+
+                    <h2>
+                        <a href="blog/blog1.html">
+                            MEMOIZATION
+                        </a>
+                    </h2>
+
+                    <p>
+                        Becoming a developer—and preserving the lessons that make each new project possible.
+                    </p>
+
+                </div>
+
+                <div class="archive-read">
+
+                    <a href="blog/blog1.html">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+<div class="archive-player-hidden">
+    <div class="music-player">
+
+    <div class="music-info">
+        <span class="music-label">NOW PLAYING</span>
+        <span id="track-title">Loading...</span>
+        <span id="track-artist"></span>
+    </div>
+
+    <div class="music-controls">
+
+        <button
+            id="prev-button"
+            class="music-control"
+            aria-label="Previous track"
+        >
+            ‹
+        </button>
+
+        <button
+            id="play-button"
+            class="music-button"
+            aria-label="Play music"
+        >
+            ▶
+        </button>
+
+        <button
+            id="next-button"
+            class="music-control"
+            aria-label="Next track"
+        >
+            ›
+        </button>
+
+    </div>
+
+    <span id="music-time">0:00</span>
+
+    <div class="volume-control">
+        <span class="volume-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+        <path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12zm0-8.5v2.06A7 7 0 0 1 20 12a7 7 0 0 1-3.5 6.44v2.06A9 9 0 0 0 22 12a9 9 0 0 0-5.5-8.5z"/>
+    </svg>
+</span>
+
+        <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.5"
+            aria-label="Volume"
+        >
+
+    </div>
+
+</div>
+
+<audio id="music-audio" preload="metadata"></audio>
+
+</div><!-- Close archive-player-hidden -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <img
+                    src="images/ew-logo.png"
+                    alt="Ethan Wilson Logo"
+                    class="footer-logo-img"
+                >
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-label">NAVIGATION</span>
+
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="articles.html">Archive</a>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-label">CONNECT</span>
+
+                <a href="https://github.com/EthanLayneWilson">GitHub</a>
+                <a href="https://www.linkedin.com/in/ethan-wilson-20b9181aa/">LinkedIn</a>
+                <a href="https://www.instagram.com/ewilsonranch/">Instagram</a>
+                <a href="ewilsonranch@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>© 2026 ETHAN WILSON</span>
+
+            <span>BUILT WITH HTML, CSS & JAVASCRIPT</span>
+
+            <a href="#top" class="back-to-top">
+                <span class="back-to-top-text">BACK TO TOP</span>
+                <span class="top-arrow">↑</span>
+            </a>
+
+        </div>
+</div>
+    </div>
+
+</footer>
+
+    <script src="js/script.js"></script>
+
+    <script>
+(() => {
+    const largerText = document.getElementById("larger-text");
+    const reduceMotion = document.getElementById("reduce-motion");
+
+    function applyPreferences() {
+        document.body.classList.toggle(
+            "larger-text", largerText.checked
+        );
+
+        document.documentElement.classList.toggle(
+            "reduce-motion", reduceMotion.checked
+        );
+    }
+
+    try {
+        largerText.checked =
+            localStorage.getItem("ew-larger-text") === "true";
+
+        reduceMotion.checked =
+            localStorage.getItem("ew-reduce-motion") === "true";
+    } catch {
+        // Controls still work when browser storage is unavailable.
+    }
+
+    applyPreferences();
+
+    [largerText, reduceMotion].forEach((control) => {
+        control.addEventListener("change", () => {
+            applyPreferences();
+
+            try {
+                localStorage.setItem(
+                    "ew-larger-text", String(largerText.checked)
+                );
+
+                localStorage.setItem(
+                    "ew-reduce-motion", String(reduceMotion.checked)
+                );
+            } catch {
+                // Keep the selected settings for this page.
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+
+</html>

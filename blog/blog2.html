@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Thoughts on software engineering, continuous learning, and turning ideas into reliable digital experiences."
+    >
+
+    <title>The Compiler Said Yes</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div id="edition-shutter" class="edition-shutter"></div>
+    <article class="blog-article" aria-labelledby="article-title"></article>
+
+    <!-- NEWSPAPER HEADER -->
+
+    <header class="newspaper-header">
+
+        <div class="top-nav">
+
+            <nav aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../portfolio.html">Portfolio</a>
+                <a href="../articles.html" class="active">Archive</a>
+            </nav>
+
+            <div class="header-right">
+
+                <button
+                    type="button"
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Switch to night mode"
+                >
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+
+                <div class="brand-mark">
+                    <strong>EW</strong>
+                    <span class="divider"></span>
+                    <span>EST. 2022</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="newspaper-info">
+            <span>The Compiler Said Yes</span>
+            <span>THE ARCHIVE</span>
+            <details class="accessibility-menu">
+    <summary>Accessibility</summary>
+
+    <div class="accessibility-panel">
+        <p>Reading preferences</p>
+
+        <label>
+            <input type="checkbox" id="larger-text">
+            Larger text
+        </label>
+
+        <label>
+            <input type="checkbox" id="reduce-motion">
+            Reduce motion
+        </label>
+    </div>
+</details>
+        </div>
+
+    </header>
+
+    <!-- BLOG ARTICLE -->
+
+    <main class="archive-page blog-page">
+
+        <article class="blog-article" aria-labelledby="article-title">
+
+            <header class="archive-heading blog-heading">
+
+                <a href="../articles.html" class="back-to-archive">
+                    ← BACK TO THE ARCHIVE
+                </a>
+
+                <p class="archive-label">SOFTWARE ENGINEERING</p>
+
+                <h1 id="article-title" class="blog-title">
+  The Compiler Said Yes
+</h1>
+
+                <p class="archive-description">
+                    Compiler messages and their cryptic, occasionally amusing clues—and how learning to interpret them makes debugging a little less mysterious.
+                </p>
+
+                <p class="archive-meta">
+                    BY ETHAN WILSON /
+                    <time datetime="2026-08">OCTOBER 9 2026</time>
+                </p>
+
+            </header>
+
+            <p class="article-intro">
+    There is a particular satisfaction in watching a program compile
+    after spending time trying to understand why it would not. The
+    errors disappear, the build finishes, and for a moment, it feels
+    like everything has fallen into place.
+</p>
+
+<p>Then you run it.</p>
+
+<p>
+    The result might be correct. It might also be completely unexpected.
+    A calculation produces the wrong number, a loop skips something it
+    should have included, or the program confidently does something you
+    never intended.
+</p>
+
+<p>
+    The compiler said yes. Apparently, I had asked the wrong question.
+    The oversized “T” opening this article is doing its best to make itself impossible to miss. Bugs rarely extend the same courtesy. A single character can change a program’s behavior without attracting much attention—and sometimes without a complaint from the compiler.
+</p>
+
+<section aria-labelledby="reading-clues">
+    <h2 id="reading-clues">The Compiler Wants To Speak To The Manager</h2>
+
+    <p>
+    Starting with C++ meant learning to read code and compiler messages at the same time. Neither was especially familiar. An error could identify a line, name the offense, and STILL leave me wondering what I had done. Basically, the compiler wanted to speak to the manager. Unfortunately, the manager was also the trainee, and his training consisted largely of investigating the incident he had just caused. I was responsible for the program’s decisions while still learning how to make them—simultaneously heading the inquiry and appearing as its principal suspect. There was nobody higher up to escalate the complaint to, so I held a brief meeting with myself. <em>Management requested answers.</em> The trainee requested an example. Both agreed to look up what “undeclared identifier” meant.
+</p>
+
+    <p>
+        Sometimes the message is straightforward: a name has not
+        been declared, or a statement needs a semicolon. Other times,
+        the compiler reports a problem farther down than the mistake
+        that caused it. A missing brace can change how it interprets
+        everything that follows, leaving what looks like a collection
+        of separate problems. Apparently, even punctuation can have
+        an entourage. Now your gobsmacked. 
+    </p>
+
+    <p>
+        That can make a small mistake look impressively destructive.
+    </p>
+
+    <p>
+        I am learning to begin with the first reported error and
+        inspect the surrounding code, including the lines before it.
+        Fixing one cause can clear several messages. Trying to solve
+        every message independently can mean chasing problems that
+        disappear as soon as the original mistake is corrected.
+        Before convening a full inquiry, it helps to check whether someone left a brace open.
+        And by someone I mean no one else other than me.
+    </p>
+
+    <p>
+        The wording also becomes more useful as the concepts become
+        clearer. A complaint about incompatible types carries more
+        information once I understand which values I am working with
+        and what an operation expects. What initially looks like an
+        accusation gradually becomes a clue. I disect the correspondence and try my best not to take it personally.
+    </p>
+
+    <p>
+        The compiler does not always explain things in the way I would
+        prefer, but it usually has a reason for objecting.
+    </p>
+</section>
+
+</section>
+
+                        <div class="archive-bookplate">
+    <img src="../images/sig.png" alt="From the library of Ethan Wilson">
+</div>
+
+            <div class="article-end" aria-hidden="true">◆ ◆ ◆</div>
+
+
+
+            <div class="archive-bookplate">
+
+
+            <nav class="blog-navigation" aria-label="Article navigation">
+                <a href="../articles.html">← RETURN TO THE ARCHIVE</a>
+            </nav>
+
+            
+
+        </article>
+
+
+    </main>
+
+    <!-- FOOTER -->
+
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <img
+                    src="../images/ew-logo.png"
+                    alt="Ethan Wilson Logo"
+                    class="footer-logo-img"
+                >
+            </div>
+
+            <nav class="footer-column">
+                <span class="footer-label">NAVIGATION</span>
+
+    <a href="../index.html">Home</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../articles.html">Archive</a>
+            </nav>
+
+            <div class="footer-column">
+                <span class="footer-label">CONNECT</span>
+
+                <a href="https://github.com/EthanLayneWilson">GitHub</a>
+                <a href="https://www.linkedin.com/in/ethan-wilson-20b9181aa/">LinkedIn</a>
+                <a href="https://www.instagram.com/ewilsonranch/">Instagram</a>
+                <a href="ewilsonranch@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>© 2026 ETHAN WILSON</span>
+
+            <span>BUILT WITH HTML, CSS & JAVASCRIPT</span>
+
+            <a href="#top" class="back-to-top">
+                <span class="back-to-top-text">BACK TO TOP</span>
+                <span class="top-arrow">↑</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="../js/script.js"></script>
+
+    <dialog id="article-image-viewer" class="image-viewer"
+        aria-label="Expanded photograph">
+    <button
+        type="button"
+        class="image-viewer-close"
+        aria-label="Close expanded photograph"
+        autofocus
+    >
+        &times;
+    </button>
+
+    <img
+        src="../images/blog1.png"
+        alt="Handwritten artwork on a wall"
+    >
+</dialog>
+
+<script>
+    const imageViewer = document.getElementById("article-image-viewer");
+    const expandedImage = imageViewer.querySelector("img");
+    const closeImage = imageViewer.querySelector(".image-viewer-close");
+
+    document.querySelectorAll(".article-image-trigger").forEach((button) => {
+        button.addEventListener("click", () => {
+            const photo = button.querySelector("img");
+
+            expandedImage.src = photo.currentSrc || photo.src;
+            expandedImage.alt = photo.alt;
+
+            imageViewer.showModal();
+        });
+    });
+
+    closeImage.addEventListener("click", () => {
+        imageViewer.close();
+    });
+
+    imageViewer.addEventListener("click", (event) => {
+        if (event.target === imageViewer) {
+            const bounds = imageViewer.getBoundingClientRect();
+
+            if (
+                event.clientX < bounds.left ||
+                event.clientX > bounds.right ||
+                event.clientY < bounds.top ||
+                event.clientY > bounds.bottom
+            ) {
+                imageViewer.close();
+            }
+        }
+    });
+</script>
+
+<script>
+(() => {
+    const largerText = document.getElementById("larger-text");
+    const reduceMotion = document.getElementById("reduce-motion");
+
+    function applyPreferences() {
+        document.body.classList.toggle(
+            "larger-text", largerText.checked
+        );
+
+        document.documentElement.classList.toggle(
+            "reduce-motion", reduceMotion.checked
+        );
+    }
+
+    try {
+        largerText.checked =
+            localStorage.getItem("ew-larger-text") === "true";
+
+        reduceMotion.checked =
+            localStorage.getItem("ew-reduce-motion") === "true";
+    } catch {
+        // Controls still work when browser storage is unavailable.
+    }
+
+    applyPreferences();
+
+    [largerText, reduceMotion].forEach((control) => {
+        control.addEventListener("change", () => {
+            applyPreferences();
+
+            try {
+                localStorage.setItem(
+                    "ew-larger-text", String(largerText.checked)
+                );
+
+                localStorage.setItem(
+                    "ew-reduce-motion", String(reduceMotion.checked)
+                );
+            } catch {
+                // Keep the selected settings for this page.
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+
+</html>

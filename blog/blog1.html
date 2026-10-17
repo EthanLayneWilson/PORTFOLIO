@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Thoughts on software engineering, continuous learning, and turning ideas into reliable digital experiences."
+    >
+
+    <title>MEMOIZATION</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div id="edition-shutter" class="edition-shutter"></div>
+    <article class="blog-article" aria-labelledby="article-title"></article>
+
+    <!-- NEWSPAPER HEADER -->
+
+    <header class="newspaper-header">
+
+        <div class="top-nav">
+
+            <nav aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../portfolio.html">Portfolio</a>
+                <a href="../articles.html" class="active">Archive</a>
+            </nav>
+
+            <div class="header-right">
+
+                <button
+                    type="button"
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Switch to night mode"
+                >
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+
+                <div class="brand-mark">
+                    <strong>EW</strong>
+                    <span class="divider"></span>
+                    <span>EST. 2022</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="newspaper-info">
+            <span>MEMOIZATION</span>
+            <span>THE ARCHIVE</span>
+            <details class="accessibility-menu">
+    <summary>Accessibility</summary>
+
+    <div class="accessibility-panel">
+        <p>Reading preferences</p>
+
+        <label>
+            <input type="checkbox" id="larger-text">
+            Larger text
+        </label>
+
+        <label>
+            <input type="checkbox" id="reduce-motion">
+            Reduce motion
+        </label>
+    </div>
+</details>
+        </div>
+
+    </header>
+
+
+    <!-- BLOG ARTICLE -->
+
+    <main class="archive-page blog-page">
+
+        <article class="blog-article" aria-labelledby="article-title">
+
+            <header class="archive-heading blog-heading">
+
+                <a href="../articles.html" class="back-to-archive">
+                    ← BACK TO THE ARCHIVE
+                </a>
+
+                <p class="archive-label">SOFTWARE ENGINEERING</p>
+
+                <h1 id="article-title" class="blog-title">
+  MEMOIZATION
+</h1>
+
+                <p class="archive-description">
+                    Becoming a developer—and preserving the lessons that make each new project possible.
+                </p>
+
+                <p class="archive-meta">
+                    BY ETHAN WILSON /
+                    <time datetime="2026-08">AUGUST 12 2026</time>
+                </p>
+
+            </header>
+
+            
+    <div class="article-music" aria-label="Article soundtrack">
+    <div class="article-music-info">
+        <span class="article-music-label">ACCOMPANYING TRACK</span>
+        <span class="article-music-title">Burial on the Presidio Banks</span>
+        <span class="article-music-artist">This Will Destroy You</span>
+    </div>
+
+    <audio id="article-audio" controls preload="metadata">
+        <source src="../audio/blog1song.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <div class="article-music-controls" id="music-controls" hidden>
+        <input
+            id="music-progress"
+            class="music-progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Seek through song"
+            disabled
+        >
+
+        <span class="music-time" id="music-time">0:00 / 0:00</span>
+
+        <button
+            id="music-play"
+            class="music-play"
+            type="button"
+            aria-label="Play song"
+        >
+            <span aria-hidden="true">▶</span>
+        </button>
+
+        <label class="music-volume">
+            <span>VOL</span>
+
+            <input
+                id="music-volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+                aria-label="Volume"
+            >
+        </label>
+    </div>
+
+    <span id="music-status" class="music-status" role="status"></span>
+</div>
+
+            <div class="blog-content">
+
+               
+                   <h4>
+רַעְיוֹן
+ra'ayon - idea, concept, notion, conception, thought
+                   </h4>
+<p class="article-intro"> Every software project begins with an idea. It might be
+                    within a website, a design integration for a local bakery, or
+                    a better way to organize information. Now, turning that idea
+                    into something useful takes patience, curiosity, and a
+                    willingness to keep learning. It's important to remember that because implementation of those traits is going to continue to prove utility in more aspects of my life than software engineering.
+                </p>
+
+                <p>
+                    That methodology is what attracted me to this practice.
+                    In the manner of writing code it can give me a way to combine problem solving
+                    with creativity—and to see the results take shape. I thought a fitting subject of my introductory blog would be in regards to the memoization of this modus operandi.
+                </p>
+
+                <section aria-labelledby="beyond-code">
+
+                    <h2 id="beyond-code">More Than Writing Code</h2>
+
+                    <p>
+                        Before I started learning to code, most of the work I knew was hands-on. My background was working on a cattle ranch, spending time around animals, and working on cars and equipment. It was a world where problems usually had something physical attached to them—something you could inspect, take apart, adjust, or repair.
+                    </p>
+
+                    <p>
+                        That kind of work teaches you to pay attention. Animals need consistent care, and equipment needs maintenance. When something goes wrong, you have to look closely at what is happening and decide what to do next. You may have an idea of the cause, but you still need to check it. Guessing can send you down the wrong path and leave the original problem unresolved.
+                    </p>
+
+                    <p>
+                        When I started studying software development, the setting changed considerably. Instead of working with machinery or caring for animals, I was looking at a screen and trying to understand how instructions became a working program. Much of it was unfamiliar, but the process of figuring things out felt connected to the work I already knew.
+                   I was beginning again in a different field, and boy it sure was a difficult one for me, but by bringing a practical background with me I learned how to apply it in a new way.
+                    </p>
+
+                </section>
+
+                <section aria-labelledby="small-details">
+
+                    <h2 id="small-details">Learning Through the Details</h2>
+
+                    <p>
+                        My first coding venture in school was diving headfirst into C++. Coming from a background of ranch work, animals, and working on cars and equipment, I was stepping into a field with its own language and way of thinking. I was learning what programming was while also trying to learn a language that asks quite a bit of a beginner.
+                    </p>
+
+                    <p>
+                        C++ is not especially beginner-friendly. There is a lot to understand before you can feel comfortable writing even a relatively small program. Along with variables, conditions, loops, and functions, you encounter rules about types, declarations, scope, and how different parts of a program fit together. As you move further, references, pointers, and memory management introduce another layer of complexity.
+                    </p>
+
+                    <p>
+                        The difficulty comes partly from learning all of those things at once. When you are new, you may not know whether the problem is your syntax, your logic, or your understanding of the concept itself. You can have a clear idea of what you want the program to accomplish and still struggle to turn that idea into something the compiler accepts.
+                    </p>
+
+                    
+                    <p>
+Even the feedback takes practice to understand. A missing semicolon or mismatched brace can produce several compiler errors, and the messages can contain terminology you have barely encountered. Before you can fix the code, you sometimes have to figure out what the error message is trying to tell you. That adds another task to an already unfamiliar process.
+
+Then there is the difference between getting a program to compile and getting it to behave correctly. A program can run without doing what you intended. A loop might stop too early, a condition might check the wrong thing, or a calculation might produce an unexpected result because of the types involved. Those problems require you to follow the program’s behavior step by step and examine your own assumptions.                    </p>
+<img
+        src="../images/notes.png"
+        alt="Illustration of learning C++"
+        class="blog-coding-illustration"
+    >
+                
+                    <p>
+What made C++ demanding was the precision it required while I was still building that understanding. I could not rely on knowing roughly what a line meant. I needed to understand how the language would interpret it and how it affected the rest of the program. Small details could change the result, and overlooking them could leave me staring at code that seemed reasonable but would not work.                    </p>
+      <p>
+That can be discouraging when you are starting out. You want to build something, but much of your attention goes toward getting the basics right. A short assignment can take longer than expected because each unfamiliar detail sends you back to an explanation or example. It is easy to measure progress by whether the program is finished and overlook how much you are learning while trying to finish it.                    </p>
+                          <p>
+I began to appreciate the value of working through smaller pieces. Understanding one loop thoroughly is more useful than copying several that I cannot explain. The same applies to a function or a compiler error. Taking time to understand why something works gives me a better starting point when I encounter a similar problem again.                    </p>
+
+                    <p>
+My background helped me find some patience with that process. Working on equipment already involved investigating problems, checking assumptions, and accepting that the first explanation might be wrong. Learning C++ required me to apply those habits in an unfamiliar setting, where I was still learning what to inspect and which questions to ask.                    </p>
+
+                    <p>
+I would not describe C++ as an easy introduction to programming. It made the beginning demanding, and there were concepts that needed repeated attention before they became clear. But it also gave me an early appreciation for how carefully software has to be constructed. As I understood more, I could begin to see the reasoning behind code that had once looked like a collection of unfamiliar symbols.                    </p>
+
+                    <p>
+The rewarding part was being able to explain something that had previously confused me. Following a function, understanding why a loop ended, or finding the cause of an incorrect result gave me evidence that I was making progress. Those moments helped make a difficult beginning feel worthwhile and gave me something solid to build on.                    </p>
+
+                </section>
+
+                <section aria-labelledby="continuous-learning">
+
+                    <h2 id="continuous-learning">Making Room to Learn</h2>
+                    <h4>
+                       <em> “What is ‘familiarly known’ is not properly known, just for the reason that it is ‘familiar’.”</em>
+                         <sup class="reference-marker">
+    <a href="#reference-1" id="citation-1" aria-label="See reference 1">1</a>
+  </sup>
+                    </h4>
+
+                    <p>
+                        That distinction captures something I have experienced while learning to program. Code can look familiar before I can explain why it works, and an explanation can make sense before I can apply it independently. Working through a problem myself reveals the distance between recognition and understanding.
+
+The moniker of <strong>Memoization</strong> grows out of that experience. I want to preserve lessons I can return to, while also recording the reasoning that made them useful. When I revisit an earlier solution, I want to understand its assumptions, recognize its limits, and decide whether it fits the problem in front of me.
+                    </p>
+                    <p>In programming, memoization means storing the result of a computation so it can be reused when the same inputs occur again. That idea gives this archive its name. By recording a problem, the approach I took, and why a solution worked, I give myself a starting point when a similar challenge appears. The connection is a metaphor: applying a past lesson still requires judgment, especially when the circumstances have changed. What I want to preserve is enough understanding to build on earlier work without having to rediscover every lesson from the beginning.</p>
+
+                    <p>
+                        Starting with C++ taught me that learning to program takes time, and that understanding something once does not always mean I am ready to use it on my own. A concept can make sense while I am reading an explanation, then become much less clear when I sit down to write the code myself. Working through that gap is an important part of learning.
+                    </p>
+
+                    <p>
+Some lessons come from studying a concept. Others come from trying an approach, finding its limits, and revising it. I need both. Studying gives me a foundation, while building something helps me discover which parts I understand and which parts still need attention.                    </p>
+
+                    <p>
+That has meant making room to be a beginner. Coming from work where I had familiar tools and practical experience, it was an adjustment to need help with things that might seem basic to an experienced developer. I had to become comfortable asking questions, revisiting material, and spending longer on a problem than I initially expected.                    </p>
+
+                    <p>
+My experience with cars and equipment gives me a useful perspective. You do not become familiar with a system simply by looking at it once. You learn through working with it, understanding how its parts connect, and encountering problems that make you look more closely. I am finding that programming requires the same willingness to build understanding over time.                    </p>
+
+<button
+    type="button"
+    class="article-image-trigger"
+    aria-label="Expand second photograph"
+    aria-haspopup="dialog"
+    aria-controls="article-image-viewer"
+>
+    <img
+        src="../images/blog2.png"
+        alt="Describe what your second photograph shows"
+        loading="lazy"
+    >
+</button>
+<p>With a gasoline engine, all you need to run is fuel, air, and spark. They need to arrive in the right amounts and at the right time, and compression matters too. If the engine will not run, I can work through those requirements and narrow down what is missing. Experience gives me a sequence of checks, even when I do not yet know the cause.
+
+Code requires a different set of checks. A program might fail because of an unexpected input, a condition that never becomes true, or a function that changes something another part of the program depends on. There is no single checklist that explains every failure, believe me I checked. So I have to understand what the program expects, follow what it actually does, and find where those two things diverge. Now, my mechanical background does help with the patience and investigation, but I still have to learn the rules of the system in front of me.
+
+Around engines, there is an old saying: <cite>“There’s no replacement for displacement.”</cite> In programming, however, adding more code rarely gives me the same promise. Sometimes the best improvement actually comes from removing a few lines, choosing a better algorithm, or avoiding work that has already been done. Memoization fits that last idea: keeping a useful result available <em>instead</em> of repeating the calculation. This archive serves a similar purpose in my learning, preserving the reasoning behind a solution so I have something to build on the next time I encounter a familiar problem.</p>
+                    <p>
+When something breaks, I try to understand why before moving on. Getting the program working again matters, but I also want to know what caused the problem. Was I misunderstanding how a function behaved? Was I making an assumption about the input? Had I changed something without considering where else it was used? Answering those questions makes the fix useful beyond that one situation.
+
+There is a temptation to move quickly once an error disappears, especially after spending a long time trying to solve it. But pausing to explain the solution helps me check my understanding. If I cannot describe why the change worked, there is probably still something worth investigating. Even a brief note about the cause can give me something to return to later.                    </p>
+
+                    <p>
+I am also learning to recognize when a problem needs to become smaller. If an entire program feels overwhelming, I can focus on one function or test one piece of logic. If a layout is not working, I can examine one section before adjusting the whole page. A smaller problem is easier to navigate through, and what I learn from it often helps me understand better the larger one.                    </p>
+
+                    <p>
+Progress often comes from those small steps: understanding a function, simplifying a layout, or choosing a data structure that better fits the task. Sometimes it means recognizing an error sooner than I would have before, or being able to explain code that once confused me. Those changes certainly are easy to overlook, but they show that the time spent learning is making a difference.                    </p>
+
+    <h4>
+    <em>
+        “Goals are good for setting a direction,
+        but systems are best for making progress.”
+    </em>
+    <sup class="reference-marker">
+        <a href="#reference-2"
+           id="citation-2"
+           aria-label="See reference 2">2</a>
+    </sup>
+</h4>
+                    <p>
+Making room to learn means allowing enough time for that process. I want to keep building projects, while also giving myself the chance to understand the decisions behind them. Each problem I work through adds to the experience I can bring to the next one.                    </p>
+
+                </section>
+
+                <section aria-labelledby="building-forward">
+
+                    <h2 id="building-forward">Building Forward</h2>
+
+                    <p>
+This archive is a place to record that process—the projects I work on, the choices I make, and the lessons I want to carry into the next project. I want to share how those projects take shape, including the challenges that require another attempt and the decisions that become clearer with experience.
+                    </p>
+
+                    <p>
+Since diving headfirst into C++, I have continued expanding my knowledge of C, C#, Python, Java, and JavaScript. Learning across these languages gives me opportunities to revisit familiar concepts from different perspectives. Each one introduces its own conventions and ways of solving problems, helping me become more thoughtful about how I structure a program and approach a task.
+
+Alongside that programming knowledge, I am developing my skills in HTML and CSS to build and refine experiences on the web. Working on my website gives me a practical place to connect structure, appearance, and behavior. HTML shapes the content, CSS controls its presentation, and JavaScript adds interaction. Bringing those pieces together helps me understand how individual decisions affect the finished experience. Git has also become part of my development process. Tracking changes gives me a clearer history of how a project evolves and allows me to revisit earlier decisions. It encourages me to approach changes more deliberately and builds a foundation for working with others as I continue developing my skills.                   </p>
+
+                                        
+<button
+    type="button"
+    class="article-image-trigger"
+    aria-label="Expand photograph"
+    aria-haspopup="dialog"
+    aria-controls="article-image-viewer"
+>
+    <img
+        src="../images/blog1.png"
+        alt="Handwritten artwork on a wall"
+        loading="lazy"
+    >
+</button>
+<p>
+My learning has also extended into cloud computing and IT service management through earning my <strong>AWS</strong> cloud certification and <strong>ITIL 4</strong> certification. Studying these areas has broadened my perspective on what it takes to support software beyond writing it. I am learning to consider the infrastructure it depends on, the services it supports, and how technical work connects with the needs of the people and organizations using it. <cite>“We have the technology.”</cite> A detail I photographed in a coffee shop in Hailey, Idaho—a fitting reminder as I learn what I can build with it.                    </p>
+
+                                        <p>
+Together, these areas of study are helping me develop a broader understanding of software development. I am still building experience with each technology, and I want to keep turning that knowledge into practical work. Projects give me the opportunity to discover where my understanding is strong and where I need to spend more time.                    </p>
+
+                                        
+<h4>
+    <em>
+        “Experience is what you get when you didn’t get what you wanted.”
+    </em>
+    <sup class="reference-marker">
+        <a
+            href="#reference-3"
+            id="citation-3"
+            aria-label="See reference 3"
+        >3</a>
+    </sup>
+</h4>
+
+<p>
+    That idea connects with what I want Memoization to preserve. At times, I fall short of what I aim for, but those attempts can still teach me something useful. Recording what happened, why it happened, and what I would change helps me carry that experience onwards.
+</p>
+
+<p>As I continue learning, my goal is to create with care and purpose. Memoization is my way of keeping a record of that effort—giving each lesson a place to live and a chance to inform whatever I build next, one line at a time.</p>
+
+</section>
+
+            </div>
+
+                        <div class="archive-bookplate">
+    <img src="../images/sig.png" alt="From the library of Ethan Wilson">
+</div>
+
+            <div class="article-end" aria-hidden="true">◆ ◆ ◆</div>
+
+
+
+            <div class="archive-bookplate">
+
+
+            <nav class="blog-navigation" aria-label="Article navigation">
+                <a href="../articles.html">← RETURN TO THE ARCHIVE</a>
+            </nav>
+
+            <section class="article-references" aria-labelledby="references-title">
+    <h2 id="references-title">References &amp; Further Reading</h2>
+
+    <ol>
+        <li id="reference-1">
+            <span class="reference-author">G. W. F. Hegel</span>
+
+            <a
+                href="https://www.marxists.org/reference/archive/hegel/works/ph/phprefac.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <cite>Phenomenology of Spirit</cite> ↗
+            </a>
+
+            <p class="reference-details">
+                Preface, §31 · Translated by J. B. Baillie
+                <a href="#citation-1" aria-label="Return to citation 1">↩</a>
+            </p>
+        </li>
+
+        <li id="reference-2">
+            <span class="reference-author">James Clear</span>
+
+            <a
+                href="https://jamesclear.com/goals-systems"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <cite>Atomic Habits</cite> ↗
+            </a>
+
+            <p class="reference-details">
+                Online excerpt: “Forget About Setting Goals.
+                Focus on This Instead.”
+                <a href="#citation-2" aria-label="Return to citation 2">↩</a>
+            </p>
+        </li>
+        <li id="reference-3">
+    <span class="reference-author">Randy Pausch</span>
+
+    <a
+        href="https://www.cmu.edu/news/stories/archives/2016/september/last-lecture.html"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <cite>The Last Lecture</cite> ↗
+    </a>
+
+    <p class="reference-details">
+        Quotation reproduced by Carnegie Mellon University
+        in “ ‘Last Lecture’ Keeps Delivering Lessons for Life.”
+        <a href="#citation-3" aria-label="Return to citation 3">↩</a>
+    </p>
+</li>
+    </ol>
+</section>
+
+        </article>
+
+
+    </main>
+
+
+    </div>
+
+    <audio id="music-audio" preload="metadata"></audio>
+
+    <!-- FOOTER -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <img
+                    src="../images/ew-logo.png"
+                    alt="Ethan Wilson Logo"
+                    class="footer-logo-img"
+                >
+            </div>
+
+            <nav class="footer-column">
+                <span class="footer-label">NAVIGATION</span>
+
+    <a href="../index.html">Home</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../articles.html">Archive</a>
+            </nav>
+
+            <div class="footer-column">
+                <span class="footer-label">CONNECT</span>
+
+                <a href="https://github.com/EthanLayneWilson">GitHub</a>
+                <a href="https://www.linkedin.com/in/ethan-wilson-20b9181aa/">LinkedIn</a>
+                <a href="https://www.instagram.com/ewilsonranch/">Instagram</a>
+                <a href="ewilsonranch@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>© 2026 ETHAN WILSON</span>
+
+            <span>BUILT WITH HTML, CSS & JAVASCRIPT</span>
+
+            <a href="#top" class="back-to-top">
+                <span class="back-to-top-text">BACK TO TOP</span>
+                <span class="top-arrow">↑</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="../js/script.js"></script>
+
+    <dialog id="article-image-viewer" class="image-viewer"
+        aria-label="Expanded photograph">
+    <button
+        type="button"
+        class="image-viewer-close"
+        aria-label="Close expanded photograph"
+        autofocus
+    >
+        &times;
+    </button>
+
+    <img
+        src="../images/blog1.png"
+        alt="Handwritten artwork on a wall"
+    >
+</dialog>
+
+<script>
+    const imageViewer = document.getElementById("article-image-viewer");
+    const expandedImage = imageViewer.querySelector("img");
+    const closeImage = imageViewer.querySelector(".image-viewer-close");
+
+    document.querySelectorAll(".article-image-trigger").forEach((button) => {
+        button.addEventListener("click", () => {
+            const photo = button.querySelector("img");
+
+            expandedImage.src = photo.currentSrc || photo.src;
+            expandedImage.alt = photo.alt;
+
+            imageViewer.showModal();
+        });
+    });
+
+    closeImage.addEventListener("click", () => {
+        imageViewer.close();
+    });
+
+    imageViewer.addEventListener("click", (event) => {
+        if (event.target === imageViewer) {
+            const bounds = imageViewer.getBoundingClientRect();
+
+            if (
+                event.clientX < bounds.left ||
+                event.clientX > bounds.right ||
+                event.clientY < bounds.top ||
+                event.clientY > bounds.bottom
+            ) {
+                imageViewer.close();
+            }
+        }
+    });
+</script>
+
+<script>
+(() => {
+    const largerText = document.getElementById("larger-text");
+    const reduceMotion = document.getElementById("reduce-motion");
+
+    function applyPreferences() {
+        document.body.classList.toggle(
+            "larger-text", largerText.checked
+        );
+
+        document.documentElement.classList.toggle(
+            "reduce-motion", reduceMotion.checked
+        );
+    }
+
+    try {
+        largerText.checked =
+            localStorage.getItem("ew-larger-text") === "true";
+
+        reduceMotion.checked =
+            localStorage.getItem("ew-reduce-motion") === "true";
+    } catch {
+        // Controls still work when browser storage is unavailable.
+    }
+
+    applyPreferences();
+
+    [largerText, reduceMotion].forEach((control) => {
+        control.addEventListener("change", () => {
+            applyPreferences();
+
+            try {
+                localStorage.setItem(
+                    "ew-larger-text", String(largerText.checked)
+                );
+
+                localStorage.setItem(
+                    "ew-reduce-motion", String(reduceMotion.checked)
+                );
+            } catch {
+                // Keep the selected settings for this page.
+            }
+        });
+    });
+})();
+</script>
+<script>
+(() => {
+    const audio = document.getElementById("article-audio");
+    const controls = document.getElementById("music-controls");
+    const play = document.getElementById("music-play");
+    const volume = document.getElementById("music-volume");
+    const progress = document.getElementById("music-progress");
+    const time = document.getElementById("music-time");
+    const status = document.getElementById("music-status");
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainder = Math.floor(seconds % 60);
+
+        return `${minutes}:${String(remainder).padStart(2, "0")}`;
+    }
+
+    function updateProgress() {
+        const duration = audio.duration;
+        const ready = Number.isFinite(duration) && duration > 0;
+
+        progress.disabled = !ready;
+
+        if (ready) {
+            progress.max = duration;
+            progress.value = audio.currentTime;
+        }
+
+        time.textContent =
+            `${formatTime(audio.currentTime)} / ${formatTime(duration)}`;
+
+        progress.setAttribute(
+            "aria-valuetext",
+            `${formatTime(audio.currentTime)} of ${formatTime(duration)}`
+        );
+    }
+
+    function updatePlayButton() {
+        const playing = !audio.paused && !audio.ended;
+
+        play.querySelector("span").textContent = playing ? "❚❚" : "▶";
+
+        play.setAttribute(
+            "aria-label",
+            playing ? "Pause song" : "Play song"
+        );
+    }
+
+    function updateVolume() {
+        const level = audio.muted ? 0 : audio.volume;
+
+        volume.value = level;
+
+        volume.setAttribute(
+            "aria-valuetext",
+            `${Math.round(level * 100)} percent`
+        );
+    }
+
+    play.addEventListener("click", async () => {
+        if (!audio.paused) {
+            audio.pause();
+            return;
+        }
+
+        status.textContent = "";
+
+        try {
+            if (audio.ended) {
+                audio.currentTime = 0;
+            }
+
+            await audio.play();
+        } catch {
+            status.textContent =
+                "Unable to play the track. Check the audio file and try again.";
+        }
+    });
+
+    volume.addEventListener("input", () => {
+        audio.volume = Number(volume.value);
+        audio.muted = false;
+        updateVolume();
+    });
+
+    audio.addEventListener("volumechange", updateVolume);
+
+    progress.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            audio.currentTime = Number(progress.value);
+            updateProgress();
+        }
+    });
+
+    ["loadedmetadata", "durationchange", "timeupdate"].forEach((event) => {
+        audio.addEventListener(event, updateProgress);
+    });
+
+    ["play", "pause", "ended"].forEach((event) => {
+        audio.addEventListener(event, updatePlayButton);
+    });
+
+    audio.addEventListener("error", () => {
+        status.textContent = "The audio file could not be loaded.";
+    });
+
+    audio.volume = Number(volume.value);
+    audio.controls = false;
+    audio.hidden = true;
+    controls.hidden = false;
+
+    updateProgress();
+    updatePlayButton();
+    updateVolume();
+})();
+</script>
+
+</body>
+
+</html>

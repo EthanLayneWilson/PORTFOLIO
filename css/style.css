@@ -1,185 +1,8193 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    margin: 0;
+    background: #f4f1e9;
+    color: #111111;
+    font-family: "DM Sans", sans-serif;
 }
 
-body{
+.minimal-nav {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  padding: 28px 20px;
+  font-size: 16px;
+}
 
-    font-family:'Poppins',sans-serif;
+.minimal-nav a {
+  color: #111;
+  text-decoration: none;
+}
 
-    background:#0f172a;
+.minimal-home {
+  max-width: 1050px;
+  margin: 90px auto 0;
+  text-align: center;
+  padding: 0 30px;
+}
 
-    color:white;
+.home-logo {
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto 35px;
+}
+
+.minimal-home h1 {
+  font-family: Georgia, serif;
+  font-size: 58px;
+  margin: 0 0 30px;
+}
+
+.minimal-home h2 {
+  font-family: Georgia, serif;
+  font-size: 82px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 55px;
+}
+
+.minimal-home p {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: left;
+  color: #9a9a9a;
+  font-size: 22px;
+  line-height: 1.6;
+}
+.portfolio {
+  max-width: 1050px;
+  margin: 140px auto;
+  padding: 0 30px;
+}
+
+.portfolio h2 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  border-top: 1px solid #111;
+  padding: 35px 0;
+}
+
+.project-card h3 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-card p {
+  color: #777;
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 900px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.project-tags span {
+  border: 1px solid #111;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.project-card a {
+  color: #111;
+  font-weight: bold;
+}
+
+.portfolio-page {
+  max-width: 1050px;
+  margin: 110px auto;
+  padding: 0 30px;
+}
+
+.portfolio-page h1 {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  margin-bottom: 60px;
+}
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+/* =========================
+   NEWSPAPER HEADER
+   ========================= */
+
+.newspaper-header {
+    width: 80%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.top-nav {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #222;
+}
+
+/* Navigation */
+
+.top-nav nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.top-nav nav a {
+    color: #111;
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+
+    position: relative;
+    padding: 8px 0;
+}
+
+.top-nav nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #111;
+
+    transition: width 0.25s ease;
+}
+
+.top-nav nav a:hover::after,
+.top-nav nav a.active::after {
+    width: 100%;
+}
+
+/* EW / Established */
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+.brand-mark > span:first-child {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.divider {
+    display: block;
+    width: 1px;
+    height: 28px;
+    background: #999;
+}
+
+/* Newspaper information row */
+
+.newspaper-info {
+    min-height: 58px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    border-bottom: 1.5px solid #777;
+
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+}
+
+.newspaper-info span:nth-child(2) {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.newspaper-info span:last-child {
+    text-align: right;
+}
+
+/* =========================
+   NEWSPAPER MASTHEAD
+   ========================= */
+
+.newspaper-home {
+    width: 80%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.masthead {
+    text-align: center;
+    padding: 35px 0 25px;
+}
+
+/* EW Logo */
+
+.masthead-logo {
+    display: block;
+
+    width: 80px;
+    height: auto;
+
+    margin: 0 auto 15px;
+}
+
+/* ETHAN WILSON */
+
+.masthead h1 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 7vw, 105px);
+
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+}
+
+/* Software Engineer line */
+
+.masthead-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    max-width: 650px;
+
+    margin: 20px auto 0;
+}
+
+.masthead-title span {
+    flex: 1;
+
+    height: 1px;
+
+    background: #999;
+}
+
+.masthead-title p {
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.4em;
+    white-space: nowrap;
+}
+/* =========================
+   FRONT PAGE FEATURE
+   ========================= */
+
+.front-feature {
+    display: grid;
+    grid-template-columns: 0.75fr 1.65fr;
+    gap: 45px;
+
+    align-items: stretch;
+
+    padding: 30px 0 35px;
+
+    border-bottom: 1px solid #777;
+}
+
+/* LEFT COLUMN */
+
+.feature-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-kicker {
+    margin: 0 0 15px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+.feature-copy h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 3.2vw, 48px);
+
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.feature-rule {
+    width: 70px;
+    height: 1px;
+
+    background: #777;
+
+    margin: 25px 0;
+}
+
+.feature-text {
+    margin: 0;
+
+    max-width: 350px;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: #333;
+}
+
+.feature-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.feature-links a {
+    color: #111;
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.feature-links > a:first-child {
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 5px;
+}
+
+.resume-button {
+    display: inline-block;
+
+    background: #111;
+    color: #f4f1e9 !important;
+
+    padding: 13px 26px;
+}
+
+/* RIGHT COLUMN */
+
+.feature-image {
+    min-height: 430px;
+    overflow: hidden;
+
+    /* Newspaper photo frame */
+    border: 1px solid #888888;
+    padding: 7px;
+
+    box-sizing: border-box;
+    background: #66645d;
+}
+
+.feature-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.feature-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border: 1px solid #777;
+
+    box-sizing: border-box;
+
+    filter: grayscale(100%);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.feature-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.015);
+    filter: grayscale(65%);
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .front-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        min-height: 320px;
+    }
+}
+
+/* =========================
+   ARTICLE ACTIONS
+   ========================= */
+
+.article-meta {
+    margin: 0 0 14px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+    color: #666;
+}
+
+.article-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.article-actions a {
+    display: inline-block;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+/* Main article button */
+
+.read-article {
+    background: #111;
+    color: #f4f1e9;
+
+    padding: 14px 22px;
+
+    border: 1px solid #111;
+}
+
+.read-article:hover {
+    background: transparent;
+    color: #111;
+}
+
+/* Archive button */
+
+.all-articles {
+    color: #111;
+
+    padding: 14px 22px;
+
+    border: 1px solid #111;
+}
+
+.all-articles:hover {
+    background: #111;
+    color: #f4f1e9;
+}
+
+/* =========================
+   ARTICLE ARCHIVE
+   ========================= */
+
+.archive-page {
+    width: calc(100% - 80px);
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* Archive heading */
+
+.archive-heading {
+    text-align: center;
+
+    padding: 70px 0 60px;
+
+    border-bottom: 2px solid #111;
+}
+
+.archive-logo {
+    width: 80px;
+    height: auto;
+
+    margin-bottom: 20px;
+}
+
+.archive-label {
+    margin: 0 0 15px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+.archive-heading h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(70px, 10vw, 145px);
+
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.archive-description {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Article rows */
+
+.article-list {
+    border-bottom: 1px solid #111;
+}
+
+.archive-article {
+    display: grid;
+
+    grid-template-columns:
+        80px
+        minmax(0, 1fr)
+        180px;
+
+    gap: 35px;
+
+    align-items: center;
+
+    padding: 45px 0;
+
+    border-bottom: 1px solid #999;
+}
+
+.archive-article:last-child {
+    border-bottom: none;
+}
+
+
+/* Number */
+
+.article-number {
+    align-self: start;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+}
+
+
+/* Article information */
+
+.archive-meta {
+    margin: 0 0 12px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    color: #666;
+}
+
+.archive-article h2 {
+    margin: 0 0 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(28px, 3vw, 46px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.archive-article h2 a {
+    color: #111;
+
+    text-decoration: none;
+}
+
+.archive-article h2 a:hover {
+    text-decoration: underline;
+}
+
+.archive-article-content > p:last-child {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* Read link */
+
+.archive-read {
+    text-align: right;
+}
+
+.archive-read a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 750px) {
+
+    .archive-page {
+        width: calc(100% - 40px);
+    }
+
+    .archive-article {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .archive-read {
+        grid-column: 2;
+
+        text-align: left;
+    }
 
 }
 
-nav{
+/* =========================
+   EDITORIAL QUOTE
+   ========================= */
 
-    width:100%;
+.editorial-quote {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 25px;
 
-    display:flex;
+    margin-top: 0;
+    padding: 22px 15px;
 
-    justify-content:space-between;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+}
 
-    align-items:center;
+.quote-mark {
+    font-family: "Playfair Display", serif;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 0.7;
+}
 
-    padding:25px 10%;
+.editorial-quote blockquote {
+    margin: 0;
 
-    position:fixed;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 2.3vw, 34px);
+    font-style: italic;
+    letter-spacing: 0.03em;
+}
 
-    background:#111827;
+.editorial-quote p {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .editorial-quote {
+        grid-template-columns: auto 1fr;
+    }
+
+    .editorial-quote p {
+        grid-column: 2;
+    }
+}
+
+/* =========================
+   MUSIC PLAYER
+   ========================= */
+
+.music-player {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 9px 14px;
+
+    background: #f4f1e9;
+
+    border: 1px solid #222;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 90px;
+}
+
+.music-label {
+    font-size: 7px;
+    letter-spacing: 0.15em;
+
+    color: #777;
+}
+
+#track-title {
+    font-family: "Playfair Display", serif;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+.music-button {
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #222;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #111;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.music-button:hover {
+    background: #111;
+    color: #f4f1e9;
+}
+
+#music-time {
+    min-width: 30px;
+
+    font-size: 9px;
+
+    color: #555;
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.music-control {
+    border: none;
+    background: transparent;
+
+    color: #111;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    padding: 3px;
+}
+
+.music-control:hover {
+    opacity: 0.5;
+}
+
+#track-artist {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+
+    color: #777;
+
+    margin-top: 1px;
+}
+
+/* =========================
+   VOLUME CONTROL
+   ========================= */
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.volume-icon {
+    font-size: 11px;
+}
+
+/* Volume slider */
+
+#volume-slider {
+    width: 60px;
+    height: 2px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: #999;
+
+    cursor: pointer;
+}
+
+/* Chrome / Edge / Safari */
+
+#volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    cursor: pointer;
+}
+
+/* Firefox */
+
+#volume-slider::-moz-range-thumb {
+    width: 8px;
+    height: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111;
+
+    cursor: pointer;
+}
+
+.volume-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: #111;
+}
+
+/* ========================================
+   DEVELOPMENT DESK
+   ======================================== */
+
+.development-desk {
+    margin-top: 35px;
+    margin-bottom: 45px;
+
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+}
+
+
+/* HEADER */
+
+.desk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #999;
+}
+
+.desk-header h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+.desk-header span {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* FOUR COLUMNS */
+
+.desk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* INDIVIDUAL COLUMN */
+
+.desk-item {
+    position: relative;
+
+    padding: 25px 24px 30px;
+}
+
+.desk-item:not(:last-child) {
+    border-right: 1px solid #aaa;
+}
+
+
+/* NUMBER */
+
+.desk-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+    line-height: 1;
+
+    color: #777;
+}
+
+
+/* CATEGORY */
+
+.desk-label {
+    margin: 0 0 8px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* TITLE */
+
+.desk-item h3 {
+    margin: 0 0 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+/* DESCRIPTION */
+
+.desk-item > p:last-child {
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    color: #444;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .desk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .desk-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .desk-item:nth-child(-n+2) {
+        border-bottom: 1px solid #aaa;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .desk-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .desk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .desk-item {
+        padding: 22px 0;
+        border-right: none !important;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .desk-item:last-child {
+        border-bottom: none;
+    }
+}
+
+.desk-status {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.desk-status span {
+    white-space: nowrap;
+}
+
+/* ========================================
+   DAY / NIGHT EDITION
+   ======================================== */
+
+body {
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+}
+
+
+/* ========================================
+   NIGHT MODE
+   ======================================== */
+
+body.night-mode {
+    background-color: #11110f;
+    color: #e8e4da;
+}
+
+
+/* Main text */
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode p,
+body.night-mode span,
+body.night-mode a {
+    color: #e8e4da;
+}
+
+
+/* ========================================
+   BORDERS
+   ======================================== */
+
+body.night-mode .newspaper-header,
+body.night-mode .dateline,
+body.night-mode .front-feature,
+body.night-mode .editorial-quote,
+body.night-mode .development-desk,
+body.night-mode .desk-header,
+body.night-mode .desk-item {
+    border-color: #777;
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+body.night-mode .resume-button,
+body.night-mode .article-button {
+    background: #e8e4da;
+    color: #11110f !important;
+}
+
+
+/* ========================================
+   THEME TOGGLE
+   ======================================== */
+
+.theme-toggle {
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #777;
+    background: transparent;
+
+    color: #111;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #111;
+    color: #f4f1e9;
+}
+
+
+/* Moon / Sun */
+
+.theme-icon {
+    display: inline-block;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+body.night-mode .theme-icon {
+    transform: rotate(360deg);
+}
+
+
+/* Night mode toggle */
+
+body.night-mode .theme-toggle {
+    border-color: #777;
+    color: #e8e4da;
+}
+
+body.night-mode .theme-toggle:hover {
+    background: #e8e4da;
+    color: #11110f;
+}
+
+body.night-mode .theme-toggle:hover .theme-icon {
+    color: #11110f;
+}
+
+
+/* ========================================
+   HEADER RIGHT
+   ======================================== */
+
+.header-right {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* ========================================
+   MUSIC PLAYER
+   ======================================== */
+
+body.night-mode .music-player {
+    background: #11110f;
+    border-color: #777;
+    color: #e8e4da;
+}
+
+body.night-mode .music-button {
+    border-color: #e8e4da;
+    color: #e8e4da;
+}
+
+body.night-mode .music-control {
+    color: #e8e4da;
+}
+
+body.night-mode .volume-icon svg {
+    fill: #e8e4da;
+}
+
+
+/* ========================================
+   DEVELOPMENT DESK
+   ======================================== */
+
+body.night-mode .desk-item > p:last-child {
+    color: #aaa69d;
+}
+
+
+/* ========================================
+   IMAGES
+   ======================================== */
+
+.feature-image img {
+    transition: filter 0.6s ease;
+}
+
+body.night-mode .feature-image img {
+    filter: grayscale(100%) brightness(0.65);
+}
+
+
+/* EW logo */
+
+.masthead-logo,
+.archive-logo {
+    transition: filter 0.6s ease;
+}
+
+body.night-mode .masthead-logo,
+body.night-mode .archive-logo {
+    filter: invert(1);
+}
+
+
+/* ========================================
+   ARCHIVE - NIGHT EDITION
+   ======================================== */
+
+body.night-mode .archive-page {
+    color: #e8e4da;
+}
+
+body.night-mode .archive-heading h1,
+body.night-mode .archive-heading p,
+body.night-mode .archive-article h2,
+body.night-mode .archive-article h2 a,
+body.night-mode .article-number,
+body.night-mode .archive-read a {
+    color: #e8e4da;
+}
+
+
+/* Secondary Archive text */
+
+body.night-mode .archive-description,
+body.night-mode .archive-meta,
+body.night-mode .archive-article-content > p:last-child {
+    color: #aaa69d;
+}
+
+
+/* Archive borders */
+
+body.night-mode .archive-heading,
+body.night-mode .article-list,
+body.night-mode .archive-article {
+    border-color: #777;
+}
+
+/* ========================================
+   SMOOTH DAY / NIGHT TRANSITION
+   ======================================== */
+
+body {
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+}
+
+/* Main structural elements */
+
+.newspaper-header,
+.newspaper-info,
+.front-feature,
+.editorial-quote,
+.development-desk,
+.desk-header,
+.desk-item,
+.archive-page,
+.archive-heading,
+.archive-article,
+.music-player,
+.theme-toggle {
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease,
+        border-color 0.6s ease;
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+p,
+span,
+a {
+    transition: color 0.6s ease;
+}
+
+/* Images */
+
+.feature-image img,
+.masthead-logo,
+.archive-logo {
+    transition:
+        filter 0.6s ease,
+        opacity 0.6s ease;
+}
+
+body {
+    transition:
+        background-color 1s ease,
+        color 1s ease;
+}
+
+.newspaper-header,
+.newspaper-info,
+.front-feature,
+.editorial-quote,
+.development-desk,
+.desk-header,
+.desk-item,
+.archive-page,
+.archive-heading,
+.archive-article,
+.music-player,
+.theme-toggle {
+    transition:
+        background-color 1s ease,
+        color 1s ease,
+        border-color 1s ease;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a {
+    transition: color 1s ease;
+}
+
+.feature-image img,
+.masthead-logo,
+.archive-logo {
+    transition:
+        filter 1s ease,
+        opacity 1s ease;
+}
+
+.theme-icon {
+    display: inline-block;
+
+    transition:
+        transform 1s ease,
+        color 0.5s ease;
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+
+/* Main footer */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding: 45px 0;
+}
+
+
+/* EW */
+
+.footer-logo {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+/* Brand description */
+
+.footer-brand p {
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+    line-height: 1.8;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* Footer columns */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+
+/* Small headings */
+
+.footer-label {
+    margin-bottom: 8px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+}
+
+
+/* Links */
+
+.footer-column a {
+    color: #eeee04;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bottom newspaper strip */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-top: 1px solid #777;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+}
+
+.footer-bottom a {
+    color: #272722;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+    width: 100%;
+    margin-top: 90px;
+
+    background-color: #30302d;
+    color: #e8e4da;
+
+    border-top: 1px solid #777;
+
+    box-sizing: border-box;
+}
+
+
+/* Keep footer content aligned with website */
+
+.footer-inner {
+    width: calc(100% - 120px);
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   MAIN FOOTER
+   ======================================== */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding: 38px 0 42px;
+}
+
+
+/* ========================================
+   FOOTER LOGO
+   ======================================== */
+
+.footer-logo-img {
+    display: block;
+
+    width: 110px;
+    height: auto;
+
+    margin-bottom: 16px;
+
+    filter: invert(1);
+
+    transition: filter 1s ease;
+}
+
+
+/* ========================================
+   BRAND TEXT
+   ======================================== */
+
+.footer-brand p {
+    margin: 0;
+
+    color: #e8e4da;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   FOOTER COLUMNS
+   ======================================== */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+
+/* Small headings */
+
+.footer-label {
+    margin-bottom: 8px;
+
+    color: #e8e4da;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+}
+
+
+/* Links */
+
+.footer-column a {
+    color: #e8e4da;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   FOOTER BOTTOM
+   ======================================== */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-top: 1px solid #777;
+
+    color: #e8e4da;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* ========================================
+   BACK TO TOP
+   ======================================== */
+
+.back-to-top {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #e8e4da;
+
+    text-decoration: none !important;
+}
+
+
+/* Do NOT underline entire link */
+
+.back-to-top:hover {
+    text-decoration: none !important;
+}
+
+
+/* Only underline BACK TO TOP */
+
+.back-to-top:hover .back-to-top-text {
+    text-decoration: underline;
+}
+
+
+/* Arrow */
+
+.top-arrow {
+    display: inline-block;
+
+    text-decoration: none !important;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Arrow moves upward */
+
+.back-to-top:hover .top-arrow {
+    transform: translateY(-3px);
+
+    text-decoration: none !important;
+}
+
+
+/* ========================================
+   SMOOTH SCROLL
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   NIGHT EDITION
+   ======================================== */
+
+.site-footer,
+.footer-main,
+.footer-bottom {
+    transition:
+        color 1s ease,
+        border-color 1s ease,
+        background-color 1s ease;
+}
+
+body.night-mode .site-footer {
+    color: #e8e4da;
+    border-color: #777;
+}
+
+body.night-mode .footer-bottom {
+    border-color: #777;
+}
+
+body.night-mode .footer-column a,
+body.night-mode .footer-bottom a {
+    color: #e8e4da;
+}
+
+
+/* ========================================
+   MOBILE FOOTER
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .footer-inner {
+        width: auto;
+
+        margin: 0 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 35px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .footer-logo-img {
+        width: 60px;
+    }
 
 }
 
-.logo{
+.site-footer {
+    width: 100%;
 
-    font-size:28px;
+    margin-top: 90px;
 
-    font-weight:700;
+    background: #22221f;
+    color: #e8e4da;
 
-    color:#38bdf8;
+    border-top: 1px solid #777;
+}
+
+.footer-inner {
+    width: calc(100% - 120px);
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding: 38px 0 42px;
+}
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-top: 1px solid #777;
+}
+
+/* ========================================
+   VOLUME SLIDER - NIGHT MODE
+   ======================================== */
+
+/* Chrome, Edge, Safari */
+body.night-mode #volume-slider::-webkit-slider-thumb {
+    background: #e8e4da;
+    border-color: #e8e4da;
+}
+
+/* Firefox */
+body.night-mode #volume-slider::-moz-range-thumb {
+    background: #e8e4da;
+    border-color: #e8e4da;
+}
+
+/* ========================================
+   PAGE SCROLL RAILS
+   ======================================== */
+
+/* ========================================
+   PAGE SCROLL RAILS
+   ======================================== */
+
+.page-rail {
+    position: fixed;
+    top: 150px;
+    bottom: 70px;
+
+    width: 1px;
+
+    background: #777;
+
+    z-index: 50;
+}
+
+.page-rail-left {
+    left: 35px;
+}
+
+
+/* End diamonds */
+
+.rail-end {
+    position: absolute;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    background: #f4f1e9;
+    border: 1px solid #11110f;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    pointer-events: none;
+}
+
+.rail-end-top {
+    top: -4px;
+}
+
+.rail-end-bottom {
+    bottom: -4px;
+}
+
+
+/* DRAGGABLE scroll marker */
+
+.rail-marker {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 6px;
+    height: 6px;
+
+    background: #f4f1e9;
+    border: 1px solid #11110f;
+
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    cursor: grab;
+
+    /* Gives the diamond a larger invisible grab area */
+    padding: 4px;
+
+    background-clip: content-box;
+
+    transition:
+        background-color 1s ease,
+        border-color 1s ease;
+}
+
+.rail-marker:hover {
+    width: 11px;
+    height: 11px;
+}
+
+.rail-marker.dragging {
+    cursor: grabbing;
+}
+
+
+/* Night edition */
+
+body.night-mode .page-rail {
+    background: #777;
+}
+
+body.night-mode .rail-end,
+body.night-mode .rail-marker {
+    background: #11110f;
+    border-color: #e8e4da;
+}
+
+
+/* Hide on smaller screens */
+
+@media (max-width: 1100px) {
+    .page-rail {
+        display: none;
+    }
+}
+
+body.night-mode .page-rail {
+    background: #777;
+}
+
+body.night-mode .rail-end,
+body.night-mode .rail-marker {
+    background: #11110f;
+    border-color: #e8e4da;
+}
+
+@media (max-width: 1100px) {
+    .page-rail {
+        display: none;
+    }
+}
+
+.page-rail-left {
+    left: 45px;
+}
+
+.site-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.site-url {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+}
+.wgu-banner {
+    position: absolute;
+
+    top: 10px;
+    left: 0;
+
+    width: 88px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 8px 5px;
+
+    box-sizing: border-box;
+
+    background: #f4f1e9;
+    border: 1px solid #11110f;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 6px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 72%,
+        50% 100%,
+        0 72%
+    );
+}
+
+/* ========================================
+   HEADER POSITIONING
+   ======================================== */
+
+.newspaper-header {
+    position: relative;
+}
+
+
+/* ========================================
+   WGU HANGING BANNER
+   ======================================== */
+
+.wgu-hanger {
+    position: absolute;
+
+    right: 0;
+    bottom: -40px;
+
+    width: 90px;
+    height: 40px;
+
+    z-index: 10;
+}
+
+
+/* Hanging strings */
+
+.wgu-hanger::before,
+.wgu-hanger::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 1px;
+    height: 10px;
+
+    background: #11110f;
+}
+
+.wgu-hanger::before {
+    left: 9px;
+}
+
+.wgu-hanger::after {
+    right: 9px;
+}
+
+
+/* Actual banner */
+
+.wgu-banner {
+    position: absolute;
+
+    top: 9px;
+    left: 0;
+
+    width: 90px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px 5px;
+
+    box-sizing: border-box;
+
+    background: #5f606d;
+    border: 1px solid #11110f;
+    color: #f4f1e9;
+    text-shadow: #e4e4e0;
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    -webkit-text-stroke: 0.15px currentColor;
+    white-space: nowrap;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 72%,
+        50% 100%,
+        0 72%
+    );
+}
+
+
+/* NIGHT MODE */
+
+body.night-mode .wgu-hanger::before,
+body.night-mode .wgu-hanger::after {
+    background: #777;
+}
+
+body.night-mode .wgu-banner {
+    background: #818286;
+    color: #0f0f0f;
+    border-color: #777;
+}
+
+/* ========================================
+   PORTFOLIO IMAGE FRAME + TOPO STRIP
+   ======================================== */
+
+.portfolio-feature-image {
+    position: relative;
+
+    height: 520px;
+
+    background: transparent;
+    border: 1px solid #777;
+
+    box-sizing: border-box;
+
+    /* Allows head to extend above the frame */
+    overflow: visible;
+}
+
+
+/* Inner frame line */
+
+.portfolio-feature-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 8px;
+
+    border: 1px solid #aaa;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* ========================================
+   TOPOGRAPHIC STRIP
+   ======================================== */
+
+.topo-strip {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    width: 298px;
+
+    background-image: url("../images/topo-pattern.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-position: center;
+
+    opacity: 0.45;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   PORTRAIT
+   ======================================== */
+
+.portfolio-feature-image img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 600px;
+    width: auto;
+    display: block;
+    z-index: 3;
+}
+
+/* ========================================
+   AUTO-SCROLLING PHOTO STRIP
+   ======================================== */
+
+.photo-marquee {
+    width: 100%;
+
+    margin: 45px 0 35px;
+
+    overflow: hidden;
+
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+
+    padding: 10px 0;
+}
+
+.photo-track {
+    display: flex;
+
+    width: max-content;
+
+    gap: 10px;
+
+    animation: photo-scroll 33s linear infinite;
+}
+
+.photo-track img {
+    flex: 0 0 auto;
+
+    width: 130px;
+    height: 125px;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: grayscale(100%);
+}
+
+/* Infinite movement */
+
+@keyframes photo-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 5px));
+    }
 
 }
 
-nav ul{
+.photo-marquee:hover .photo-track {
+    animation-play-state: paused;
+}
 
-    display:flex;
+body.night-mode .photo-marquee {
+    border-color: #777;
+}
 
-    list-style:none;
+body.night-mode .photo-track img {
+    filter: grayscale(100%) brightness(0.8);
+}
 
-    gap:35px;
+/* ========================================
+   TOPO STRIP - NIGHT MODE
+   ======================================== */
+
+.topo-strip {
+    transition:
+        filter 1s ease,
+        opacity 1s ease;
+}
+
+body.night-mode .topo-strip {
+    filter: invert(1) brightness(1.3);
+    opacity: 0.35;
+}
+
+/* ========================================
+   POSTAGE ARCHIVE PAGE
+   ======================================== */
+
+.stamp-gallery-page {
+    width: 80%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   PAGE HEADING
+   ======================================== */
+
+.stamp-gallery-heading {
+    text-align: center;
+
+    padding: 55px 0 65px;
+}
+
+.stamp-gallery-heading .masthead-logo {
+    display: block;
+
+    width: 62px;
+    height: auto;
+
+    margin: 0 auto 22px;
+}
+
+.gallery-kicker {
+    margin: 0 0 16px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+.stamp-gallery-heading h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(68px, 7vw, 105px);
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+}
+
+.gallery-intro {
+    max-width: 590px;
+
+    margin: 27px auto 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* ========================================
+   STAMP GRID
+   ======================================== */
+
+.stamp-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 45px 35px;
+
+    padding: 45px 0 90px;
+
+    border-top: 1px solid #777;
+}
+
+
+/* Individual stamps */
+
+.stamp-card {
+    appearance: none;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.stamp-card img {
+    display: block;
+
+    width: 135%;
+    height: auto;
+}
+
+
+/* Hover interaction */
+
+.stamp-card:hover {
+    transform:
+        translateY(-7px)
+        rotate(-0.7deg);
+}
+
+.stamp-card:nth-child(even):hover {
+    transform:
+        translateY(-7px)
+        rotate(0.7deg);
+}
+
+
+/* ========================================
+   MODAL BACKDROP
+   ======================================== */
+
+.stamp-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+
+    background: rgba(17, 17, 15, 0.84);
+
+    backdrop-filter: blur(6px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 10000;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.stamp-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   MODAL CONTENT
+   ======================================== */
+
+.stamp-modal-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* Close button */
+
+.stamp-modal-close {
+    position: absolute;
+
+    top: 28px;
+    right: 38px;
+
+    padding: 5px;
+
+    border: none;
+    background: transparent;
+
+    color: #f4f1e9;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 36px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   3D STAMP
+   ======================================== */
+
+.stamp-flipper {
+    position: relative;
+
+    width: min(720px, 80vw);
+
+    aspect-ratio: 1.42 / 1;
+
+    cursor: pointer;
+
+    perspective: 1600px;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.8s
+        cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+/* Flip state */
+
+.stamp-flipper.flipped {
+    transform: rotateY(180deg);
+}
+
+
+/* Both sides */
+
+.stamp-face {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform-style: preserve-3d;
+}
+
+
+/* Front */
+
+.stamp-front {
+    transform: rotateY(0deg);
+}
+
+
+/* Back */
+
+.stamp-back {
+    transform: rotateY(180deg);
+}
+
+
+/* Stamp image */
+
+.stamp-face img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 75vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Flip instruction */
+
+.stamp-flip-hint {
+    margin: 25px 0 0;
+
+    color: #f4f1e9;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+
+/* ========================================
+   NIGHT EDITION
+   ======================================== */
+
+body.night-mode .gallery-intro {
+    color: #aaa69d;
+}
+
+body.night-mode .stamp-grid {
+    border-color: #777;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 850px) {
+
+    .stamp-gallery-page {
+        width: calc(100% - 50px);
+    }
+
+    .stamp-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 30px 20px;
+    }
 
 }
 
-nav a{
 
-    color:white;
+@media (max-width: 550px) {
 
-    text-decoration:none;
+    .stamp-grid {
+        grid-template-columns: 1fr;
+    }
 
-    transition:.3s;
+    .stamp-modal {
+        padding: 25px;
+    }
 
-}
-
-nav a:hover{
-
-    color:#38bdf8;
-
-}
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:0 10%;
+    .stamp-modal-close {
+        top: 15px;
+        right: 18px;
+    }
 
 }
 
-.hero h1{
+/* PT PAGE LOGO ONLY */
 
-    font-size:64px;
+.pt-logo {
+    display: block;
 
-    margin-bottom:20px;
+    width: 610px;
+    height: auto;
 
+    margin: 0 auto 0px;
 }
 
-.hero h2{
+.pt-divider-perforated {
+    height: 1px;
 
-    color:#38bdf8;
+    margin: 30px 0 0;
 
-    margin-bottom:30px;
-
-    font-weight:500;
-
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            #777 0,
+            #777 5px,
+            transparent 5px,
+            transparent 10px
+        );
 }
 
-.hero p{
+.stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    max-width:700px;
+    column-gap: 38px;
+    row-gap: 0px;
 
-    line-height:1.8;
-
-    font-size:20px;
-
+    padding: 0px 0 20px;
 }
 
-.buttons{
+/* PT PAGE - REMOVE EXTRA SOLID DIVIDER */
 
-    margin-top:50px;
-
-    display:flex;
-
-    gap:20px;
-
+.stamp-gallery-page,
+.stamp-gallery-heading,
+.stamp-grid {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  transform: scale(0.95);
+  transform-origin: top right;
 }
 
-.buttons a{
-
-    background:#38bdf8;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:15px 35px;
-
-    border-radius:10px;
-
-    transition:.3s;
-
+.article-references {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid currentColor;
+  color: inherit;
+  font-family: "DM Sans", sans-serif;
 }
 
-.buttons a:hover{
-
-    transform:translateY(-5px);
-
+.article-references h2 {
+  margin: 0 0 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-.about{
-
-    background:#111827;
-
-    padding:120px 10%;
-
+.article-references ol {
+  margin: 0;
+  padding-left: 1.5rem;
 }
 
-.about-container{
-
-    max-width:1000px;
-
-    margin:auto;
-
+.article-references li {
+  padding-left: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.65;
 }
 
-.about h2{
-
-    font-size:42px;
-
-    color:#38bdf8;
-
-    margin-bottom:30px;
-
+.article-references li + li {
+  margin-top: 1.5rem;
 }
 
-.about p{
+.article-references li::marker {
+  font-size: 0.7rem;
+}
 
-    font-size:19px;
+.reference-author {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+}
 
-    line-height:1.9;
+.article-references a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
 
-    color:#d1d5db;
+.article-references a:hover {
+  text-decoration-thickness: 2px;
+}
 
-    margin-bottom:25px;
+.article-references a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
 
+.article-references a span {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.8em;
+}
+
+.article-references .reference-details {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+}
+
+.article-references .reference-note {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Comfortable reading width */
+.blog-article {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  counter-reset: blog-section;
+  color: inherit;
+}
+
+/* Editorial headline */
+.blog-article .article-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px double currentColor;
+}
+
+.blog-article .article-header h1 {
+  margin: 0.75rem 0 1.25rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  overflow-wrap: break-word;
+}
+
+/* Small newspaper category label */
+.blog-article .eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Article copy */
+.blog-article p {
+  margin: 0 0 1.4rem;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* Opening paragraph */
+.blog-article .article-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Traditional newspaper drop cap */
+.blog-article .article-intro::first-letter {
+  float: left;
+  margin: 0.08em 0.12em 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: 4.7em;
+  line-height: 0.8;
+}
+
+/* Numbered section headings */
+.blog-article h2:not(#references-title) {
+  counter-increment: blog-section;
+  margin: 3rem 0 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid currentColor;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.blog-article h2:not(#references-title)::before {
+  content: counter(blog-section, decimal-leading-zero) " /";
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
+/* Featured quotation */
+.blog-article .editorial-quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem clamp(1rem, 4vw, 2rem);
+  border-block: 3px double currentColor;
+  text-align: center;
+}
+
+.blog-article .editorial-quote p {
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.blog-article .editorial-quote cite {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+/* A small printer's ornament at the end */
+.blog-article .article-end {
+  margin: 2.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.5em;
+}
+
+.reference-marker {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.reference-marker a {
+  padding: 0.15em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.reference-marker a:hover {
+  text-decoration: underline;
+}
+
+.reference-marker a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
+.article-references li[id],
+.reference-marker a[id] {
+  scroll-margin-top: 6rem;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-article > .blog-heading {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.blog-article > .blog-heading > * {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.blog-article > .blog-heading > .blog-title {
+  display: block;
+  width: 100%;
+}
+
+.blog-article .blog-heading {
+  display: block;
+  text-align: center;
+}
+
+.blog-article .blog-heading .blog-title {
+  width: 100%;
+  margin: 0.75rem auto 1.25rem;
+  text-align: center;
+}
+
+.blog-article .blog-heading h1.blog-title {
+  width: 100%;
+  margin: 0.75rem 0 1.25rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(14px, 11.5vw, 110px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  text-align: center;
+  overflow-wrap: anywhere;
+    white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.blog-ranch-illustration {
+  display: block;
+  width: 20%;
+  max-width: 500px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.archive-bookplate {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.archive-bookplate img {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  transform: rotate(-4deg);
+}
+
+body.night-mode .archive-bookplate img {
+  filter: invert(1);
+}
+
+.blog-coding-illustration {
+  display: block;
+  width: 540px;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 1rem auto 1.5rem;
+}
+
+.development-desk .desk-item > p:not(.desk-label) {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.development-desk .desk-item .desk-view {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.development-desk .desk-view:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.development-desk .desk-view:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.blog-article .article-image-right {
+  float: right;
+  display: block;
+  width: 58%;
+  height: auto;
+  margin: 0.4rem 0 1.25rem 1.5rem;
+  padding: 0;
+}
+
+/* Keep the image within its section */
+.blog-article section {
+  display: flow-root;
+}
+
+/* Stack the image above the text on smaller screens */
+@media (max-width: 800px) {
+  .blog-article .article-image-right {
+    float: none;
+    width: min(100%, 300px);
+    margin: 1.5rem auto;
+  }
+}
+
+/* Image inside the article */
+.blog-article .article-image-trigger {
+  float: right;
+  width: 58%;
+  margin: 0.4rem 0 1.25rem 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.article-image-trigger img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+@media (hover: hover) {
+  .article-image-trigger:hover img {
+    transform: translateY(-3px) scale(1.015);
+    box-shadow: 0 8px 22px rgb(0 0 0 / 20%);
+  }
+}
+
+.article-image-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+.blog-article section {
+  display: flow-root;
+}
+
+/* Expanded image */
+.image-viewer {
+  width: fit-content;
+  max-width: 92vw;
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: #11110f;
+  box-shadow: 0 16px 60px rgb(0 0 0 / 35%);
+}
+
+.image-viewer::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+.image-viewer > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.image-viewer-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 70%);
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.image-viewer-close:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .blog-article .article-image-trigger {
+    float: none;
+    width: min(100%, 300px);
+    display: block;
+    margin: 1.5rem auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-image-trigger img {
+    transition: none;
+  }
+
+  .article-image-trigger:hover img {
+    transform: none;
+  }
+}
+
+.article-references ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-references li {
+  padding-left: 0;
+}
+
+.blog-article .blog-heading h1.blog-title {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.blog-article .article-code {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.blog-article code {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.blog-article p code {
+  padding: 0.1em 0.3em;
+  background: rgb(127 127 127 / 12%);
+  font-size: 0.9em;
+}
+
+.accessibility-menu {
+  position: relative;
+  justify-self: end;
+  text-align: left;
+  color: inherit;
+}
+
+.accessibility-menu summary {
+  padding: 0.5rem 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.accessibility-menu summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.accessibility-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  width: min(240px, 80vw);
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid currentColor;
+  background: #f4f1e8;
+  color: #11110f;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 12%);
+  font-family: "DM Sans", sans-serif;
+}
+
+.accessibility-panel p {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.accessibility-panel label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.accessibility-panel input {
+  width: 18px;
+  height: 18px;
+  accent-color: #11110f;
+}
+
+body.night-mode .accessibility-panel {
+  background: #11110f;
+  color: #e8e4da;
+}
+
+body.night-mode .accessibility-panel input {
+  accent-color: #e8e4da;
+}
+
+/* Increase reading text */
+body.larger-text main p,
+body.larger-text main li {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* User-selected motion preference */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Also respect the device's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.site-playlist {
+  margin-block: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid currentColor;
+}
+
+.site-playlist h2 {
+  margin: 0 0 0.75rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+}
+
+.site-playlist p {
+  margin: 0 0 1.25rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.spotify-player {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.article-music {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+}
+
+.article-music-info {
+  flex: 0 1 220px;
+  text-align: left;
+}
+
+.article-music-info span {
+  display: block;
+}
+
+.article-music-label {
+  margin-bottom: 0.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.article-music-title {
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.article-music-artist {
+  margin-top: 0.25rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.article-music-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.article-music-controls[hidden] {
+  display: none;
+}
+
+.article-music .music-progress {
+  flex: 1;
+  min-width: 50px;
+  height: 44px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.music-progress::-webkit-slider-runnable-track {
+  height: 1px;
+  background: currentColor;
+}
+
+.music-progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  margin-top: -4.5px;
+  border: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.music-progress::-moz-range-track {
+  height: 1px;
+  background: currentColor;
+}
+
+.music-progress::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.music-time {
+  white-space: nowrap;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.article-music button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.article-music .music-play {
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: transform 180ms ease;
+}
+
+.music-play:hover {
+  transform: scale(1.06);
+}
+
+.article-music .music-mute {
+  border: 0;
+}
+
+.music-mute[aria-pressed="true"] svg {
+  opacity: 0.4;
+}
+
+.article-music button:focus-visible,
+.article-music input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.music-status {
+  flex-basis: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.music-status:empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .article-music {
+    gap: 0.75rem;
+  }
+
+  .article-music-info,
+  .article-music-controls {
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-music .music-play {
+    transition: none;
+  }
+
+  .music-play:hover {
+    transform: none;
+  }
+}
+
+
+.music-volume {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+}
+
+.music-volume input {
+  width: 70px;
+  height: 44px;
+  margin: 0;
+  accent-color: currentColor;
+  cursor: pointer;
+}
+
+/* Give volume its own row on smaller screens */
+@media (max-width: 600px) {
+  .article-music-controls {
+    flex-wrap: wrap;
+  }
+
+  .music-volume {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.article-music {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+}
+
+.article-music-info {
+  flex: 0 1 190px;
+  min-width: 0;
+  text-align: left;
+}
+
+.article-music-info span {
+  display: block;
+}
+
+.article-music-label {
+  margin-bottom: 0.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.article-music-title {
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.article-music-artist {
+  margin-top: 0.25rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.article-music-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.article-music-controls[hidden] {
+  display: none;
+}
+
+.article-music input[type="range"] {
+  height: 44px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.article-music .music-progress {
+  flex: 1;
+  min-width: 50px;
+  width: 100%;
+}
+
+.article-music input[type="range"]::-webkit-slider-runnable-track {
+  height: 1px;
+  background: currentColor;
+}
+
+.article-music input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  margin-top: -4.5px;
+  border: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.article-music input[type="range"]::-moz-range-track {
+  height: 1px;
+  background: currentColor;
+}
+
+.article-music input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.article-music input:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.music-time {
+  white-space: nowrap;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.article-music .music-play {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.music-play:hover {
+  transform: scale(1.06);
+}
+
+.music-volume {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+}
+
+.article-music .music-volume input {
+  width: 65px;
+}
+
+.article-music button:focus-visible,
+.article-music input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.music-status {
+  flex-basis: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.music-status:empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .article-music {
+    gap: 0.75rem;
+  }
+
+  .article-music-info,
+  .article-music-controls {
+    flex-basis: 100%;
+  }
+
+  .article-music-controls {
+    flex-wrap: wrap;
+  }
+
+  .music-volume {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-music .music-play {
+    transition: none;
+  }
+
+  .music-play:hover {
+    transform: none;
+  }
+}
+
+.blog-article .article-music {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f4f1e8;
+}
+
+body.night-mode .blog-article .article-music {
+  background: #11110f;
+}
+
+.blog-article .article-music {
+  background: rgba(244, 241, 232, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+body.night-mode .blog-article .article-music {
+  background: rgba(17, 17, 15, 0.7);
+}
+
+/* THE READING ROOM */
+
+.reading-room-page {
+  --room-paper: #f4f1e8;
+  --room-ink: #25251f;
+
+  margin: 0;
+  background: var(--room-paper);
+  color: var(--room-ink);
+}
+
+body.night-mode.reading-room-page {
+  --room-paper: #11110f;
+  --room-ink: #e8e4da;
+}
+
+.reading-room {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 4rem clamp(1rem, 5vw, 3rem);
+}
+
+.reading-room-heading {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.reading-room-back,
+.reading-room-label,
+.shelf-label,
+.reading-room-instruction,
+.reading-room-footer {
+  font-family: "DM Sans", sans-serif;
+}
+
+.reading-room-back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.reading-room-back:hover {
+  text-decoration: underline;
+}
+
+.reading-room-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.reading-room-heading h1 {
+  margin: 1rem 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.reading-room-description {
+  max-width: 460px;
+  margin-inline: auto;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.reading-room-instruction {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.shelf-label {
+  margin-bottom: 2rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
+/* Each wrapping row becomes another shelf. */
+
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 2.5rem 10px;
+  padding: 0 14px 18px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 300px,
+      var(--room-ink) 300px,
+      var(--room-ink) 302px,
+      transparent 302px
+    );
+
+  background-size: 100% 340px;
+}
+
+/* Book spines */
+
+.shelf-book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  flex: 0 0 78px;
+  height: 300px;
+  padding: 18px 10px;
+
+  border: 1px solid rgb(0 0 0 / 20%);
+  border-radius: 3px 5px 2px 2px;
+
+  background: var(--book-color);
+  color: var(--book-ink, #f8f3e8);
+
+  box-shadow:
+    inset 5px 0 8px rgb(255 255 255 / 8%),
+    inset -5px 0 8px rgb(0 0 0 / 15%),
+    3px 3px 5px rgb(0 0 0 / 12%);
+
+  cursor: pointer;
+
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.shelf-book::before,
+.shelf-book::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+.shelf-book::before {
+  top: 12px;
+}
+
+.shelf-book::after {
+  bottom: 12px;
+}
+
+.book-spine-title {
+  writing-mode: vertical-rl;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.book-spine-author {
+  writing-mode: vertical-rl;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+}
+
+.book-clay {
+  --book-color: #865548;
+}
+
+.book-olive {
+  --book-color: #58604d;
+}
+
+.book-charcoal {
+  --book-color: #333734;
+}
+
+.book-sand {
+  --book-color: #c5b594;
+  --book-ink: #302c24;
+}
+
+.shelf-book:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 5px 12px 18px rgb(0 0 0 / 20%);
+}
+
+.shelf-book:focus-visible {
+  outline: 2px solid var(--room-ink);
+  outline-offset: 5px;
+}
+
+.reading-room-footer {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Expanded book details */
+
+.book-dialog {
+  box-sizing: border-box;
+  width: min(600px, calc(100% - 2rem));
+  max-height: 85vh;
+  padding: 0;
+  overflow-y: auto;
+
+  border: 1px solid var(--room-ink);
+  background: var(--room-paper);
+  color: var(--room-ink);
+
+  box-shadow: 0 25px 80px rgb(0 0 0 / 25%);
+}
+
+.book-dialog[open] {
+  animation: book-open 220ms ease-out;
+}
+
+.book-dialog::backdrop {
+  background: rgb(0 0 0 / 45%);
+  backdrop-filter: blur(4px);
+}
+
+.book-dialog-content {
+  position: relative;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.book-close-form {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.book-close {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.book-close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.book-dialog h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.book-dialog-author {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+}
+
+.book-dialog-divider {
+  margin: 2rem 0;
+  border-top: 3px double currentColor;
+}
+
+.book-dialog h3 {
+  margin-top: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.book-dialog h3 + p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+@keyframes book-open {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shelf-book,
+  .book-dialog[open] {
+    animation: none;
+    transition: none;
+  }
+
+  .shelf-book:hover {
+    transform: none;
+  }
+}
+
+html.reduce-motion .shelf-book,
+html.reduce-motion .book-dialog[open] {
+  animation: none;
+  transition: none;
+}
+
+html.reduce-motion .shelf-book:hover {
+  transform: none;
+}
+
+/* Default size for photographed books */
+.shelf-book.book-photo {
+  flex: 0 0 auto;
+  width: var(--book-width, 78px);
+  height: var(--book-height, 300px);
+}
+
+/* Fill the spine without stretching the photograph */
+.shelf-book.book-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Individual book sizes */
+.atomic-habits {
+  --book-width: 65px;
+  --book-height: 280px;
+}
+
+.second-lean {
+  --book-width: 50px;
+  --book-height: 260px;
+}
+
+.hegel {
+  --book-width: 90px;
+  --book-height: 300px;
+}
+
+.principles {
+  --book-width: 85px;
+  --book-height: 290px;
+}
+
+/* Shared settings, with individual overrides below */
+.shelf-book {
+  flex: 0 0 var(--book-width, 78px);
+  width: var(--book-width, 78px);
+  height: var(--book-height, 300px);
+  box-sizing: border-box;
+
+  background: var(--book-color, #333734);
+  color: var(--book-ink, #f8f3e8);
+}
+
+.shelf-book .book-spine-title {
+  font-family: var(--title-font, "Playfair Display", serif);
+  font-size: var(--title-size, 1.15rem);
+  font-weight: var(--title-weight, 400);
+}
+
+.shelf-book .book-spine-author {
+  font-family: var(--author-font, "DM Sans", sans-serif);
+  font-size: var(--author-size, 0.55rem);
+}
+
+/* ATOMIC HABITS */
+.book-atomic {
+  --book-width: 70px;
+  --book-height: 280px;
+  --book-color: #e8dfca;
+  --book-ink: #967d4b;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1.2rem;
+  --title-weight: 600;
+}
+
+/* 2 SECOND LEAN */
+.book-lean {
+  --book-width: 30px;
+  --book-height: 260px;
+  --book-color: #b1af96;
+  --book-ink: #f8f3e8;
+  --title-size: 1.1rem;
+}
+
+/* PHENOMENOLOGY OF SPIRIT */
+.book-hegel {
+  --book-width: 90px;
+  --book-height: 300px;
+  --book-color: #e2dd94;
+  --book-ink: #405a44;
+  --title-size: 1rem;
+}
+
+/* PRINCIPLES */
+.book-principles {
+  --book-width: 85px;
+  --book-height: 290px;
+  --book-color: #865548;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1.3rem;
+  --title-weight: 600;
+}
+
+.bookshelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  align-items: end;
+  gap: 30px 0;
+  padding: 0;
+  background: none;
+}
+
+.bookshelf .shelf-book {
+  justify-self: center;
+  margin-bottom: 12px;
+}
+
+/* Shelf beneath each book; neighboring lines join together */
+.bookshelf .shelf-book::after {
+  left: 50%;
+  right: auto;
+  bottom: -14px;
+  width: 140px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: var(--room-ink);
+  opacity: 1;
+}
+
+/* Keep the shelf stationary during hover */
+.bookshelf .shelf-book:hover {
+  transform: none;
+  box-shadow: 5px 8px 18px rgb(0 0 0 / 20%);
+}
+
+/* Individual examples */
+.book-atomic-habits {
+  --book-width: 75px;
+  --book-height: 300px;
+  --book-color: #e8dfca;
+  --book-ink: #302c24;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1.3rem;
+  --title-weight: 600;
+}
+
+.book-principles {
+  --book-width: 85px;
+  --book-height: 300px;
+  --book-color: #292b29;
+  --book-ink: #f4f1e8;
+  --title-size: 1.2;
+}
+
+.book-nineteen-eighty-four {
+  --book-width: 65px;
+  --book-height: 275px;
+  --book-color: #222222;
+  --book-ink: #ffffff;
+  --title-size: 1.8rem;
+}
+
+.book-tiger-in-the-well {
+  --book-width: 74px;
+  --book-height: 255px;
+  --book-color: #c99944;
+  --book-ink: #382719;
+}
+
+.book-being-and-time {
+  --book-width: 80px;
+  --book-height: 300px;
+  --book-color: #a17738;
+  --book-ink: #20204b;
+  --title-font: "Times New Roman", sans-serif;
+  --title-size: 1.3rem;
+  --title-weight: 900;
+}
+.book-storyteller {
+  --book-width: 55px;
+  --book-height: 300px;
+  --book-color: #26233b;
+  --book-ink: #c9c9c9;
+  --title-font: "Times New Roman", sans-serif;
+  --title-size: 1.2rem;
+  --title-weight: 900;
+}
+.book-ocarina-of-time {
+  --book-width: 60px;
+  --book-height: 300px;
+  --book-color: #064e12;
+  --book-ink: #948a05;
+  --title-font: "Times New Roman", sans-serif;
+  --title-size: 1.1rem;
+  --title-weight: 900;
+}
+.book-thunder-mountain {
+  --book-width: 59px;
+  --book-height: 280px;
+  --book-color: #a9af8f;
+  --book-ink: #ac0c0c;
+  --title-font: "Times New Roman", sans-serif;
+  --title-size: 0.9rem;
+  --title-weight: 900;
+}
+
+.bookshelf .shelf-book {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.bookshelf .shelf-book:hover,
+.bookshelf .shelf-book:focus-visible {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 5px 12px 18px rgb(0 0 0 / 20%);
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .bookshelf .shelf-book {
+    transition: none;
+  }
+
+  .bookshelf .shelf-book:hover,
+  .bookshelf .shelf-book:focus-visible {
+    transform: none;
+  }
+}
+
+html.reduce-motion .bookshelf .shelf-book {
+  transition: none;
+}
+
+html.reduce-motion .bookshelf .shelf-book:hover,
+html.reduce-motion .bookshelf .shelf-book:focus-visible {
+  transform: none;
+}
+
+/* Stationary shelf */
+.bookshelf .book-slot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--room-ink);
+}
+
+/* Remove the shelf line attached to the book */
+.bookshelf .shelf-book::after {
+  content: none;
+}
+
+.bookshelf .shelf-book {
+  margin-bottom: 0;
+}
+.bookshelf {
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  column-gap: 0;
+  row-gap: 10px;
+}
+
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  column-gap: 0;
+  row-gap: 30px;
+
+  padding: 0;
+  background: none;
+}
+
+/* Each slot fits its own book */
+.bookshelf .book-slot {
+  display: flex;
+  flex: 0 0 auto;
+  width: auto;
+
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  padding: 0 0 12px;
+  margin: 0;
+  border-bottom: 2px solid var(--room-ink);
+}
+
+.bookshelf .book-slot > .shelf-book {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+/* Keep the shelf separate from the animated book */
+.bookshelf .shelf-book::after {
+  content: none;
+}
+
+.book-fly-fishing {
+  --book-width: 35px;
+  --book-height: 260px;
+  --book-color: #753125;
+  --book-ink: #8b8744;
+  --title-font: "DM Sans";
+  --title-size: 0.7rem;
+  --title-weight: 900;
+}
+
+.book-exactly-what-to-say-first {
+  --book-width: 22px;
+  --book-height: 250px;
+  --book-color: #c7520f;
+  --book-ink: #1d1d1b;
+  --title-font: "DM Sans";
+  --title-size: 0.7rem;
+  --title-weight: 900;
+}
+
+.book-mysterious-stranger {
+  --book-width: 12px;
+  --book-height: 300px;
+  --book-color: #2c2927;
+  --book-ink: #8d8c8c;
+  --title-font: "DM Sans";
+  --title-size: 0.7rem;
+  --title-weight: 900;
+}
+.book-second-lean {
+  --book-width: 34px;
+  --book-height: 300px;
+  --book-color: #d6cfcf;
+  --book-ink: #383636;
+  --title-font: "DM Sans";
+  --title-size: 0.9rem;
+  --title-weight: 900;
+}
+
+.book-twelve-rules {
+  --book-width: 74px;
+  --book-height: 300px;
+  --book-color: #d6cfcf;
+  --book-ink: #9b953f;
+  --title-font: "DM Sans";
+  --title-size: 1.2rem;
+  --font-weight: 900;
+}
+.book-beyond-order {
+  --book-width: 74px;
+  --book-height: 300px;
+  --book-color: #2b2a2a;
+  --book-ink: #9b953f;
+  --title-font: "DM Sans";
+  --title-size: 1.2rem;
+  --font-weight: 900;
+}
+
+.book-unscaled {
+  --book-width: 44px;
+  --book-height: 300px;
+  --book-color: #dee758;
+  --book-ink: #141413;
+  --title-font: "DM Sans";
+  --title-size: 1.4rem;
+  --font-weight: 900;
+}
+.book-never-split{
+  --book-width: 44px;
+  --book-height: 300px;
+  --book-color: #d8ab4a;
+  --book-ink: #141413;
+  --title-font: "DM Sans";
+  --title-size: 1.1rem;
+  --font-weight: 900;
+}
+
+/* REDWALL — shared collection styling */
+.shelf-book[data-book^="redwall-"] {
+  --book-height: 280px;
+  --book-ink: #f5e7c6;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1.05rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+/* Illustrative colors and thicknesses */
+
+.book-redwall {
+  --book-width: 52px;
+  --book-color: #803b32;
+}
+
+.book-mossflower {
+  --book-width: 68px;
+  --book-color: #465b3b;
+}
+
+.book-mattimeo {
+  --book-width: 79px;
+  --book-color: #745037;
+}
+
+.book-mariel {
+  --book-width: 45px;
+  --book-color: #345c68;
+}
+
+.book-salamandastron {
+  --book-width: 65px;
+  --book-color: #86542f;
+}
+
+.book-martin-warrior {
+  --book-width: 65px;
+  --book-color: #723b42;
+}
+
+.book-bellmaker {
+  --book-width: 58px;
+  --book-color: #6a5931;
+}
+
+.book-outcast {
+  --book-width: 64px;
+  --book-color: #514951;
+}
+
+.book-pearls-lutra {
+  --book-width: 69px;
+  --book-color: #365f5d;
+}
+
+.book-long-patrol {
+  --book-width: 62px;
+  --book-color: #5b633e;
+}
+
+.book-marlfox {
+  --book-width: 63px;
+  --book-color: #65506d;
+}
+
+.book-legend-luke {
+  --book-width: 64px;
+  --book-color: #37526c;
+}
+
+.book-lord-brocktree {
+  --book-width: 65px;
+  --book-color: #654b3e;
+}
+
+.book-taggerung {
+  --book-width: 72px;
+  --book-color: #79502f;
+}
+
+.book-triss {
+  --book-width: 66px;
+  --book-color: #42604c;
+}
+
+.book-loamhedge {
+  --book-width: 68px;
+  --book-color: #766548;
+}
+
+.book-rakkety-tam {
+  --book-width: 65px;
+  --book-color: #823e35;
+}
+
+.book-high-rhulain {
+  --book-width: 61px;
+  --book-color: #376772;
+}
+
+.book-eulalia {
+  --book-width: 65px;
+  --book-color: #6b693c;
+}
+
+.book-doomwyte {
+  --book-width: 65px;
+  --book-color: #484357;
+}
+
+.book-sable-quean {
+  --book-width: 66px;
+  --book-color: #573840;
+}
+
+.book-rogue-crew {
+  --book-width: 65px;
+  --book-color: #3b5559;
+}
+
+.book-daily-edge{
+  --book-width: 34px;
+  --book-height: 300px;
+  --book-color: #333333;
+  --book-ink: #838383;
+  --title-font: "DM Sans";
+  --title-size: 1.1rem;
+  --font-weight: 900;
+}
+
+.book-2024{
+  --book-width: 34px;
+  --book-height: 295px;
+  --book-color: #888888;
+  --book-ink: #da4bc7;
+  --title-font: "DM Sans";
+  --title-size: 1.5rem;
+  --title-weight: 500;
+}
+
+.book-five-dysfunctions{
+  --book-width: 41px;
+  --book-height: 300px;
+  --book-color: #1d1d1d;
+  --book-ink: #a1a1a1;
+  --title-font: "DM Sans";
+  --title-size: 1.1rem;
+  --title-weight: 500;
+}
+
+.book-managing-yourself{
+  --book-width: 34px;
+  --book-height: 295px;
+  --book-color: #a10606;
+  --book-ink: #a1a1a1;
+  --title-font: "DM Sans";
+  --title-size: 0.85rem;
+  --title-weight: 30;
+}
+
+.book-carved-in-stone{
+  --book-width: 39px;
+  --book-height: 300px;
+  --book-color: #493c16;
+  --book-ink: #968a24;
+  --title-font: "DM Sans";
+  --title-size: 0.75rem;
+  --title-weight: 70;
+}
+
+.book-tuesdays-with-morrie{
+  --book-width: 48px;
+  --book-height: 270px;
+  --book-color: #665644;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans";
+  --title-size: 0.75rem;
+  --title-weight: 70;
+}
+
+.book-last-lecture{
+  --book-width: 48px;
+  --book-height: 270px;
+  --book-color: #222350;
+  --book-ink: #a8a639;
+  --title-font: "DM Sans";
+  --title-size: 0.95rem;
+  --title-weight: 70;
+}
+
+.book-outsider{
+  --book-width: 42px;
+  --book-height: 250px;
+  --book-color: #c9c9c9;
+  --book-ink: #57201d;
+  --title-font: "DM Sans";
+  --title-size: 0.95rem;
+  --title-weight: 70;
+}
+
+.book-win-friends{
+  --book-width: 40px;
+  --book-height: 285px;
+  --book-color: #8f0303;
+  --book-ink: #b3b3b3;
+  --title-font: "DM Sans";
+  --title-size: 0.95rem;
+  --title-weight: 70;
+}
+
+.book-wilderness-essays{
+  --book-width: 39px;
+  --book-height: 300px;
+  --book-color: #cabd91;
+  --book-ink: #181817;
+  --title-font: "DM Sans";
+  --title-size: 0.99rem;
+  --title-weight: 70;
+}
+
+.book-all-creatures{
+  --book-width: 62px;
+  --book-height: 255px;
+  --book-color: #1a1b4e;
+  --book-ink: #cfcdcd;
+  --title-font: "DM Sans";
+  --title-size: 0.45rem;
+  --title-weight: 70;
+}
+
+.bookshelf-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+}
+
+#reset-books {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+#reset-books:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#reset-books:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.bookshelf {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Let a moved book appear above neighboring slots. */
+.bookshelf .book-slot {
+  overflow: visible;
+}
+
+.bookshelf .shelf-book {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+
+.bookshelf .shelf-book.book-loose {
+  transition: none;
+}
+
+.bookshelf .shelf-book.book-dragging {
+  cursor: grabbing;
+  box-shadow: 8px 16px 24px rgb(0 0 0 / 25%);
+}
+
+.bookshelf-status {
+  flex-basis: 100%;
+}
+
+.bookshelf-status:empty {
+  display: none;
+}
+
+/* Allow books to move beyond the bookshelf */
+.bookshelf {
+  overflow: visible;
+  isolation: auto;
+}
+
+.bookshelf .book-slot {
+  overflow: visible;
+}
+
+.bookshelf .shelf-book.physics-book {
+  position: relative;
+  transition: none;
+  will-change: transform;
+}
+
+.bookshelf .shelf-book.physics-book:hover {
+  /* JavaScript controls the transform during physics. */
+  box-shadow: 6px 10px 18px rgb(0 0 0 / 20%);
+}
+
+.bookshelf .shelf-book.book-dragging {
+  cursor: grabbing;
+}
+
+/* Keep reset above scattered books */
+.bookshelf-tools {
+  position: relative;
+  z-index: 10000;
+}
+
+.bookshelf {
+  position: relative;
+  overflow: visible;
+  isolation: auto;
+}
+
+.bookshelf .book-slot {
+  overflow: visible;
+}
+
+.bookshelf .shelf-book {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+
+.bookshelf .shelf-book.physics-book {
+  position: relative;
+  transform-origin: center;
+  transition: none;
+  will-change: transform;
+}
+
+.bookshelf .shelf-book.book-dragging {
+  cursor: grabbing;
+  box-shadow: 8px 16px 24px rgb(0 0 0 / 25%);
+}
+
+.bookshelf-tools {
+  position: relative;
+  z-index: 10000;
+}
+
+/* Shared settings for these new books */
+.shelf-book.new-library-book {
+  padding-inline: 4px;
+}
+
+.shelf-book.new-library-book .book-spine-title {
+  font-family: var(--title-font, "Playfair Display", serif);
+  font-size: var(--title-size, 0.9rem);
+  font-weight: var(--title-weight, 500);
+}
+
+.shelf-book.new-library-book .book-spine-author {
+  font-size: var(--author-size, 0.4rem);
+  letter-spacing: 0.04em;
+}
+
+/* Individual spine colors and estimated proportions */
+
+.book-cowboy-poetry {
+  --book-width: 28px;
+  --book-height: 235px;
+  --book-color: #e0c6a9;
+  --book-ink: #78392d;
+  --title-size: 0.75rem;
+}
+
+.book-courage-disliked {
+  --book-width: 36px;
+  --book-height: 300px;
+  --book-color: #dedacb;
+  --book-ink: #303544;
+  --author-size: 0.32rem;
+}
+
+.book-dazai-collection {
+  --book-width: 43px;
+  --book-height: 280px;
+  --book-color: #6c85ae;
+  --book-ink: #edf0f7;
+  --title-size: 0.8rem;
+}
+
+.book-alchemist {
+  --book-width: 29px;
+  --book-height: 300px;
+  --book-color: #a94e2c;
+  --book-ink: #241b16;
+}
+
+.book-ikigai {
+  --book-width: 39px;
+  --book-height: 260px;
+  --book-color: #bad7d6;
+  --book-ink: #202b2b;
+  --title-size: 1.2rem;
+  --author-size: 0.32rem;
+}
+
+.book-kokoro {
+  --book-width: 35px;
+  --book-height: 290px;
+  --book-color: #d9d5ae;
+  --book-ink: #242f2b;
+  --title-size: 1.05rem;
+}
+
+.book-unidentified-white {
+  --book-width: 34px;
+  --book-height: 330px;
+  --book-color: #eee9de;
+  --book-ink: #262626;
+}
+
+.book-wallflower {
+  --book-width: 42px;
+  --book-height: 315px;
+  --book-color: #deded2;
+  --book-ink: #544161;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.8rem;
+}
+
+.book-hunter {
+  --book-width: 49px;
+  --book-height: 300px;
+  --book-color: #d58b20;
+  --book-ink: #f7ebcb;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1.15rem;
+  --title-weight: 600;
+}
+
+.book-wild-snail {
+  --book-width: 29px;
+  --book-height: 250px;
+  --book-color: #e4e5d7;
+  --book-ink: #4b4b35;
+  --title-size: 0.65rem;
+}
+
+.book-meditations {
+  --book-width: 32px;
+  --book-height: 285px;
+  --book-color: #a9322c;
+  --book-ink: #f1e4c9;
+}
+
+.book-best-2018 {
+  --book-width: 30px;
+  --book-height: 320px;
+  --book-color: #eeece3;
+  --book-ink: #393b35;
+}
+
+.book-best-2020 {
+  --book-width: 18px;
+  --book-height: 320px;
+  --book-color: #e2dfd4;
+  --book-ink: #393b35;
+  --title-size: 0.7rem;
+}
+
+.book-best-2022 {
+  --book-width: 18px;
+  --book-height: 320px;
+  --book-color: #eeece3;
+  --book-ink: #393b35;
+  --title-size: 0.7rem;
+}
+
+.book-sun-valley-guide {
+  --book-width: 34px;
+  --book-height: 320px;
+  --book-color: #674534;
+  --book-ink: #f6f0df;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.85rem;
+}
+
+.book-mammals-guide,
+.book-wildflowers-guide,
+.book-birds-guide {
+  --book-width: 24px;
+  --book-height: 245px;
+  --book-color: #eed344;
+  --book-ink: #242820;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.65rem;
+  --author-size: 0.3rem;
+}
+
+.book-john-wayne-grit {
+  --book-width: 36px;
+  --book-height: 230px;
+  --book-color: #492928;
+  --book-ink: #f0d798;
+}
+
+.book-notes-underground {
+  --book-width: 73px;
+  --book-height: 270px;
+  --book-color: #625248;
+  --book-ink: #d0bea0;
+}
+
+.book-house-dead {
+  --book-width: 54px;
+  --book-height: 270px;
+  --book-color: #83948c;
+  --book-ink: #27372c;
+  --title-size: 0.7rem;
+}
+
+.book-idiot {
+  --book-width: 67px;
+  --book-height: 270px;
+  --book-color: #34434b;
+  --book-ink: #bec3bd;
+}
+
+.book-karamazov {
+  --book-width: 98px;
+  --book-height: 270px;
+  --book-color: #835456;
+  --book-ink: #251b1b;
+}
+
+.book-crime-punishment {
+  --book-width: 69px;
+  --book-height: 270px;
+  --book-color: #aa6d5b;
+  --book-ink: #34211e;
+}
+
+.book-devils {
+  --book-width: 77px;
+  --book-height: 270px;
+  --book-color: #a67a5d;
+  --book-ink: #30231d;
+}
+
+.book-music-festival-2026 {
+  --book-width: 22px;
+  --book-height: 310px;
+  --book-color: #516c9f;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.6rem;
+}
+
+.book-subconscious {
+  --book-width: 37px;
+  --book-height: 335px;
+  --book-color: #171a18;
+  --book-ink: #e6e4dc;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.75rem;
+}
+
+.book-hells-canyon {
+  --book-width: 34px;
+  --book-height: 310px;
+  --book-color: #966343;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.75rem;
+  --author-size: 0.32rem;
+}
+
+.book-greater-boise {
+  --book-width: 40px;
+  --book-height: 310px;
+  --book-color: #615038;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.85rem;
+}
+
+/* VINTAGE BOOKS */
+
+.book-denizens-desert {
+  --book-width: 75px;
+  --book-height: 315px;
+  --book-color: #aaa080;
+  --book-ink: #494637;
+  --title-size: 1rem;
+  --title-weight: 500;
+  --author-size: 0.55rem;
+}
+
+.book-enemy-king {
+  --book-width: 48px;
+  --book-height: 280px;
+  --book-color: #976653;
+  --book-ink: #34382c;
+  --title-size: 0.9rem;
+  --author-size: 0.4rem;
+}
+
+.book-riverside-drive {
+  --book-width: 85px;
+  --book-height: 315px;
+  --book-color: #b8645d;
+  --book-ink: #443c37;
+  --title-size: 1.1rem;
+  --author-size: 0.55rem;
+}
+
+.book-black-majesty {
+  --book-width: 55px;
+  --book-height: 315px;
+  --book-color: #303943;
+  --book-ink: #d4bd83;
+  --title-size: 1rem;
+  --author-size: 0.45rem;
+}
+
+/* Subtle cloth texture on all seven books */
+.shelf-book:is(
+  .book-denizens-desert,
+  .book-enemy-king,
+  .book-riverside-drive,
+  .book-black-majesty,
+  .book-cousin-bette,
+  .book-eugenie-grandet,
+  .book-old-goriot
+) {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgb(255 255 255 / 3%) 0 1px,
+      transparent 1px 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(0 0 0 / 4%) 0 1px,
+      transparent 1px 3px
+    );
+}
+
+/* Matching burgundy Balzac editions */
+.book-cousin-bette,
+.book-eugenie-grandet,
+.book-old-goriot {
+  --book-color: #763f50;
+  --book-ink: #e0d5b5;
+  --title-size: 0.95rem;
+  --author-size: 0.5rem;
+
+  /* Dark label with narrow gold edges */
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 24%,
+      #b6a77a 24%,
+      #b6a77a 25%,
+      #252d38 25%,
+      #252d38 66%,
+      #b6a77a 66%,
+      #b6a77a 67%,
+      transparent 67%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(255 255 255 / 4%) 0 1px,
+      transparent 1px 3px
+    );
+}
+
+.book-cousin-bette {
+  --book-width: 66px;
+  --book-height: 300px;
+}
+
+.book-eugenie-grandet {
+  --book-width: 48px;
+  --book-height: 300px;
+}
+
+.book-old-goriot {
+  --book-width: 51px;
+  --book-height: 290px;
+}
+
+/* Put Balzac lettering within the dark label */
+.shelf-book:is(
+  .book-cousin-bette,
+  .book-eugenie-grandet,
+  .book-old-goriot
+) {
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.shelf-book:is(
+  .book-cousin-bette,
+  .book-eugenie-grandet,
+  .book-old-goriot
+) .book-spine-title {
+  writing-mode: horizontal-tb;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.shelf-book:is(
+  .book-cousin-bette,
+  .book-eugenie-grandet,
+  .book-old-goriot
+) .book-spine-author {
+  writing-mode: horizontal-tb;
+  order: -1;
+  text-align: center;
+  font-size: 0.45rem;
+  line-height: 1.6;
+}
+
+.book-pivot-year {
+  --book-width: 60px;
+  --book-height: 275px;
+  --book-color: #eee9dd;
+  --book-ink: #34332f;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1rem;
+  --title-weight: 500;
+}
+
+.book-mastery {
+  --book-width: 78px;
+  --book-height: 300px;
+  --book-color: #20201e;
+  --book-ink: #d6b65b;
+  --title-size: 1.3rem;
+  --title-weight: 600;
+}
+
+.book-cattle-kingdom {
+  --book-width: 70px;
+  --book-height: 300px;
+  --book-color: #b59568;
+  --book-ink: #332820;
+  --title-size: 1.15rem;
+  --author-size: 0.45rem;
+}
+
+.book-seven-habits {
+  --book-width: 72px;
+  --book-height: 295px;
+  --book-color: #eee8dc;
+  --book-ink: #803632;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.8rem;
+  --title-weight: 600;
+}
+
+.book-disrupting-game {
+  --book-width: 50px;
+  --book-height: 295px;
+  --book-color: #c93132;
+  --book-ink: #ffffff;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.95rem;
+  --title-weight: 600;
+}
+
+.book-creative-act {
+  --book-width: 76px;
+  --book-height: 285px;
+  --book-color: #ded8c9;
+  --book-ink: #292824;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1rem;
+  --title-weight: 400;
+}
+
+.book-mountain-you {
+  --book-width: 47px;
+  --book-height: 275px;
+  --book-color: #354d57;
+  --book-ink: #f3ece0;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.95rem;
+}
+
+.book-hobbit {
+  --book-width: 62px;
+  --book-height: 280px;
+  --book-color: #466046;
+  --book-ink: #e8d6a0;
+  --title-size: 1.2rem;
+  --title-weight: 600;
+}
+
+.book-communicate {
+  --book-width: 40px;
+  --book-height: 260px;
+  --book-color: #293d54;
+  --book-ink: #e6d1a3;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.75rem;
+}
+
+/* A SERIES OF UNFORTUNATE EVENTS */
+
+.book-bad-beginning,
+.book-reptile-room,
+.book-wide-window,
+.book-miserable-mill,
+.book-austere-academy,
+.book-ersatz-elevator,
+.book-vile-village,
+.book-hostile-hospital,
+.book-carnivorous-carnival,
+.book-slippery-slope,
+.book-grim-grotto,
+.book-penultimate-peril,
+.book-end {
+  --book-height: 270px;
+  --book-ink: #f1e2bb;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.9rem;
+  --title-weight: 500;
+  --author-size: 0.4rem;
+
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(255 255 255 / 4%) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+.book-bad-beginning {
+  --book-width: 40px;
+  --book-color: #76543e;
+}
+
+.book-reptile-room {
+  --book-width: 43px;
+  --book-color: #526343;
+}
+
+.book-wide-window {
+  --book-width: 43px;
+  --book-color: #516779;
+}
+
+.book-miserable-mill {
+  --book-width: 41px;
+  --book-color: #796744;
+}
+
+.book-austere-academy {
+  --book-width: 46px;
+  --book-color: #67516f;
+}
+
+.book-ersatz-elevator {
+  --book-width: 49px;
+  --book-color: #7c4547;
+}
+
+.book-vile-village {
+  --book-width: 49px;
+  --book-color: #626048;
+}
+
+.book-hostile-hospital {
+  --book-width: 49px;
+  --book-color: #54716b;
+}
+
+.book-carnivorous-carnival {
+  --book-width: 51px;
+  --book-color: #9a623d;
+  --title-size: 0.8rem;
+}
+
+.book-slippery-slope {
+  --book-width: 58px;
+  --book-color: #647783;
+}
+
+.book-grim-grotto {
+  --book-width: 58px;
+  --book-color: #3d6065;
+}
+
+.book-penultimate-peril {
+  --book-width: 60px;
+  --book-color: #70424c;
+}
+
+.book-end {
+  --book-width: 57px;
+  --book-color: #3d4245;
+  --title-size: 1.2rem;
+}
+
+.book-eragon,
+.book-eldest,
+.book-brisingr,
+.book-inheritance {
+  --book-height: 300px;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1.3rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-eragon {
+  --book-width: 65px;
+  --book-color: #244d78;
+  --book-ink: #e7d5a4;
+}
+
+.book-eldest {
+  --book-width: 85px;
+  --book-color: #82352f;
+  --book-ink: #ead7aa;
+}
+
+.book-brisingr {
+  --book-width: 90px;
+  --book-color: #b18b43;
+  --book-ink: #30291d;
+}
+
+.book-inheritance {
+  --book-width: 100px;
+  --book-color: #395d3d;
+  --book-ink: #e7d5a4;
+}
+
+/* THE CHRONICLES OF NARNIA */
+
+.book-magicians-nephew,
+.book-lion-witch-wardrobe,
+.book-horse-boy,
+.book-prince-caspian,
+.book-dawn-treader,
+.book-silver-chair,
+.book-last-battle {
+  --book-height: 265px;
+  --book-ink: #f0dfb5;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.9rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-magicians-nephew {
+  --book-width: 42px;
+  --book-color: #675078;
+}
+
+.book-lion-witch-wardrobe {
+  --book-width: 43px;
+  --book-color: #486985;
+  --title-size: 0.7rem;
+}
+
+.book-horse-boy {
+  --book-width: 44px;
+  --book-color: #a16c36;
+}
+
+.book-prince-caspian {
+  --book-width: 45px;
+  --book-color: #843e36;
+}
+
+.book-dawn-treader {
+  --book-width: 49px;
+  --book-color: #326a70;
+  --title-size: 0.75rem;
+}
+
+.book-silver-chair {
+  --book-width: 47px;
+  --book-color: #59644e;
+}
+
+.book-last-battle {
+  --book-width: 43px;
+  --book-color: #46465e;
+}
+
+.book-empire-summer-moon {
+  --book-width: 72px;
+  --book-height: 300px;
+  --book-color: #b38b55;
+  --book-ink: #30261d;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.95rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-revenant {
+  --book-width: 55px;
+  --book-height: 290px;
+  --book-color: #394842;
+  --book-ink: #e8e0cd;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1.1rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-cuckoos-nest {
+  --book-width: 60px;
+  --book-height: 285px;
+  --book-color: #d3c69f;
+  --book-ink: #374538;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.85rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-outsiders {
+  --book-width: 40px;
+  --book-height: 270px;
+  --book-color: #293b50;
+  --book-ink: #eee1c7;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1rem;
+  --title-weight: 600;
+  --author-size: 0.45rem;
+}
+
+.book-convicts,
+.book-cannibals,
+.book-castaways {
+  --book-height: 270px;
+  --book-ink: #eee0bc;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-convicts {
+  --book-width: 40px;
+  --book-color: #514943;
+}
+
+.book-cannibals {
+  --book-width: 45px;
+  --book-color: #596044;
+}
+
+.book-castaways {
+  --book-width: 46px;
+  --book-color: #365766;
+}
+
+.book-watership-down {
+  --book-width: 75px;
+  --book-height: 290px;
+  --book-color: #596344;
+  --book-ink: #eee0b9;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1.05rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-anne-green-gables {
+  --book-width: 55px;
+  --book-height: 280px;
+  --book-color: #527052;
+  --book-ink: #f0e3c4;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.95rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-red-fern {
+  --book-width: 45px;
+  --book-height: 275px;
+  --book-color: #884b38;
+  --book-ink: #f0dfbd;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.85rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-lonesome-dove {
+  --book-width: 100px;
+  --book-height: 300px;
+  --book-color: #79553c;
+  --book-ink: #f0dbad;
+  --title-font: "Playfair Display", serif;
+  --title-size: 1.15rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-old-man-sea {
+  --book-width: 30px;
+  --book-height: 270px;
+  --book-color: #527b86;
+  --book-ink: #f1e6ca;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.85rem;
+  --title-weight: 500;
+  --author-size: 0.4rem;
+}
+
+.book-zelda-totk-guide {
+  --book-width: 75px;
+  --book-height: 340px;
+  --book-color: #284f49;
+  --book-ink: #dfc994;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.95rem;
+  --title-weight: 500;
+  --author-size: 0.5rem;
+}
+
+.book-cattle-production {
+  --book-width: 65px;
+  --book-height: 310px;
+  --book-color: #a72828;
+  --book-ink: #eee0b8;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 0.75rem;
+  --title-weight: 600;
+  --author-size: 0.45rem;
+}
+
+.book-maze-runner,
+.book-scorch-trials,
+.book-death-cure,
+.book-kill-order,
+.book-fever-code {
+  --book-height: 285px;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1rem;
+  --title-weight: 600;
+  --author-size: 0.45rem;
+}
+
+.book-maze-runner {
+  --book-width: 58px;
+  --book-color: #394e3b;
+  --book-ink: #eee4c9;
+}
+
+.book-scorch-trials {
+  --book-width: 60px;
+  --book-color: #a15d32;
+  --book-ink: #fff0d4;
+}
+
+.book-death-cure {
+  --book-width: 55px;
+  --book-color: #426579;
+  --book-ink: #edf1ec;
+}
+
+.book-kill-order {
+  --book-width: 55px;
+  --book-color: #843c35;
+  --book-ink: #f2dfc2;
+}
+
+.book-fever-code {
+  --book-width: 60px;
+  --book-color: #575066;
+  --book-ink: #eee7d6;
+}
+
+.book-pauls-case {
+  --book-width: 25px;
+  --book-height: 255px;
+  --book-color: #693e4d;
+  --book-ink: #eee0c5;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.7rem;
+  --title-weight: 500;
+  --author-size: 0.4rem;
+}
+
+.book-i-robot {
+  --book-width: 45px;
+  --book-height: 275px;
+  --book-color: #394957;
+  --book-ink: #e7e3d7;
+  --title-font: "DM Sans", sans-serif;
+  --title-size: 1.2rem;
+  --title-weight: 600;
+  --author-size: 0.45rem;
+}
+
+.book-lightning-thief,
+.book-sea-monsters,
+.book-titans-curse,
+.book-battle-labyrinth,
+.book-last-olympian {
+  --book-height: 280px;
+  --book-ink: #f1e5c7;
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.95rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+}
+
+.book-lightning-thief {
+  --book-width: 60px;
+  --book-color: #376b78;
+}
+
+.book-sea-monsters {
+  --book-width: 48px;
+  --book-color: #46765a;
+}
+
+.book-titans-curse {
+  --book-width: 52px;
+  --book-color: #465b80;
+}
+
+.book-battle-labyrinth {
+  --book-width: 60px;
+  --book-color: #994d35;
+  --title-size: 0.8rem;
+}
+
+.book-last-olympian {
+  --book-width: 60px;
+  --book-color: #51445f;
+}
+.shelf-book.book-silent-traveller-japan {
+  --book-width: 65px;
+  --book-height: 295px;
+  --book-color: #ded4b9;
+  --book-ink: #283f50;
+
+  --title-font: "Playfair Display", serif;
+  --title-size: 0.95rem;
+  --title-weight: 500;
+  --author-size: 0.45rem;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.12),
+      transparent 18%,
+      rgba(255, 255, 255, 0.12) 75%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    var(--book-color);
+
+  border-color: #9e947c;
+}
+
+.book-practical-stock-doctor {
+    --book-width: 58px;
+    --book-height: 285px;
+    --book-color: #304c45;
+    --book-ink: #d9b56b;
+    --title-font: "Cinzel Decorative", serif;
+    --title-size: 16px;
+    --title-weight: 400;
+    --author-size: 9px;
+}
+
+.book-practical-stock-doctor .book-spine-title {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.book-dialog {
+    position: fixed;
+    width: min(560px, 92vw);
+    max-height: 90vh;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 48px 32px 32px;
+    overflow-y: auto;
+    border: 1px solid #d9d1c2;
+    border-radius: 12px;
+    background: #f5f1e8;
+    color: #292821;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.book-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.book-dialog-close-form {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+}
+
+.book-dialog-close {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #292821;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.book-dialog-close:hover {
+    background: #e6dfd2;
+}
+
+.book-dialog-close:focus-visible {
+    outline: 2px solid #304c45;
+    outline-offset: 3px;
+}
+
+.book-dialog-cover {
+    display: block;
+    width: min(100%, 300px);
+    height: auto;
+    margin: 0 auto 28px;
+    border-radius: 3px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.book-dialog [hidden] {
+    display: none;
+}
+
+#book-dialog-title {
+    margin: 0 0 8px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(24px, 5vw, 32px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+#book-dialog-author {
+    margin: 0 0 28px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #686257;
+}
+
+.book-dialog section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #d9d1c2;
+}
+
+.book-dialog h3 {
+    margin: 0 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+#book-dialog-notes,
+#book-dialog-connection {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .book-dialog {
+        padding: 48px 20px 24px;
+    }
+}
+
+/* Transparent popup: cover with notes underneath */
+#book-dialog {
+    width: min(420px, 92vw);
+    max-height: 90vh;
+    margin: auto;
+    padding: 44px 16px 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #050505;
+    scrollbar-width: none;
+}
+
+#book-dialog::-webkit-scrollbar {
+    display: none;
+}
+
+#book-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+/* Cover */
+#book-dialog-cover {
+    display: block;
+    width: min(100%, 340px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+#book-dialog-cover[hidden] {
+    display: none;
+}
+
+/* Hide repeated book information */
+#book-dialog-title,
+#book-dialog-author,
+#book-dialog-connection-section {
+    display: none;
+}
+
+/* Notes directly beneath the cover */
+#book-dialog .book-dialog-notes-section {
+    width: min(100%, 340px);
+    margin: 24px auto 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    background: rgba(31, 30, 30, 0.815);
+}
+
+#book-dialog .book-dialog-notes-section h3 {
+    margin: 0 0 12px;
+    color: #dfc995;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+#book-dialog-notes {
+    margin: 0;
+    color: #f5f1e8;
+    font-size: 15px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+}
+
+/* Small close control above the cover */
+#book-dialog .book-dialog-close-form {
+    top: 0;
+    right: 16px;
+}
+
+#book-dialog .book-dialog-close {
+    background: transparent;
+    border: none;
+    color: #f5f1e8;
+}
+
+#book-dialog .book-dialog-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#book-dialog .book-dialog-close:focus-visible {
+    outline-color: #dfc995;
+}
+
+#book-dialog .book-dialog-notes-section {
+    position: relative;
+    box-sizing: border-box;
+    width: min(100%, 340px);
+    margin: 24px auto 0;
+    padding: 26px 24px;
+    background: #eee5d3;
+    border: 1px solid #b59a65;
+    border-radius: 2px;
+    box-shadow:
+        inset 0 0 0 5px #eee5d3,
+        inset 0 0 0 6px rgba(139, 112, 63, 0.35),
+        0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Decorative corners */
+#book-dialog .book-dialog-notes-section::before,
+#book-dialog .book-dialog-notes-section::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+}
+
+#book-dialog .book-dialog-notes-section::before {
+    top: 12px;
+    left: 12px;
+    border-top: 1px solid #9a7a43;
+    border-left: 1px solid #9a7a43;
+}
+
+#book-dialog .book-dialog-notes-section::after {
+    bottom: 12px;
+    right: 12px;
+    border-bottom: 1px solid #9a7a43;
+    border-right: 1px solid #9a7a43;
+}
+
+#book-dialog .book-dialog-notes-section h3 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(139, 112, 63, 0.35);
+    color: #72572f;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+}
+
+#book-dialog #book-dialog-notes {
+    color: #39352c;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Cover and notes on the left, library card on the right */
+#book-dialog {
+    width: min(850px, 94vw);
+    outline: none;
+}
+
+#book-dialog[open] {
+    display: grid;
+    grid-template-columns: minmax(0, 340px) minmax(0, 320px);
+    justify-content: center;
+    align-items: start;
+    column-gap: 48px;
+}
+
+#book-dialog-cover {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#book-dialog .book-dialog-notes-section {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Aged paper with faded stains and a fold */
+#book-dialog .vintage-library-card {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 28px 22px 20px;
+    color: #514735;
+    background:
+        radial-gradient(
+            ellipse at 0% 100%,
+            rgba(139, 86, 33, 0.2),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(139, 86, 33, 0.16),
+            transparent 45%
+        ),
+        linear-gradient(
+            172deg,
+            transparent 47%,
+            rgba(115, 89, 48, 0.09) 49.5%,
+            rgba(255, 255, 255, 0.25) 50%,
+            transparent 52%
+        ),
+        #e8dcc0;
+    border: 1px solid #bca77d;
+    border-radius: 3px 7px 4px 2px;
+    box-shadow:
+        inset 0 0 22px rgba(116, 76, 28, 0.15),
+        4px 12px 24px rgba(0, 0, 0, 0.3);
+    font-family: "Courier New", monospace;
+    transform: rotate(2deg);
+}
+
+.library-card-heading {
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.library-card-owner {
+    margin: 8px 0 24px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+}
+
+.library-card-details > span {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.library-card-details > p {
+    margin: 6px 0 16px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(90, 71, 42, 0.4);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.library-card-checkout {
+    width: 100%;
+    margin-top: 22px;
+    border-collapse: collapse;
+    color: inherit;
+    font-family: inherit;
+    font-size: 10px;
+}
+
+.library-card-checkout th,
+.library-card-checkout td {
+    height: 32px;
+    padding: 5px;
+    border: 1px solid rgba(90, 71, 42, 0.35);
+    text-align: center;
+}
+
+.library-card-checkout th {
+    height: 26px;
+    letter-spacing: 0.06em;
+}
+
+.library-card-footer {
+    margin: 18px 0 0;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+/* Stack the card beneath the notes on smaller screens */
+@media (max-width: 700px) {
+    #book-dialog[open] {
+        grid-template-columns: minmax(0, 340px);
+        row-gap: 24px;
+    }
+
+    #book-dialog .vintage-library-card {
+        grid-column: 1;
+        grid-row: 3;
+        width: 94%;
+        justify-self: center;
+        transform: rotate(1deg);
+    }
+}
+
+#book-dialog .library-card-thoughts {
+    margin-top: 22px;
+    padding: 0;
+    border: none;
+}
+
+#book-dialog .library-card-thoughts h3 {
+    margin: 0 0 12px;
+    color: #72572f;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+#library-card-notes {
+    min-height: 160px;
+    margin: 0;
+    color: #514735;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 28px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    /* Faint notebook lines */
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 27px,
+        rgba(90, 71, 42, 0.18) 27px,
+        rgba(90, 71, 42, 0.18) 28px
+    );
+}
+
+.book-volsunga-saga {
+    --book-width: 48px;
+    --book-height: 278px;
+    --book-color: #46332d;
+    --book-ink: #dfc995;
+    --title-font: "Cinzel Decorative", serif;
+    --title-size: 16px;
+    --title-weight: 400;
+    --author-size: 9px;
+}
+
+#book-dialog .library-stamp-logo {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 14px;
+    transform: rotate(-4deg);
+    opacity: 0.85;
+    padding-top: 0%;
+}
+
+body.reading-room-page {
+    min-height: 100vh;
+    margin: 0;
+    isolation: isolate;
+    background: #d4c2a3;
+}
+
+/* Each book row carries its own wooden shelf. */
+.reading-room-page .bookshelf {
+    position: relative;
+    overflow: visible;
+    isolation: isolate;
+
+    border-bottom: none !important;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+}
+
+.reading-room-page #bookshelf {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+
+    border-bottom: none !important;
+    background: transparent;
+    padding-bottom: 0;
+    row-gap: 75px;
+    margin-bottom: 75px;
+}
+
+/* Remove the previous line and single wooden shelf. */
+.reading-room-page #bookshelf::before,
+.reading-room-page #bookshelf::after {
+    content: none !important;
+}
+
+/* Keep books in front of the wooden shelves. */
+.reading-room-page #bookshelf > .book-slot,
+.reading-room-page #bookshelf > .shelf-book {
+    position: relative;
+    z-index: 1;
+}
+
+/* One wooden shelf beneath each row. */
+.reading-room-page .library-wood-shelf {
+    position: absolute;
+    left: -16px;
+    right: -16px;
+    height: 36px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Polished top edge. */
+.reading-room-page .library-wood-shelf::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 9px;
+
+    background: linear-gradient(
+        to bottom,
+        #422819,
+        #976641 45%,
+        #b48050 80%,
+        #684025
+    );
+
+    border-radius: 2px 2px 0 0;
+
+    box-shadow:
+        0 -5px 12px rgba(40, 24, 12, 0.18),
+        inset 0 1px rgba(255, 220, 165, 0.35);
+}
+
+/* Thick front edge with wood grain and a wall shadow. */
+.reading-room-page .library-wood-shelf::after {
+    content: "";
+    position: absolute;
+    inset: 9px 0 0;
+
+    background:
+        repeating-linear-gradient(
+            178deg,
+            transparent 0 3px,
+            rgba(35, 17, 7, 0.22) 4px,
+            transparent 5px 9px,
+            rgba(218, 164, 99, 0.12) 10px,
+            transparent 11px 17px
+        ),
+        linear-gradient(
+            90deg,
+            #56331e,
+            #815132 20%,
+            #694027 45%,
+            #8b5835 72%,
+            #51301d
+        );
+
+    border-radius: 0 0 3px 3px;
+
+    box-shadow:
+        inset 0 2px 1px rgba(255, 210, 145, 0.25),
+        inset 0 -4px 5px rgba(25, 12, 5, 0.45),
+        0 12px 15px rgba(47, 28, 13, 0.25),
+        0 25px 30px rgba(47, 28, 13, 0.12);
+}
+
+/* Matching wood around the entire bookcase. */
+body.reading-room-page {
+    background-color: #624029;
+
+    background-image:
+        repeating-linear-gradient(
+            91deg,
+            transparent 0 7px,
+            rgba(28, 13, 5, 0.18) 8px,
+            transparent 10px 23px,
+            rgba(211, 151, 88, 0.08) 24px,
+            transparent 26px 42px
+        ),
+        linear-gradient(
+            90deg,
+            #49301f,
+            #795034 25%,
+            #583820 50%,
+            #805536 75%,
+            #49301f
+        );
+
+    background-attachment: scroll;
+}
+
+/* Turn off the previous fixed wall background. */
+body.reading-room-page::before {
+    content: none !important;
+}
+
+/* Beige wall stays inside the wooden frame. */
+.reading-room-page .reading-room {
+    position: relative;
+    isolation: isolate;
+
+    background: #d4c2a3
+        url("../images/reading-room-background.png")
+        center top / 100% auto repeat-y;
+
+    box-shadow:
+        inset 14px 0 22px rgba(40, 23, 10, 0.18),
+        inset -14px 0 22px rgba(40, 23, 10, 0.18);
+}
+
+/* Full-height wooden side boards. */
+.reading-room-page .reading-room::before,
+.reading-room-page .reading-room::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    z-index: 2;
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            91deg,
+            transparent 0 3px,
+            rgba(30, 14, 6, 0.25) 4px,
+            transparent 6px 11px,
+            rgba(220, 168, 102, 0.12) 12px,
+            transparent 14px 21px
+        ),
+        linear-gradient(
+            90deg,
+            #422719,
+            #895938 25%,
+            #704629 65%,
+            #492b19
+        );
+}
+
+/* Left board. */
+.reading-room-page .reading-room::before {
+    left: -32px;
+
+    box-shadow:
+        inset 3px 0 3px rgba(255, 211, 151, 0.18),
+        inset -4px 0 5px rgba(25, 12, 5, 0.5),
+        -8px 0 18px rgba(25, 12, 5, 0.22);
+}
+
+/* Right board. */
+.reading-room-page .reading-room::after {
+    right: -32px;
+
+    box-shadow:
+        inset -3px 0 3px rgba(255, 211, 151, 0.18),
+        inset 4px 0 5px rgba(25, 12, 5, 0.5),
+        8px 0 18px rgba(25, 12, 5, 0.22);
+}
+
+/* Surrounding wood. */
+body.reading-room-page {
+    background: #573720
+        url("../images/walnut-vertical.png")
+        center top / cover no-repeat;
+    background-attachment: scroll;
+}
+
+/* Wooden side boards. */
+.reading-room-page .reading-room::before,
+.reading-room-page .reading-room::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.3),
+            transparent 25%,
+            transparent 70%,
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../images/walnut-vertical.png")
+        center / 100% 100% no-repeat;
+}
+
+/* Shelf top surface. */
+.reading-room-page .library-wood-shelf::before {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(255, 218, 165, 0.15) 70%,
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("../images/walnut-horizontal.png")
+        center / cover no-repeat;
+}
+
+/* Shelf front edge. */
+.reading-room-page .library-wood-shelf::after {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 220, 175, 0.15),
+            transparent 30%,
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../images/walnut-horizontal.png")
+        center / cover no-repeat;
+}
+
+/* Keep the surrounding wood grain at a controlled size. */
+body.reading-room-page {
+    background-color: #634329;
+    background-image: url("../images/walnut-vertical.png");
+    background-position: center top;
+    background-size: 300px auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+/* Side boards: natural grain without stretching. */
+.reading-room-page .reading-room::before,
+.reading-room-page .reading-room::after {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.3),
+            transparent 25%,
+            transparent 70%,
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../images/walnut-vertical.png");
+
+    background-size: 100% 100%, 600px auto;
+    background-position: center, center top;
+    background-repeat: no-repeat, repeat;
+}
+
+
+.reading-room-page .library-wood-shelf::before,
+.reading-room-page .library-wood-shelf::after {
+    border-radius: 0 !important;
+}
+
+/* Stucco outside the bookcase. */
+body.reading-room-page {
+    background: #d4c2a3
+        url("../images/reading-room-background.png")
+        center top / cover no-repeat;
+
+    background-attachment: scroll;
+}
+
+/* Width of the wooden sides. */
+.reading-room-page .reading-room {
+    --wood-side-width: clamp(32px, 11vw, 110px);
+}
+
+.reading-room-page .reading-room::before,
+.reading-room-page .reading-room::after {
+    width: var(--wood-side-width);
+}
+
+.reading-room-page .reading-room::before {
+    left: calc(-1 * var(--wood-side-width));
+}
+
+.reading-room-page .reading-room::after {
+    right: calc(-1 * var(--wood-side-width));
+}
+
+/* Thicker horizontal shelves: previously 36px. */
+.reading-room-page .library-wood-shelf {
+    height: 80px;
+}
+
+/* Top surface stays directly beneath the books. */
+.reading-room-page .library-wood-shelf::before {
+    height: 9px;
+}
+
+/* Deeper wooden front. */
+.reading-room-page .library-wood-shelf::after {
+    top: 9px;
+    bottom: 0;
+}
+
+/* Allow room for the thicker shelves between book rows. */
+.reading-room-page #bookshelf {
+    row-gap: 105px;
+    margin-bottom: 90px;
+}
+
+/* Fine stucco without stretching over the full page height. */
+body.reading-room-page {
+    background: #d8c3a0
+        url("../images/stucco-fine.png")
+        center top / 900px auto repeat;
+
+    background-attachment: scroll;
+}
+
+/* Use the same wall texture inside and outside the frame. */
+.reading-room-page .reading-room {
+    background: transparent !important;
+}
+
+/* Walnut backing inside the bookcase. */
+.reading-room-page .reading-room {
+    background:
+        linear-gradient(
+            rgba(25, 14, 7, 0.15),
+            rgba(25, 14, 7, 0.15)
+        ),
+        url("../images/bookcase-back-panel.png")
+        center top / 900px auto repeat !important;
+
+    box-shadow:
+        inset 18px 0 28px rgba(20, 10, 4, 0.35),
+        inset -18px 0 28px rgba(20, 10, 4, 0.35);
+}
+
+/* Warm cream lettering against the wood. */
+.reading-room-page .reading-room-heading h1,
+.reading-room-page .reading-room-description {
+    color: #f4e6cd !important;
+    text-shadow: 0 2px 3px rgba(20, 10, 4, 0.4);
+}
+
+.reading-room-page .reading-room-back,
+.reading-room-page .reading-room-label,
+.reading-room-page .reading-room-instruction,
+.reading-room-page .shelf-label,
+.reading-room-page .reading-room-footer,
+.reading-room-page .bookshelf-status {
+    color: #e6d1ad !important;
+}
+
+.reading-room-page .reading-room {
+    background:
+        linear-gradient(
+            rgba(12, 7, 3, 0.55),
+            rgba(12, 7, 3, 0.55)
+        ),
+        url("../images/bookcase-back-panel.png")
+        center top / 900px auto repeat !important;
+
+    box-shadow:
+        inset 35px 0 55px rgba(0, 0, 0, 0.55),
+        inset -35px 0 55px rgba(0, 0, 0, 0.55),
+        inset 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+
+.reading-room-page .reading-room {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.reading-room-page #bookshelf {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Space above the bookcase and below its top board. */
+.reading-room-page .reading-room {
+    margin-top: 30px;
+    padding-top: 60px;
+}
+
+/* Solid walnut top joins both side boards. */
+.reading-room-page .bookcase-top {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--wood-side-width, 42px) - 86px);
+    right: calc(-1 * var(--wood-side-width, 42px) - 86px);
+    height: 90px;
+    z-index: 3;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 222, 174, 0.16),
+            transparent 25%,
+            rgba(20, 10, 4, 0.35)
+        ),
+        url("../images/walnut-horizontal.png")
+        center / cover no-repeat;
+
+    border-radius: 3px 3px 1px 1px;
+
+    box-shadow:
+        inset 0 2px 2px rgba(255, 223, 177, 0.25),
+        inset 0 -5px 6px rgba(20, 10, 4, 0.4),
+        0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Aged brass plate mounted on the wooden top. */
+.reading-room-page .bookcase-top .reading-room-back {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    top: auto;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    height: 38px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 22px;
+    pointer-events: auto;
+
+    border: 1px solid #60451f;
+    border-radius: 3px;
+
+    background:
+        /* Two small brass mounting screws. */
+        radial-gradient(
+            circle at 10px 50%,
+            #49321a 0 1px,
+            #d6b77e 1.5px 3px,
+            #765328 3.5px 4px,
+            transparent 4.5px
+        ),
+        radial-gradient(
+            circle at calc(100% - 10px) 50%,
+            #49321a 0 1px,
+            #d6b77e 1.5px 3px,
+            #765328 3.5px 4px,
+            transparent 4.5px
+        ),
+        /* Fine brushed metal grain. */
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 2px,
+            rgba(65, 42, 15, 0.1) 3px,
+            rgba(255, 235, 187, 0.12) 4px
+        ),
+        linear-gradient(
+            155deg,
+            #d0b17a,
+            #b48c50 45%,
+            #99713d 75%,
+            #c5a16a
+        );
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 240, 197, 0.65),
+        inset 0 -2px 3px rgba(58, 35, 12, 0.4),
+        0 1px 2px rgba(0, 0, 0, 0.7);
+
+    color: #30200e !important;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255, 237, 190, 0.65);
+
+    animation: none !important;
+    transition: none !important;
+}
+
+.reading-room-page .bookcase-top .reading-room-back:hover {
+    transform: translateX(-50%);
+    color: #171006 !important;
+}
+
+.reading-room-page .bookcase-top .reading-room-back:focus-visible {
+    outline: 2px solid #f4e6cd;
+    outline-offset: 3px;
+}
+
+.reading-room-page .bookcase-top .reading-room-back {
+    width: 210px;
+    height: 34px;
+
+    background:
+        linear-gradient(
+            rgba(40, 25, 8, 0.15),
+            rgba(40, 25, 8, 0.15)
+        ),
+        url("../images/aged-brass.png")
+        center / cover no-repeat;
+
+    border: 1px solid #594326;
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 1px rgba(235, 211, 158, 0.2),
+        inset 0 -1px rgba(40, 25, 8, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.65);
+
+    color: #271d10 !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-shadow: 0 3px rgba(235, 211, 158, 0.25);
+}
+
+/* Small, subdued slotted screws. */
+.reading-room-page .bookcase-top .reading-room-back::before,
+.reading-room-page .bookcase-top .reading-room-back::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #a88b53 40%,
+        #49351d 45% 55%,
+        #a88b53 60%
+    );
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+}
+
+.reading-room-page .bookcase-top .reading-room-back::before {
+    left: 9px;
+}
+
+.reading-room-page .bookcase-top .reading-room-back::after {
+    right: 9px;
+}
+
+.article-photo-wrap {
+    display: flow-root;
+}
+
+.article-photo-wrap .article-polaroid {
+    float: right;
+    display: block;
+    width: 230px;
+    max-width: 40%;
+    height: auto;
+    margin: 8px 8px 24px 28px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    transform: rotate(4deg);
+    filter: drop-shadow(3px 7px 6px rgba(45, 31, 18, 0.22));
+}
+
+/* Stack the photograph above the text on smaller screens. */
+@media (max-width: 600px) {
+    .article-photo-wrap .article-polaroid {
+        float: none;
+        width: 220px;
+        max-width: 80%;
+        margin: 20px auto 32px;
+    }
+}
+
+.article-photo-wrap {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.article-photo-wrap .article-polaroid {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* CURRENTLY ON MY DESK */
+.personal-desk {
+    margin: 48px 0;
+    color: #25221c;
+}
+
+.personal-desk-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px 0 18px;
+    border-top: 1px solid #625d52;
+    border-bottom: 1px solid #625d52;
+}
+
+.personal-desk-header h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(26px, 3.2vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.personal-desk-header > p {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.personal-desk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 16px;
+}
+
+.personal-desk-item {
+    min-width: 0;
+    padding: 8px 18px 20px;
+}
+
+.personal-desk-item + .personal-desk-item {
+    border-left: 1px solid rgba(98, 93, 82, 0.45);
+}
+
+.personal-desk-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 20px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.personal-desk-label > span:first-child {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.personal-desk-slash {
+    color: #8d8575;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Equal-height spaces keep the captions aligned. */
+.personal-desk-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.personal-desk-visual img {
+    display: block;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+/* Worn book cover. */
+.personal-desk-visual .personal-desk-book {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 245px;
+
+    transform: rotate(-6deg);
+    border-radius: 2px;
+    filter: drop-shadow(4px 8px 5px rgba(42, 31, 17, 0.25));
+}
+
+/* Album sleeve and separate vinyl. */
+.personal-desk-album {
+    position: relative;
+    width: 92%;
+    max-width: 250px;
+    aspect-ratio: 1.18;
+    transform: rotate(-5deg);
+}
+
+.personal-desk-album .personal-desk-record {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 80%;
+    height: auto;
+    z-index: 0;
+
+    filter: drop-shadow(3px 5px 4px rgba(42, 31, 17, 0.18));
+}
+
+.personal-desk-album .personal-desk-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 82%;
+    height: auto;
+    z-index: 1;
+
+    box-shadow: 2px 6px 7px rgba(42, 31, 17, 0.22);
+}
+
+/* The image already includes its Polaroid border. */
+.personal-desk-visual .personal-desk-polaroid {
+    width: auto;
+    height: auto;
+    max-width: 98%;
+    max-height: 255px;
+
+    transform: rotate(-3deg);
+    filter: drop-shadow(3px 7px 5px rgba(42, 31, 17, 0.22));
+}
+
+/* Handwritten paper note. */
+.personal-desk-note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 180px;
+    box-sizing: border-box;
+    padding: 26px 16px 20px;
+
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.12' filter='url(%23grain)'/%3E%3C/svg%3E"),
+        #ede1c9;
+
+    border: 1px solid rgba(124, 105, 71, 0.18);
+    border-radius: 2px 4px 3px 1px;
+    transform: rotate(3deg);
+
+    box-shadow:
+        inset 0 0 15px rgba(132, 102, 57, 0.08),
+        3px 7px 7px rgba(42, 31, 17, 0.2);
+}
+
+.personal-desk-note > p {
+    margin: 0;
+    color: #493a27;
+    font-family: "Caveat", cursive;
+    font-size: clamp(22px, 2vw, 29px);
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+}
+
+/* Brass binder-clip handle. */
+.personal-desk-note::before {
+    content: "";
+    position: absolute;
+    top: -29px;
+    left: calc(50% - 9px);
+    width: 18px;
+    height: 31px;
+
+    border: 2px solid #8b7043;
+    border-radius: 10px 10px 3px 3px;
+    box-shadow: 1px 1px 1px rgba(42, 31, 17, 0.25);
+}
+
+/* Binder-clip body. */
+.personal-desk-note::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 21px;
+
+    background: linear-gradient(110deg, #443722, #8b7043, #443722);
+    border: 1px solid #3d301d;
+    border-radius: 2px;
+
+    box-shadow: 0 2px 2px rgba(42, 31, 17, 0.3);
+}
+
+.personal-desk-note-rule {
+    width: 45px;
+    margin-top: 18px;
+    border-top: 1px solid #86745a;
+}
+
+/* Captions beneath each object. */
+.personal-desk-caption {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.personal-desk-caption::before {
+    content: "";
+    display: block;
+    width: 28px;
+    margin: 0 auto 12px;
+    border-top: 1px solid #625d52;
+}
+
+.personal-desk-caption h3 {
+    margin: 0 0 7px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.personal-desk-caption p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.personal-desk-caption .personal-desk-artist {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.personal-desk-visual:focus-visible {
+    outline: 1px solid #625d52;
+    outline-offset: 6px;
+}
+
+/* Two columns on tablets. */
+@media (max-width: 800px) {
+    .personal-desk-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .personal-desk-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 25px;
+    }
+
+    .personal-desk-item:nth-child(3) {
+        border-left: none;
+    }
+}
+
+/* One column on phones. */
+@media (max-width: 480px) {
+    .personal-desk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-desk-item + .personal-desk-item {
+        border-left: none;
+        border-top: 1px solid rgba(98, 93, 82, 0.35);
+        padding-top: 25px;
+    }
+
+    .personal-desk-note {
+        max-width: 250px;
+    }
+}
+
+.archive-player-hidden {
+    display: none !important;
+}
+
+.archive-room-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+
+    width: 100%;
+    max-width: 1050px;
+    box-sizing: border-box;
+    margin: 0 auto 24px;
+    padding: 14px 12px 0;
+
+    border-bottom: 1px solid #777064;
+}
+
+.archive-room-tabs a {
+    display: block;
+    margin-bottom: -1px;
+    padding: 13px 25px;
+
+    color: #302a21;
+    background: #e9e1d2;
+
+    border: 1px solid #777064;
+    border-bottom-color: #777064;
+    border-radius: 3px 3px 0 0;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.archive-room-tabs a:hover {
+    background: #f5efe4;
+    color: #111;
+}
+
+.archive-room-tabs a:focus-visible {
+    outline: 2px solid #66513a;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .archive-room-tabs a {
+        padding: 12px 15px;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+    }
+}
+
+.archive-collection-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+
+    max-width: 1050px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+.archive-collection-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    width: 260px;
+    max-width: 100%;
+    min-height: 88px;
+    box-sizing: border-box;
+    padding: 16px;
+
+    border: 1px solid #817969;
+    background: rgba(230, 221, 203, 0.3);
+    color: #29251f;
+    text-align: center;
+    text-decoration: none;
+}
+
+.archive-collection-box:first-child {
+    justify-self: start;
+}
+
+.archive-collection-box:last-child {
+    justify-self: end;
+}
+
+.archive-collection-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.archive-collection-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.archive-collection-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.archive-collection-logo img {
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: 0;
+}
+
+.archive-collection-box:hover {
+    background: rgba(220, 207, 181, 0.5);
+}
+
+.archive-collection-box:focus-visible {
+    outline: 2px solid #66513a;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .archive-collection-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 12px;
+    }
+
+    .archive-collection-logo {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .archive-collection-box {
+        width: 100%;
+    }
+
+    .archive-collection-title {
+        font-size: 20px;
+    }
+}
+
+.archive-collection-box {
+    position: relative;
+    min-height: 100px;
+    padding: 20px 26px 24px;
+    gap: 10px;
+
+    color: #3c3327;
+    background: linear-gradient(135deg, #f3eee3, #e9dfcd);
+    border: 1px solid #a99a80;
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 0 0 4px #f3eee3,
+        inset 0 0 0 5px rgba(143, 123, 90, 0.3),
+        0 3px 6px rgba(65, 46, 22, 0.08);
+
+    transition:
+        background 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.archive-collection-label {
+    color: #79684d;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+}
+
+.archive-collection-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* A small arrow tucked into the lower corner. */
+.archive-collection-box::after {
+    position: absolute;
+    right: 13px;
+    bottom: 8px;
+
+    color: #89724d;
+    font-size: 15px;
+}
+
+.archive-collection-box:hover {
+    color: #292116;
+    background: linear-gradient(135deg, #f7f1e5, #e5d7be);
+
+    box-shadow:
+        inset 0 0 0 4px #f3eee3,
+        inset 0 0 0 5px rgba(143, 123, 90, 0.5),
+        0 4px 9px rgba(65, 46, 22, 0.13);
+}
+
+.archive-collection-box:focus-visible {
+    outline: 2px solid #89724d;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .archive-collection-box {
+        transition: none;
+    }
+}
+
+.reading-room-page .reading-atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.reading-room-page .reading-atmosphere canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reading-room-page .reading-sunlight {
+    position: absolute;
+    inset: -15%;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(255, 222, 158, 0.08),
+            transparent 55%
+        ),
+        linear-gradient(
+            125deg,
+            transparent 15%,
+            rgba(255, 237, 188, 0.12) 28%,
+            rgba(255, 237, 188, 0.03) 42%,
+            transparent 58%
+        );
+
+    mix-blend-mode: screen;
+    transform-origin: top left;
+    animation: reading-sunlight-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes reading-sunlight-drift {
+    from {
+        transform: translate(-5%, -3%) rotate(-4deg);
+        opacity: 0.45;
+    }
+
+    to {
+        transform: translate(6%, 4%) rotate(4deg);
+        opacity: 0.8;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reading-room-page .reading-atmosphere {
+        display: none;
+    }
+}
+
+.reading-room-page .reading-atmosphere {
+    position: fixed !important;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+body.reading-room-page {
+    position: relative;
+}
+
+.reading-room-page .reading-atmosphere {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.archive-collection-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+
+    max-width: 1050px;
+    margin: 24px auto;
+    padding: 0;
+}
+
+/* Balance the left buttons to keep the logo centered. */
+.archive-collection-row::after {
+    content: "";
+}
+
+.archive-collection-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.archive-collection-buttons .archive-collection-box {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 140px;
+    max-width: 100%;
+    min-height: 70px;
+    padding: 14px 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.archive-collection-buttons .archive-collection-title {
+    font-size: 18px;
+}
+
+/* Remove the old corner arrow. */
+.archive-collection-buttons .archive-collection-box::after {
+    content: none;
+}
+
+.archive-collection-logo {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.archive-collection-logo img {
+    display: block;
+    width: 42px;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .archive-collection-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .archive-collection-row::after {
+        content: none;
+    }
+
+    .archive-collection-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .archive-collection-buttons {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+.archive-collection-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.archive-collection-buttons .archive-collection-box {
+    width: 240px;
+    min-height: 85px;
+}
+
+.archive-collection-buttons .archive-collection-title {
+    font-size: 25px;
+}
+
+.archive-collection-logo img {
+    width: 140px;
+    height: auto;
+}
+
+/* Archive hero with navigation in the left margin. */
+.archive-intro {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto 40px;
+    padding: 0 0 28px;
+    border-bottom: 1px solid currentColor;
+    color: #191815;
+}
+
+/* Left-hand collection index. */
+.archive-intro .archive-index {
+    box-sizing: border-box;
+    display: block;
+    align-self: stretch;
+    margin: 0;
+    padding: 38px 28px 38px 0;
+
+    border: none;
+    border-right: 1px solid rgba(50, 45, 36, 0.4);
+    background: transparent;
+}
+
+.archive-index-heading {
+    margin: 0 0 14px;
+    font: 10px/1.5 "DM Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.archive-intro .archive-index-link {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr) 22px;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 82px;
+    margin: 0;
+    padding: 12px 0;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 1px solid rgba(50, 45, 36, 0.35);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.archive-intro .archive-index-link:last-child {
+    border-bottom: none;
+}
+
+.archive-index-number {
+    font: 600 13px Georgia, serif;
+}
+
+.archive-index-name {
+    font: 400 25px/1.2 "Playfair Display", Georgia, serif;
+}
+
+.archive-index-arrow {
+    justify-self: end;
+    font: 26px Georgia, serif;
+}
+
+.archive-intro .archive-index-link:hover {
+    color: #786448;
+}
+
+.archive-intro .archive-index-link:focus-visible {
+    outline: 2px solid #786448;
+    outline-offset: 5px;
+}
+
+/* Logo, title, and description beside the index. */
+.archive-intro .archive-intro-heading {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    margin: 0;
+    padding: 30px 36px;
+    text-align: center;
+}
+
+.archive-intro .archive-intro-logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0 auto 22px;
+}
+
+.archive-intro .archive-intro-eyebrow {
+    margin: 0 0 16px;
+    font: 500 10px/1.5 "DM Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.archive-intro #archive-title {
+    margin: 0;
+    padding: 0;
+    font: 400 clamp(46px, 6vw, 110px)/1
+        "Playfair Display", Georgia, serif;
+    letter-spacing: -0.045em;
+}
+
+.archive-intro .archive-intro-description {
+    max-width: 660px;
+    margin: 22px auto 0;
+    font: 400 15px/1.8 "DM Sans", sans-serif;
+    color: #625d54;
+}
+
+/* On smaller screens, put the index beneath the heading. */
+@media (max-width: 800px) {
+    .archive-intro {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .archive-intro .archive-intro-heading {
+        grid-row: 1;
+        padding: 24px 12px 32px;
+    }
+
+    .archive-intro .archive-index {
+        grid-row: 2;
+        padding: 24px 0 0;
+        border-right: none;
+        border-top: 1px solid rgba(50, 45, 36, 0.35);
+    }
+
+    .archive-intro .archive-index-link {
+        min-height: 68px;
+    }
+}
+
+.archive-side-nav {
+    width: 240px;
+    max-width: 100%;
+    margin: 30px 0;
+    padding: 20px 26px 20px 0;
+    box-sizing: border-box;
+    border-right: 1px solid #aaa397;
+    color: #191815;
+}
+
+.archive-side-nav p {
+    margin: 0 0 12px;
+    font: 10px/1.5 "DM Sans", sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.archive-side-nav a {
+    display: grid;
+    grid-template-columns: 24px 1fr 22px;
+    align-items: center;
+    gap: 12px;
+    min-height: 75px;
+
+    color: inherit;
+    background: transparent;
+    border-bottom: 1px solid #b8b0a3;
+    text-decoration: none;
+    font: 23px/1.3 "Playfair Display", Georgia, serif;
+}
+
+.archive-side-nav a:last-child {
+    border-bottom: none;
+}
+
+.archive-side-nav .archive-side-number {
+    font: 600 12px Georgia, serif;
+}
+
+.archive-side-nav a:hover {
+    color: #786448;
+}
+
+.archive-side-nav a:focus-visible {
+    outline: 2px solid #786448;
+    outline-offset: 4px;
+}
+
+.archive-heading-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.archive-heading-layout .archive-side-nav {
+    width: 100%;
+    margin: 0;
+}
+
+.archive-heading-content {
+    min-width: 0;
+    text-align: center;
+}
+
+/* Remove extra spacing from the existing heading wrapper. */
+.archive-heading-content > header {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    .archive-heading-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .archive-heading-content {
+        grid-row: 1;
+    }
+
+    .archive-heading-layout .archive-side-nav {
+        grid-row: 2;
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+body.public-talks-page {
+    background-color: #eee5d3;
+    background-image: url("../images/public-talks-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Let the background show behind the page content. */
+.public-talks-page .newspaper-header,
+.public-talks-page .newspaper-home,
+.public-talks-page .masthead {
+    background: transparent;
+}
+
+.stamp-notes-dialog {
+    box-sizing: border-box;
+    width: min(760px, 94vw);
+    max-width: none;
+    max-height: 92dvh;
+    margin: auto;
+    padding: 44px 22px 20px;
+    overflow: auto;
+
+    border: none;
+    background: transparent;
+    color: #382e22;
+}
+
+.stamp-notes-dialog::backdrop {
+    background: rgba(24, 18, 12, 0.78);
+    backdrop-filter: blur(5px);
+}
+
+.stamp-notes-close {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    padding: 0 8px;
+    border: none;
+    background: transparent;
+    color: #fff6e5;
+    font: 36px/1 Georgia, serif;
+    cursor: pointer;
+}
+
+.stamp-notes-flipper {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    perspective: 1600px;
+}
+
+.stamp-notes-inner {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.stamp-notes-flipper.is-flipped .stamp-notes-inner {
+    transform: rotateY(180deg);
+}
+
+.stamp-notes-face {
+    display: block;
+    grid-area: 1 / 1;
+    min-width: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.stamp-notes-front {
+    align-self: center;
+}
+
+.stamp-notes-front img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.35));
+}
+
+.stamp-notes-back {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+    padding: clamp(24px, 5vw, 48px);
+
+    transform: rotateY(180deg);
+    border: 1px solid #bbaa88;
+    border-radius: 3px;
+    background:
+        radial-gradient(
+            ellipse at top left,
+            rgba(132, 91, 42, 0.12),
+            transparent 65%
+        ),
+        #eee3cb;
+
+    box-shadow:
+        inset 0 0 30px rgba(111, 78, 36, 0.12),
+        0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stamp-notes-label {
+    display: block;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #b9a98d;
+
+    font: 12px "Courier New", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+#stamp-notes-text {
+    display: block;
+    flex: 1;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font: 17px/1.9 Georgia, serif;
+}
+
+.stamp-notes-signature {
+    display: block;
+    margin-top: 30px;
+    font: 9px/1.5 "Courier New", monospace;
+    letter-spacing: 0.12em;
+    opacity: 0.65;
+}
+
+.stamp-notes-hint {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #f5ead4;
+    font: 10px "DM Sans", sans-serif;
+    letter-spacing: 0.16em;
+}
+
+.stamp-notes-dialog[open] .stamp-notes-flipper {
+    animation: stamp-notes-enter 350ms ease-out;
+}
+
+.stamp-notes-flipper:focus-visible,
+.stamp-notes-close:focus-visible {
+    outline: 2px solid #e4cca0;
+    outline-offset: 5px;
+}
+
+@keyframes stamp-notes-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stamp-notes-inner {
+        transition: none;
+    }
+
+    .stamp-notes-dialog[open] .stamp-notes-flipper {
+        animation: none;
+    }
+}
+
+/* Keep the page behind the popup from scrolling. */
+body:has(#stamp-notes-dialog[open]) {
+    overflow: hidden;
+}
+
+/* Prevent the flipping animation from creating scrollbars. */
+#stamp-notes-dialog {
+    box-sizing: border-box;
+    width: min(760px, 96vw);
+    max-height: calc(100dvh - 16px);
+    padding: 44px 22px 20px;
+    overflow: hidden;
+}
+
+/* Fit the complete stamp inside the screen. */
+#stamp-notes-dialog .stamp-notes-flipper {
+    position: relative;
+    width: min(
+        680px,
+        100%,
+        calc((100dvh - 140px) * var(--stamp-ratio, 1.4))
+    );
+    aspect-ratio: var(--stamp-ratio, 1.4);
+    margin: 0 auto;
+}
+
+#stamp-notes-dialog .stamp-notes-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#stamp-notes-dialog .stamp-notes-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+}
+
+#stamp-notes-dialog .stamp-notes-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Paper back with the exact front-image silhouette. */
+#stamp-notes-dialog .stamp-notes-back {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(24px, 5vw, 48px);
+
+    border: none;
+    border-radius: 0;
+
+    background:
+        radial-gradient(
+            ellipse at top left,
+            rgba(118, 83, 40, 0.16),
+            transparent 65%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            rgba(118, 83, 40, 0.12),
+            transparent 60%
+        ),
+        #eee3cb;
+
+    -webkit-mask-image: var(--stamp-outline);
+    mask-image: var(--stamp-outline);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+
+    box-shadow: inset 0 0 35px rgba(111, 78, 36, 0.15);
+}
+
+/* Long notes can scroll without a visible scrollbar. */
+#stamp-notes-dialog #stamp-notes-text {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    font-size: clamp(13px, 1.5vw, 17px);
+    line-height: 1.8;
+}
+
+#stamp-notes-text::-webkit-scrollbar {
+    display: none;
+}
+
+#stamp-notes-dialog .stamp-notes-label {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+}
+
+#stamp-notes-dialog .stamp-notes-signature {
+    flex-shrink: 0;
+    margin-top: 18px;
+}
+
+#stamp-notes-dialog .stamp-notes-hint {
+    margin-top: 14px;
+}
+
+#stamp-notes-dialog .stamp-notes-back {
+    background:
+        radial-gradient(
+            ellipse at top left,
+            rgba(100, 82, 55, 0.10),
+            transparent 65%
+        ),
+        #d7cebd;
+}
+
+.public-talks-page .page-rail {
+    display: none;
+}
+
+/* Moving light and dust over the correspondence desk. */
+.public-talks-page .postage-atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.public-talks-page .postage-atmosphere canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.public-talks-page .postage-sunlight {
+    position: absolute;
+    inset: -15%;
+    transform-origin: top left;
+
+    background:
+        radial-gradient(
+            ellipse at 12% 12%,
+            rgba(255, 218, 151, 0.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            125deg,
+            transparent 12%,
+            rgba(255, 239, 195, 0.12) 28%,
+            rgba(255, 239, 195, 0.03) 43%,
+            transparent 60%
+        );
+
+    mix-blend-mode: screen;
+    animation: postage-light-drift 32s ease-in-out infinite alternate;
+}
+
+@keyframes postage-light-drift {
+    from {
+        transform: translate(-3%, -2%) rotate(-2deg);
+        opacity: 0.45;
+    }
+
+    to {
+        transform: translate(4%, 3%) rotate(2deg);
+        opacity: 0.8;
+    }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+    .public-talks-page .postage-atmosphere {
+        display: none;
+    }
+}
+
+html.reduce-motion .public-talks-page .postage-atmosphere {
+    display: none;
+}
+
+/* Keep notes inside the stamp’s perforated edges */
+.stamp-face.stamp-back {
+    box-sizing: border-box;
+    padding: 150px 58px;
+    overflow: hidden;
+}
+
+.stamp-face.stamp-back p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.stamp-notes-back {
+    box-sizing: border-box;
+    padding: 38px 81px !important;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Keep all text inside the padded area */
+.stamp-notes-back > span {
+    position: static !important;
+    width: auto !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#stamp-notes-text {
+    display: block;
+    flex: 1;
+    min-height: 0;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.7;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#stamp-notes-text::-webkit-scrollbar {
+    display: none;
+}
+
+.stamp-notes-label,
+.stamp-notes-signature {
+    flex-shrink: 0;
 }

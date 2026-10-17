@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>THE LIBRARY | Ethan Wilson</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+<script src="js/library.js" defer></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"
+  defer
+></script>
+
+<script src="js/book-playground.js?v=4" defer></script>
+<script src="js/reading-room-effects.js" defer></script>
+</head>
+
+<body class="reading-room-page">
+
+  <div class="reading-atmosphere" aria-hidden="true">
+    <div class="reading-sunlight"></div>
+    <canvas id="lr-dust"></canvas>
+</div>
+
+  <!-- Add your existing website header here. -->
+
+  <main class="reading-room">
+    <div class="bookcase-top" aria-hidden="true"></div>
+
+    <header class="reading-room-heading">
+
+<div class="bookcase-top">
+    <a href="articles.html" class="reading-room-back">
+        BACK TO ARCHIVE
+    </a>
+</div>
+
+      <p class="reading-room-label">THE LIBRARY</p>
+
+      <h1>THE LIBRARY</h1>
+
+      <p class="reading-room-description">
+
+      </p>
+
+      <p class="reading-room-instruction">
+        Select a spine to take a book off the shelf!
+      </p>
+
+    </header>
+
+    <section aria-labelledby="shelf-title">
+
+      <h2 id="shelf-title" class="shelf-label">
+        ALL BOOKS READ
+      </h2>
+
+  <span
+    id="bookshelf-status"
+    class="bookshelf-status"
+    role="status"
+  ></span>
+
+      <div class="bookshelf" id="bookshelf">
+
+<button
+    class="shelf-book book-being-and-time"
+    type="button"
+    data-book="being-and-time"
+    data-cover="images/books/being-and-time.png"
+>
+    <span class="book-spine-title">Being and Time</span>
+    <span class="book-spine-author">MARTIN HEIDEGGER</span>
+</button>
+
+        <button
+    type="button"
+    class="shelf-book new-library-book book-volsunga-saga"
+    data-book="collection-volsunga-saga"
+    data-title="Völsunga Saga"
+data-cover="images/books/volsunga-saga.png"
+    aria-controls="book-dialog"
+    aria-haspopup="dialog"
+    aria-label="View Völsunga Saga"
+>
+    <span class="book-spine-title">Völsunga Saga</span>
+    <span class="book-spine-author">ANONYMOUS</span>
+</button>
+
+<button
+    class="shelf-book book-storyteller"
+    type="button"
+    data-book="storyteller"
+    data-cover="images/books/the-storyteller.png"
+>
+    <span class="book-spine-title">The Storyteller</span>
+    <span class="book-spine-author">DAVE GROHL</span>
+</button>
+
+        <button
+    class="shelf-book book-thunder-mountain"
+    type="button"
+    data-book="unidentified-book"
+    data-title="Thunder Mountain"
+    data-cover="images/books/thunder-mountain.png"
+>
+    <span class="book-spine-title">Thunder Mountain</span>
+    <span class="book-spine-author">ZANE GREY</span>
+</button>
+
+        <button class="shelf-book book-tuesdays-with-morrie"
+          type="button" data-book="tuesdays-with-morrie">
+          <span class="book-spine-title">Tuesdays with Morrie</span>
+          <span class="book-spine-author">MITCH ALBOM</span>
+        </button>
+
+        <button class="shelf-book book-last-lecture"
+          type="button" data-book="last-lecture">
+          <span class="book-spine-title">The Last Lecture</span>
+          <span class="book-spine-author">RANDY PAUSCH</span>
+        </button>
+
+        <button class="shelf-book book-fly-fishing"
+          type="button" data-book="fly-fishing">
+          <span class="book-spine-title">The Little Red Book of Fly Fishing</span>
+          <span class="book-spine-author">Charlie Meyers and Kirk Deeter
+</span>
+        </button>
+
+        <button class="shelf-book book-exactly-what-to-say-first"
+          type="button" data-book="exactly-what-to-say-first">
+          <span class="book-spine-title">Exactly What to Say</span>
+          <span class="book-spine-author">PHIL M. JONES</span>
+        </button>
+
+        <button class="shelf-book book-twelve-rules"
+          type="button" data-book="twelve-rules">
+          <span class="book-spine-title">12 Rules for Life</span>
+          <span class="book-spine-author">JORDAN B. PETERSON</span>
+        </button>
+
+        <button class="shelf-book book-beyond-order"
+          type="button" data-book="beyond-order">
+          <span class="book-spine-title">Beyond Order</span>
+          <span class="book-spine-author">JORDAN B. PETERSON</span>
+        </button>
+
+        <button class="shelf-book book-atomic-habits"
+          type="button" data-book="atomic-habits">
+          <span class="book-spine-title">Atomic Habits</span>
+          <span class="book-spine-author">JAMES CLEAR</span>
+        </button>
+
+        <button class="shelf-book book-principles"
+          type="button" data-book="principles">
+          <span class="book-spine-title">Principles</span>
+          <span class="book-spine-author">RAY DALIO</span>
+        </button>
+
+        <button class="shelf-book book-unscaled"
+          type="button" data-book="unscaled">
+          <span class="book-spine-title">Unscaled</span>
+          <span class="book-spine-author">HEMANT TANEJA</span>
+        </button>
+
+        <button class="shelf-book book-never-split"
+          type="button" data-book="never-split">
+          <span class="book-spine-title">Never Split the Difference</span>
+          <span class="book-spine-author">CHRIS VOSS</span>
+        </button>
+
+        <button class="shelf-book book-daily-edge"
+          type="button" data-book="daily-edge">
+          <span class="book-spine-title">The Daily Edge</span>
+          <span class="book-spine-author">DAVID HORSAGER</span>
+        </button>
+
+        <button class="shelf-book book-five-dysfunctions"
+          type="button" data-book="five-dysfunctions">
+          <span class="book-spine-title">The Five Dysfunctions of a Team</span>
+          <span class="book-spine-author">PATRICK LENCIONI</span>
+        </button>
+
+        <button class="shelf-book book-2024"
+          type="button" data-book="management-2024">
+          <span class="book-spine-title">2024</span>
+          <span class="book-spine-author">HBR’S 10 MUST READS</span>
+        </button>
+
+        <button class="shelf-book book-managing-yourself"
+          type="button" data-book="managing-yourself">
+          <span class="book-spine-title">Managing Yourself</span>
+          <span class="book-spine-author">HBR’S 10 MUST READS</span>
+        </button>
+
+        <button class="shelf-book book-carved-in-stone"
+          type="button" data-book="carved-in-stone">
+          <span class="book-spine-title">Character Carved in Stone</span>
+          <span class="book-spine-author">Pat Williams and Jim Denney</span>
+        </button>
+
+        <button class="shelf-book book-outsider"
+          type="button" data-book="outsider">
+          <span class="book-spine-title">The Odyssey</span>
+          <span class="book-spine-author">HOMER</span>
+        </button>
+
+        <button class="shelf-book book-win-friends"
+          type="button" data-book="win-friends">
+          <span class="book-spine-title">How to Win Friends &amp; Influence People</span>
+          <span class="book-spine-author">DALE CARNEGIE</span>
+        </button>
+
+        <button class="shelf-book book-nineteen-eighty-four"
+          type="button" data-book="nineteen-eighty-four">
+          <span class="book-spine-title">1984</span>
+          <span class="book-spine-author">GEORGE ORWELL</span>
+        </button>
+
+        <button class="shelf-book book-tiger-in-the-well"
+          type="button" data-book="tiger-in-the-well">
+          <span class="book-spine-title">The Tiger in the Well</span>
+          <span class="book-spine-author">PHILIP PULLMAN</span>
+        </button>
+
+        <button class="shelf-book book-wilderness-essays"
+          type="button" data-book="wilderness-essays">
+          <span class="book-spine-title">Wilderness Essays</span>
+          <span class="book-spine-author">JOHN MUIR</span>
+        </button>
+
+        <button class="shelf-book book-all-creatures"
+          type="button" data-book="all-creatures">
+          <span class="book-spine-title">All Creatures Great and Small</span>
+          <span class="book-spine-author">JAMES HERRIOT</span>
+        </button>
+
+        <button
+    type="button"
+    class="shelf-book new-library-book book-practical-stock-doctor"
+    data-book="collection-practical-stock-doctor"
+    data-title="The Practical Stock Doctor"
+    data-cover="images/books/practical-stock-doctor.png"
+    aria-controls="book-dialog"
+    aria-label="The Practical Stock Doctor by George Arthur Waterman"
+>
+    <span class="book-spine-title">The Practical Stock Doctor</span>
+    <span class="book-spine-author">GEORGE ARTHUR WATERMAN</span>
+</button>
+
+        <button
+  class="shelf-book new-library-book book-outsiders"
+  type="button"
+  data-book="collection-outsiders"
+>
+  <span class="book-spine-title">The Outsiders</span>
+  <span class="book-spine-author">S. E. HINTON</span>
+</button>
+
+<!-- NEW BOOKS -->
+
+<button class="shelf-book new-library-book book-cowboy-poetry"
+  type="button" data-book="collection-cowboy-poetry">
+  <span class="book-spine-title">Cowboy Poetry: A Gathering</span>
+  <span class="book-spine-author">HAL CANNON, EDITOR</span>
+</button>
+
+<button class="shelf-book new-library-book book-courage-disliked"
+  type="button" data-book="collection-courage-disliked">
+  <span class="book-spine-title">The Courage to Be Disliked</span>
+  <span class="book-spine-author">ICHIRO KISHIMI &amp; FUMITAKE KOGA</span>
+</button>
+
+<button class="shelf-book new-library-book book-dazai-collection"
+  type="button" data-book="collection-dazai-collection">
+  <span class="book-spine-title">The Setting Sun / No Longer Human</span>
+  <span class="book-spine-author">OSAMU DAZAI</span>
+</button>
+
+<button class="shelf-book new-library-book book-alchemist"
+  type="button" data-book="collection-alchemist">
+  <span class="book-spine-title">The Alchemist</span>
+  <span class="book-spine-author">PAULO COELHO</span>
+</button>
+
+<button class="shelf-book new-library-book book-ikigai"
+  type="button" data-book="collection-ikigai"
+  data-title="Ikigai: The Japanese Secret to a Long and Happy Life">
+  <span class="book-spine-title">Ikigai</span>
+  <span class="book-spine-author">HÉCTOR GARCÍA &amp; FRANCESC MIRALLES</span>
+</button>
+
+<button class="shelf-book new-library-book book-kokoro"
+  type="button" data-book="collection-kokoro">
+  <span class="book-spine-title">Kokoro</span>
+  <span class="book-spine-author">NATSUME SŌSEKI</span>
+</button>
+
+<!-- White spine beside Kokoro: unreadable in the photo -->
+<button class="shelf-book new-library-book book-unidentified-white"
+  type="button" data-book="collection-unidentified-white">
+  <span class="book-spine-title">Sun and Steel</span>
+  <span class="book-spine-author">Yukio Mishima
+</span>
+</button>
+
+<button class="shelf-book new-library-book book-wallflower"
+  type="button" data-book="collection-wallflower">
+  <span class="book-spine-title">The Perks of Being a Wallflower</span>
+  <span class="book-spine-author">STEPHEN CHBOSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-hunter"
+  type="button" data-book="collection-hunter">
+  <span class="book-spine-title">The Hunter</span>
+  <span class="book-spine-author">TANA FRENCH</span>
+</button>
+
+<button class="shelf-book new-library-book book-wild-snail"
+  type="button" data-book="collection-wild-snail">
+  <span class="book-spine-title">The Sound of a Wild Snail Eating</span>
+  <span class="book-spine-author">ELISABETH TOVA BAILEY</span>
+</button>
+
+<button class="shelf-book new-library-book book-meditations"
+  type="button" data-book="collection-meditations">
+  <span class="book-spine-title">Meditations</span>
+  <span class="book-spine-author">MARCUS AURELIUS</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-cuckoos-nest"
+  type="button"
+  data-book="collection-cuckoos-nest"
+>
+  <span class="book-spine-title">One Flew Over the Cuckoo’s Nest</span>
+  <span class="book-spine-author">KEN KESEY</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-denizens-desert"
+  type="button"
+  data-book="collection-denizens-desert"
+>
+  <span class="book-spine-title">Denizens of the Desert</span>
+  <span class="book-spine-author">EDMUND C. JAEGER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-enemy-king"
+  type="button"
+  data-book="collection-enemy-king"
+>
+  <span class="book-spine-title">An Enemy to the King</span>
+  <span class="book-spine-author">ROBERT NEILSON STEPHENS</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-riverside-drive"
+  type="button"
+  data-book="collection-riverside-drive"
+>
+  <span class="book-spine-title">Riverside Drive</span>
+  <span class="book-spine-author">BETH BROWN</span>
+</button>
+
+        <button class="shelf-book book-mysterious-stranger"
+          type="button" data-book="mysterious-stranger">
+          <span class="book-spine-title">The Mysterious Stranger</span>
+          <span class="book-spine-author">MARK TWAIN</span>
+        </button>
+
+        <button class="shelf-book book-second-lean"
+          type="button" data-book="second-lean">
+          <span class="book-spine-title">2 Second Lean</span>
+          <span class="book-spine-author">PAUL AKERS</span>
+        </button>
+
+<button
+  class="shelf-book new-library-book book-black-majesty"
+  type="button"
+  data-book="collection-black-majesty"
+  data-title="Black Majesty: The Life of Christophe, King of Haiti"
+>
+  <span class="book-spine-title">Black Majesty</span>
+  <span class="book-spine-author">JOHN W. VANDERCOOK</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-cousin-bette"
+  type="button"
+  data-book="collection-cousin-bette"
+>
+  <span class="book-spine-title">Cousin Bette</span>
+  <span class="book-spine-author">HONORÉ DE BALZAC</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-eugenie-grandet"
+  type="button"
+  data-book="collection-eugenie-grandet"
+>
+  <span class="book-spine-title">Eugénie Grandet</span>
+  <span class="book-spine-author">HONORÉ DE BALZAC</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-old-goriot"
+  type="button"
+  data-book="collection-old-goriot"
+>
+  <span class="book-spine-title">Old Goriot</span>
+  <span class="book-spine-author">HONORÉ DE BALZAC</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-watership-down"
+  type="button"
+  data-book="collection-watership-down"
+>
+  <span class="book-spine-title">Watership Down</span>
+  <span class="book-spine-author">RICHARD ADAMS</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-pivot-year"
+  type="button"
+  data-book="collection-pivot-year"
+>
+  <span class="book-spine-title">The Pivot Year</span>
+  <span class="book-spine-author">BRIANNA WIEST</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-mastery"
+  type="button"
+  data-book="collection-mastery"
+>
+  <span class="book-spine-title">Mastery</span>
+  <span class="book-spine-author">ROBERT GREENE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-cattle-production"
+  type="button"
+  data-book="collection-cattle-production"
+>
+  <span class="book-spine-title">Approved Practices in Cattle Production</span>
+  <span class="book-spine-author">JUERGENSEN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-cattle-kingdom"
+  type="button"
+  data-book="collection-cattle-kingdom"
+  data-title="Cattle Kingdom: The Hidden History of the Cowboy West"
+>
+  <span class="book-spine-title">Cattle Kingdom</span>
+  <span class="book-spine-author">CHRISTOPHER KNOWLTON</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-seven-habits"
+  type="button"
+  data-book="collection-seven-habits"
+  data-title="The 7 Habits of Highly Effective People"
+>
+  <span class="book-spine-title">The 7 Habits of Highly Effective People</span>
+  <span class="book-spine-author">STEPHEN R. COVEY</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-disrupting-game"
+  type="button"
+  data-book="collection-disrupting-game"
+  data-title="Disrupting the Game: From the Bronx to the Top of Nintendo"
+>
+  <span class="book-spine-title">Disrupting the Game</span>
+  <span class="book-spine-author">REGGIE FILS-AIMÉ</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-creative-act"
+  type="button"
+  data-book="collection-creative-act"
+  data-title="The Creative Act: A Way of Being"
+  data-cover="images/books/creative-act.png"
+>
+  <span class="book-spine-title">The Creative Act</span>
+  <span class="book-spine-author">RICK RUBIN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-silent-traveller-japan"
+  type="button"
+  data-book="collection-silent-traveller-japan"
+>
+  <span class="book-spine-title">
+    The Silent Traveller in Japan
+  </span>
+
+  <span class="book-spine-author">
+    CHIANG YEE
+  </span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-mountain-you"
+  type="button"
+  data-book="collection-mountain-you"
+  data-title="The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery"
+>
+  <span class="book-spine-title">The Mountain Is You</span>
+  <span class="book-spine-author">BRIANNA WIEST</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-convicts"
+  type="button"
+  data-book="collection-convicts"
+>
+  <span class="book-spine-title">The Convicts</span>
+  <span class="book-spine-author">IAIN LAWRENCE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-cannibals"
+  type="button"
+  data-book="collection-cannibals"
+>
+  <span class="book-spine-title">The Cannibals</span>
+  <span class="book-spine-author">IAIN LAWRENCE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-castaways"
+  type="button"
+  data-book="collection-castaways"
+>
+  <span class="book-spine-title">The Castaways</span>
+  <span class="book-spine-author">IAIN LAWRENCE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-hobbit"
+  type="button"
+  data-book="collection-hobbit"
+  data-title="The Hobbit, or There and Back Again"
+>
+  <span class="book-spine-title">The Hobbit</span>
+  <span class="book-spine-author">J. R. R. TOLKIEN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-revenant"
+  type="button"
+  data-book="collection-revenant"
+  data-title="The Revenant: A Novel of Revenge"
+>
+  <span class="book-spine-title">The Revenant</span>
+  <span class="book-spine-author">MICHAEL PUNKE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-communicate"
+  type="button"
+  data-book="collection-communicate"
+  data-title="Communicate What You Think"
+>
+  <span class="book-spine-title">Communicate What You Think</span>
+  <span class="book-spine-author">EARL NIGHTINGALE</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-empire-summer-moon"
+  type="button"
+  data-book="collection-empire-summer-moon"
+>
+  <span class="book-spine-title">Empire of the Summer Moon</span>
+  <span class="book-spine-author">S. C. GWYNNE</span>
+</button>
+
+<!-- Full titles and authors of these three need confirmation -->
+<button class="shelf-book new-library-book book-best-2018"
+  type="button" data-book="collection-best-2018">
+  <span class="book-spine-title">Best of 2018</span>
+  <span class="book-spine-author"></span>
+</button>
+
+<button class="shelf-book new-library-book book-best-2020"
+  type="button" data-book="collection-best-2020">
+  <span class="book-spine-title">Best of 2020</span>
+  <span class="book-spine-author"></span>
+</button>
+
+<button class="shelf-book new-library-book book-best-2022"
+  type="button" data-book="collection-best-2022">
+  <span class="book-spine-title">Best of 2022</span>
+  <span class="book-spine-author"></span>
+</button>
+
+<button class="shelf-book new-library-book book-sun-valley-guide"
+  type="button" data-book="collection-sun-valley-guide"
+  data-title="The Hiker’s Guide: Sun Valley &amp; Ketchum">
+  <span class="book-spine-title">Sun Valley &amp; Ketchum</span>
+  <span class="book-spine-author">SCOTT MARCHANT</span>
+</button>
+
+<button class="shelf-book new-library-book book-mammals-guide"
+  type="button" data-book="collection-mammals-guide"
+  data-title="National Geographic Pocket Guide to the Mammals of North America">
+  <span class="book-spine-title">Mammals of North America</span>
+  <span class="book-spine-author">CATHERINE H. HOWELL</span>
+</button>
+
+<button class="shelf-book new-library-book book-wildflowers-guide"
+  type="button" data-book="collection-wildflowers-guide"
+  data-title="National Geographic Pocket Guide to Wildflowers of North America">
+  <span class="book-spine-title">Wildflowers of North America</span>
+  <span class="book-spine-author">CATHERINE H. HOWELL</span>
+</button>
+
+<button class="shelf-book new-library-book book-birds-guide"
+  type="button" data-book="collection-birds-guide"
+  data-title="National Geographic Pocket Guide to the Birds of North America">
+  <span class="book-spine-title">Birds of North America</span>
+  <span class="book-spine-author">LAURA ERICKSON &amp; JONATHAN ALDERFER</span>
+</button>
+
+<button class="shelf-book new-library-book book-john-wayne-grit"
+  type="button" data-book="collection-john-wayne-grit"
+  data-title="John Wayne Grit: Daily Inspiration and Frontier Wisdom for Men">
+  <span class="book-spine-title">John Wayne Grit</span>
+  <span class="book-spine-author"></span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-lonesome-dove"
+  type="button"
+  data-book="collection-lonesome-dove"
+>
+  <span class="book-spine-title">Lonesome Dove</span>
+  <span class="book-spine-author">LARRY McMURTRY</span>
+</button>
+
+<button class="shelf-book new-library-book book-notes-underground"
+  type="button" data-book="collection-notes-underground">
+  <span class="book-spine-title">Notes from Underground</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-house-dead"
+  type="button" data-book="collection-house-dead">
+  <span class="book-spine-title">The House of the Dead &amp; The Gambler</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-idiot"
+  type="button" data-book="collection-idiot">
+  <span class="book-spine-title">The Idiot</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-karamazov"
+  type="button" data-book="collection-karamazov">
+  <span class="book-spine-title">The Karamazov Brothers</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-crime-punishment"
+  type="button" data-book="collection-crime-punishment">
+  <span class="book-spine-title">Crime and Punishment</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-devils"
+  type="button" data-book="collection-devils">
+  <span class="book-spine-title">Devils</span>
+  <span class="book-spine-author">FYODOR DOSTOEVSKY</span>
+</button>
+
+<button class="shelf-book new-library-book book-music-festival-2026"
+  type="button" data-book="collection-music-festival-2026">
+  <span class="book-spine-title">Sun Valley Music Festival: 2026 Summer</span>
+  <span class="book-spine-author"></span>
+</button>
+
+<button class="shelf-book new-library-book book-subconscious"
+  type="button" data-book="collection-subconscious">
+  <span class="book-spine-title">The Power of Your Subconscious Mind</span>
+  <span class="book-spine-author">JOSEPH MURPHY</span>
+</button>
+
+<button class="shelf-book new-library-book book-hells-canyon"
+  type="button" data-book="collection-hells-canyon"
+  data-title="The Hiker’s Guide: Idaho’s Hells Canyon &amp; Seven Devils Country">
+  <span class="book-spine-title">Hells Canyon &amp; Seven Devils</span>
+  <span class="book-spine-author">SCOTT MARCHANT &amp; TRACEY BAER</span>
+</button>
+
+<button class="shelf-book new-library-book book-greater-boise"
+  type="button" data-book="collection-greater-boise"
+  data-title="The Hiker’s Guide: Exploring Greater Boise">
+  <span class="book-spine-title">Exploring Greater Boise</span>
+  <span class="book-spine-author">SCOTT MARCHANT</span>
+</button>
+
+        <button class="shelf-book book-ocarina-of-time"
+          type="button" data-book="ocarina-of-time">
+          <span class="book-spine-title">Ocarina of Time</span>
+          <span class="book-spine-author">AKIRA HIMEKAWA</span>
+        </button>
+
+<button
+  class="shelf-book new-library-book book-zelda-totk-guide"
+  type="button"
+  data-book="collection-zelda-totk-guide"
+  data-title="The Legend of Zelda: Tears of the Kingdom – The Complete Official Guide"
+>
+  <span class="book-spine-title">Zelda: Tears of the Kingdom</span>
+  <span class="book-spine-author">PIGGYBACK</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-old-man-sea"
+  type="button"
+  data-book="collection-old-man-sea"
+>
+  <span class="book-spine-title">The Old Man and the Sea</span>
+  <span class="book-spine-author">ERNEST HEMINGWAY</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-pauls-case"
+  type="button"
+  data-book="collection-pauls-case"
+>
+  <span class="book-spine-title">Paul's Case</span>
+  <span class="book-spine-author">WILLA CATHER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-i-robot"
+  type="button"
+  data-book="collection-i-robot"
+>
+  <span class="book-spine-title">I, Robot</span>
+  <span class="book-spine-author">ISAAC ASIMOV</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-maze-runner"
+  type="button"
+  data-book="collection-maze-runner"
+>
+  <span class="book-spine-title">The Maze Runner</span>
+  <span class="book-spine-author">JAMES DASHNER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-scorch-trials"
+  type="button"
+  data-book="collection-scorch-trials"
+>
+  <span class="book-spine-title">The Scorch Trials</span>
+  <span class="book-spine-author">JAMES DASHNER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-death-cure"
+  type="button"
+  data-book="collection-death-cure"
+>
+  <span class="book-spine-title">The Death Cure</span>
+  <span class="book-spine-author">JAMES DASHNER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-kill-order"
+  type="button"
+  data-book="collection-kill-order"
+>
+  <span class="book-spine-title">The Kill Order</span>
+  <span class="book-spine-author">JAMES DASHNER</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-fever-code"
+  type="button"
+  data-book="collection-fever-code"
+>
+  <span class="book-spine-title">The Fever Code</span>
+  <span class="book-spine-author">JAMES DASHNER</span>
+</button>
+
+<button class="shelf-book new-library-book book-magicians-nephew"
+  type="button" data-book="collection-magicians-nephew">
+  <span class="book-spine-title">The Magician’s Nephew</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-lion-witch-wardrobe"
+  type="button" data-book="collection-lion-witch-wardrobe">
+  <span class="book-spine-title">The Lion, the Witch and the Wardrobe</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-horse-boy"
+  type="button" data-book="collection-horse-boy">
+  <span class="book-spine-title">The Horse and His Boy</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-prince-caspian"
+  type="button" data-book="collection-prince-caspian">
+  <span class="book-spine-title">Prince Caspian</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-dawn-treader"
+  type="button" data-book="collection-dawn-treader">
+  <span class="book-spine-title">The Voyage of the Dawn Treader</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-silver-chair"
+  type="button" data-book="collection-silver-chair">
+  <span class="book-spine-title">The Silver Chair</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+<button class="shelf-book new-library-book book-last-battle"
+  type="button" data-book="collection-last-battle">
+  <span class="book-spine-title">The Last Battle</span>
+  <span class="book-spine-author">C. S. LEWIS</span>
+</button>
+
+        <!-- THE REDWALL COLLECTION -->
+
+<button class="shelf-book book-redwall"
+  type="button" data-book="redwall-01">
+  <span class="book-spine-title">Redwall</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-mossflower"
+  type="button" data-book="redwall-02">
+  <span class="book-spine-title">Mossflower</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-mattimeo"
+  type="button" data-book="redwall-03">
+  <span class="book-spine-title">Mattimeo</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-mariel"
+  type="button" data-book="redwall-04">
+  <span class="book-spine-title">Mariel of Redwall</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-salamandastron"
+  type="button" data-book="redwall-05">
+  <span class="book-spine-title">Salamandastron</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-martin-warrior"
+  type="button" data-book="redwall-06">
+  <span class="book-spine-title">Martin the Warrior</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-bellmaker"
+  type="button" data-book="redwall-07">
+  <span class="book-spine-title">The Bellmaker</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-outcast"
+  type="button" data-book="redwall-08">
+  <span class="book-spine-title">Outcast of Redwall</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-pearls-lutra"
+  type="button" data-book="redwall-09">
+  <span class="book-spine-title">The Pearls of Lutra</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-long-patrol"
+  type="button" data-book="redwall-10">
+  <span class="book-spine-title">The Long Patrol</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-marlfox"
+  type="button" data-book="redwall-11">
+  <span class="book-spine-title">Marlfox</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-legend-luke"
+  type="button" data-book="redwall-12">
+  <span class="book-spine-title">The Legend of Luke</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-lord-brocktree"
+  type="button" data-book="redwall-13">
+  <span class="book-spine-title">Lord Brocktree</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-taggerung"
+  type="button" data-book="redwall-14">
+  <span class="book-spine-title">The Taggerung</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-triss"
+  type="button" data-book="redwall-15">
+  <span class="book-spine-title">Triss</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-loamhedge"
+  type="button" data-book="redwall-16">
+  <span class="book-spine-title">Loamhedge</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-rakkety-tam"
+  type="button" data-book="redwall-17">
+  <span class="book-spine-title">Rakkety Tam</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-high-rhulain"
+  type="button" data-book="redwall-18">
+  <span class="book-spine-title">High Rhulain</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-eulalia"
+  type="button" data-book="redwall-19">
+  <span class="book-spine-title">Eulalia!</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-doomwyte"
+  type="button" data-book="redwall-20">
+  <span class="book-spine-title">Doomwyte</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-sable-quean"
+  type="button" data-book="redwall-21">
+  <span class="book-spine-title">The Sable Quean</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button class="shelf-book book-rogue-crew"
+  type="button" data-book="redwall-22">
+  <span class="book-spine-title">The Rogue Crew</span>
+  <span class="book-spine-author">BRIAN JACQUES</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-lightning-thief"
+  type="button"
+  data-book="collection-lightning-thief"
+>
+  <span class="book-spine-title">The Lightning Thief</span>
+  <span class="book-spine-author">RICK RIORDAN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-sea-monsters"
+  type="button"
+  data-book="collection-sea-monsters"
+>
+  <span class="book-spine-title">The Sea of Monsters</span>
+  <span class="book-spine-author">RICK RIORDAN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-titans-curse"
+  type="button"
+  data-book="collection-titans-curse"
+>
+  <span class="book-spine-title">The Titan’s Curse</span>
+  <span class="book-spine-author">RICK RIORDAN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-battle-labyrinth"
+  type="button"
+  data-book="collection-battle-labyrinth"
+>
+  <span class="book-spine-title">The Battle of the Labyrinth</span>
+  <span class="book-spine-author">RICK RIORDAN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-last-olympian"
+  type="button"
+  data-book="collection-last-olympian"
+>
+  <span class="book-spine-title">The Last Olympian</span>
+  <span class="book-spine-author">RICK RIORDAN</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-eragon"
+  type="button"
+  data-book="collection-eragon"
+>
+  <span class="book-spine-title">Eragon</span>
+  <span class="book-spine-author">CHRISTOPHER PAOLINI</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-eldest"
+  type="button"
+  data-book="collection-eldest"
+>
+  <span class="book-spine-title">Eldest</span>
+  <span class="book-spine-author">CHRISTOPHER PAOLINI</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-brisingr"
+  type="button"
+  data-book="collection-brisingr"
+>
+  <span class="book-spine-title">Brisingr</span>
+  <span class="book-spine-author">CHRISTOPHER PAOLINI</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-inheritance"
+  type="button"
+  data-book="collection-inheritance"
+>
+  <span class="book-spine-title">Inheritance</span>
+  <span class="book-spine-author">CHRISTOPHER PAOLINI</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-anne-green-gables"
+  type="button"
+  data-book="collection-anne-green-gables"
+>
+  <span class="book-spine-title">Anne of Green Gables</span>
+  <span class="book-spine-author">L. M. MONTGOMERY</span>
+</button>
+
+<button
+  class="shelf-book new-library-book book-red-fern"
+  type="button"
+  data-book="collection-red-fern"
+>
+  <span class="book-spine-title">Where the Red Fern Grows</span>
+  <span class="book-spine-author">WILSON RAWLS</span>
+</button>
+
+
+<button class="shelf-book new-library-book book-bad-beginning"
+  type="button" data-book="collection-bad-beginning">
+  <span class="book-spine-title">The Bad Beginning</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-reptile-room"
+  type="button" data-book="collection-reptile-room">
+  <span class="book-spine-title">The Reptile Room</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-wide-window"
+  type="button" data-book="collection-wide-window">
+  <span class="book-spine-title">The Wide Window</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-miserable-mill"
+  type="button" data-book="collection-miserable-mill">
+  <span class="book-spine-title">The Miserable Mill</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-austere-academy"
+  type="button" data-book="collection-austere-academy">
+  <span class="book-spine-title">The Austere Academy</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-ersatz-elevator"
+  type="button" data-book="collection-ersatz-elevator">
+  <span class="book-spine-title">The Ersatz Elevator</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-vile-village"
+  type="button" data-book="collection-vile-village">
+  <span class="book-spine-title">The Vile Village</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-hostile-hospital"
+  type="button" data-book="collection-hostile-hospital">
+  <span class="book-spine-title">The Hostile Hospital</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-carnivorous-carnival"
+  type="button" data-book="collection-carnivorous-carnival">
+  <span class="book-spine-title">The Carnivorous Carnival</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-slippery-slope"
+  type="button" data-book="collection-slippery-slope">
+  <span class="book-spine-title">The Slippery Slope</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-grim-grotto"
+  type="button" data-book="collection-grim-grotto">
+  <span class="book-spine-title">The Grim Grotto</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-penultimate-peril"
+  type="button" data-book="collection-penultimate-peril">
+  <span class="book-spine-title">The Penultimate Peril</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+<button class="shelf-book new-library-book book-end"
+  type="button" data-book="collection-end">
+  <span class="book-spine-title">The End</span>
+  <span class="book-spine-author">LEMONY SNICKET</span>
+</button>
+
+      </div>
+
+    </section>
+
+    <p class="reading-room-footer">
+      Thanks for stopping by!
+    </p>
+
+  </main>
+
+  <dialog
+    id="book-dialog"
+    class="book-dialog"
+    aria-labelledby="book-dialog-title"
+>
+    <form method="dialog" class="book-dialog-close-form">
+        <button
+            type="submit"
+            class="book-dialog-close"
+            aria-label="Close book"
+            autofocus
+        >×</button>
+    </form>
+
+    <img
+        id="book-dialog-cover"
+        class="book-dialog-cover"
+        alt=""
+        hidden
+    >
+
+    <h2 id="book-dialog-title"></h2>
+    <p id="book-dialog-author"></p>
+
+
+    <aside class="vintage-library-card" aria-label="Library card">
+      <img src="images/sig.png" class="library-stamp-logo" alt="From the library of Ethan Wilson">
+
+    <div class="library-card-details">
+        <span>AUTHOR</span>
+        <p id="library-card-author"></p>
+
+        <span>TITLE</span>
+        <p id="library-card-title"></p>
+    </div>
+
+<section class="library-card-thoughts">
+    <h3>MY THOUGHTS</h3>
+    <p id="library-card-notes"></p>
+</section>
+
+    <p class="library-card-footer">FROM THE COLLECTION OF E. WILSON</p>
+</aside>
+
+</dialog>
+
+</body>
+</html>

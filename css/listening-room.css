@@ -1,0 +1,1181 @@
+.listening-room-page { --lr-ink:#2b2118; --lr-gold:#a0773c; margin:0; min-height:100vh; color:var(--lr-ink); background:#e5d8bf url('../images/listening-room-background.png') center top/cover fixed no-repeat; font-family:'DM Sans',sans-serif; }
+.listening-room-page * { box-sizing:border-box; }
+.listening-room-page button,.listening-room-page input,.listening-room-page select { font:inherit; }
+.listening-room-page button { cursor:pointer; }
+.listening-room-page button:focus-visible,.listening-room-page a:focus-visible,.listening-room-page select:focus-visible,.listening-room-page input:focus-visible { outline:3px solid #775324; outline-offset:4px; }
+.lr-nav { width:min(1280px,90%); margin:auto; padding:14px 0 12px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #9e825c; }
+.lr-nav a { color:inherit; text-decoration:none; }
+.lr-brand { font-family:'Playfair Display',Georgia,serif; font-size:30px; color:#865e29!important; }
+.lr-nav nav { display:flex; gap:34px; font-size:10px; text-transform:uppercase; letter-spacing:.2em; }
+.lr-main { width:min(1180px,92%); margin:auto; }
+.lr-heading { text-align:center; padding:32px 0 24px; }
+.lr-heading .lr-eyebrow { margin:0 0 18px; font:10px 'DM Sans',sans-serif; letter-spacing:.45em; }
+.lr-eyebrow::after { content:''; display:block; width:32px; margin:16px auto 0; border-bottom:1px solid #a0773c; }
+.lr-heading h1 { margin:0; font:500 clamp(38px,5.3vw,76px)/1.1 'Playfair Display',Georgia,serif; letter-spacing:-.035em; }
+.lr-heading>p:last-child { margin:14px 0 0; font:18px Georgia,serif; letter-spacing:.04em; }
+.lr-display { display:grid; grid-template-columns:minmax(0,640px) 320px; gap:54px; align-items:center; justify-content:center; }
+.lr-record-column { min-width:0; }
+.lr-record-stage { position:relative; width:100%; padding-right:24%; isolation:isolate; touch-action:pan-y; }
+.lr-album-cover { position:relative; display:block; width:100%; aspect-ratio:1; object-fit:cover; background:#d2c19e; box-shadow:0 12px 24px #21180d66; border-radius:2px; z-index:2; }
+.lr-album-cover.lr-changing { animation:lr-lift .4s ease; }
+@keyframes lr-lift { 0% { opacity:.5; transform:translateY(12px) rotate(-1deg); } 100% { opacity:1; transform:none; } }
+.lr-vinyl { position:absolute; right:1%; top:2%; width:73%; aspect-ratio:1; border-radius:50%; background:repeating-radial-gradient(circle,#171716 0,#171716 1px,#292824 2px,#141413 3px),#111; box-shadow:8px 9px 22px #0005; display:grid; place-items:center; }
+.lr-vinyl::after { content:''; position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 25deg,transparent,#ffffff19 18%,transparent 32%,#ffffff10 48%,transparent 70%,#ffffff19 85%,transparent); }
+.lr-vinyl span { width:29%; aspect-ratio:1; display:grid; place-content:center; text-align:center; background:#635334; border:1px solid #a58955; border-radius:50%; color:#d8bf88; font:12px Georgia,serif; }
+.lr-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:44px; height:44px; border-radius:50%; border:1px solid #b59963; background:#f6ecd7; color:#342819; font-size:35px!important; box-shadow:0 3px 12px #0002; line-height:1; }
+.lr-arrow-prev { left:-24px; }.lr-arrow-next { right:-12px; }
+.lr-browse-bar { display:flex; align-items:center; justify-content:space-around; gap:10px; margin:15px auto 0; padding:12px 16px; border:1px solid #cfb77d; border-radius:12px; background:linear-gradient(100deg,#342315,#674527,#342315); color:#f4e6c8; box-shadow:0 5px 14px #0003; }
+.lr-browse-bar button { padding:2px 10px; border:0; background:none; color:inherit; font:12px Georgia,serif; text-transform:uppercase; letter-spacing:.08em; }
+#album-counter { font:12px Georgia,serif; white-space:nowrap; }
+.lr-browse-hint { margin:8px 0 0; text-align:center; font:italic 12px Georgia,serif; color:#f8ecd5; text-shadow:0 1px 4px #000; }
+.lr-card { padding:22px 24px 18px; border:1px solid #bda778; border-radius:3px 9px 4px 2px; transform:rotate(2deg); color:#514735; background:radial-gradient(ellipse at 0 100%,#8b562f38,transparent 52%),radial-gradient(ellipse at 100% 0,#8b562f2b,transparent 40%),linear-gradient(172deg,transparent 47%,#73593016 49.5%,#ffffff44 50%,transparent 52%),#e8dcc0; box-shadow:inset 0 0 25px #744c2828,4px 12px 24px #0004; }
+.lr-stamp { display:block; width:185px; max-width:100%; height:auto; margin:-8px auto 14px; transform:rotate(-4deg); opacity:.8; mix-blend-mode:multiply; }
+.lr-card dl { margin:0; }.lr-card dl>div { padding:10px 0; border-bottom:1px solid #73593055; }
+.lr-card dt,.lr-thoughts h2 { margin:0 0 8px; font:10px 'Courier New',monospace; text-transform:uppercase; letter-spacing:.13em; }
+.lr-card dd { margin:0; font:14px/1.5 Georgia,serif; overflow-wrap:anywhere; }
+#album-year { float:right; }.lr-thoughts { margin-top:20px; }.lr-thoughts h2 { font-weight:bold; }
+.lr-thoughts p { min-height:108px; margin:0; font:italic 15px/27px Georgia,serif; white-space:pre-wrap; overflow-wrap:anywhere; background:repeating-linear-gradient(to bottom,transparent 0,transparent 26px,#5a472a2e 26px,#5a472a2e 27px); }
+.lr-card-footer { margin:24px 0 0; text-align:center; font:8px 'Courier New',monospace; letter-spacing:.07em; }
+.lr-crate { width:min(760px,100%); margin:24px auto 0; }
+.lr-sleeves { min-height:116px; display:flex; align-items:end; justify-content:center; gap:12px; padding:0 22px; }
+.lr-sleeve { position:relative; width:132px; flex:0 1 132px; aspect-ratio:1; padding:0; border:2px solid #c5ad81; background:#4b3b2a; box-shadow:0 5px 15px #0005; transition:transform .18s; }
+.lr-sleeve:hover { transform:translateY(-9px) rotate(-1deg); }.lr-sleeve[aria-pressed='true'] { outline:2px solid #f3dfac; outline-offset:3px; transform:translateY(-7px); }
+.lr-sleeve img { width:100%; height:100%; object-fit:cover; display:block; }
+.lr-crate-front { position:relative; display:flex; justify-content:center; gap:30px; padding:22px 16px; border-top:8px solid #6d4829; border-bottom:7px solid #352211; background:repeating-linear-gradient(2deg,#382514 0,#4d301b 3px,#5d3b22 6px,#422817 10px); box-shadow:0 8px 24px #0004; }
+.lr-brass-button,.lr-category-label { display:flex; align-items:center; border:2px solid #8b692f; border-radius:5px; background:linear-gradient(110deg,#b99b60,#e1c992,#ab884b); color:#3b2b17; box-shadow:inset 0 0 0 1px #efdba8,0 2px 4px #0005; font:11px Georgia,serif!important; text-transform:uppercase; letter-spacing:.09em; }
+.lr-brass-button { padding:10px 18px; }.lr-category-label { padding:0 8px; }.lr-category-label select { max-width:210px; padding:10px 8px; border:none; background:transparent; color:inherit; font:inherit; text-transform:uppercase; letter-spacing:inherit; }
+.lr-demo-label { text-align:center; font:9px 'DM Sans',sans-serif; letter-spacing:.18em; margin:18px 0 24px; padding:4px; color:#f5ead4; text-shadow:0 1px 3px #000; }
+.lr-gallery { width:min(980px,94vw); max-height:88vh; padding:32px; background:#ede3ce; color:#382d20; border:1px solid #a78d5e; border-radius:8px; }
+.lr-gallery::backdrop { background:#20160ecc; backdrop-filter:blur(5px); }.lr-gallery h2 { font:32px 'Playfair Display',Georgia,serif; margin:0 0 20px; }.lr-gallery-close { position:absolute; right:12px; top:8px; background:none; border:0; font-size:28px!important; color:#443523; }
+.lr-search-label { display:block; font-size:12px; margin-bottom:7px; }#album-search { width:100%; padding:12px; border:1px solid #b49b70; background:#fbf6e9; margin-bottom:24px; }
+.lr-gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:24px; }.lr-gallery-item { padding:0; background:none; color:inherit; border:none; text-align:left; }.lr-gallery-item img { display:block; width:100%; aspect-ratio:1; object-fit:cover; box-shadow:0 4px 10px #0003; margin-bottom:10px; }.lr-gallery-item strong,.lr-gallery-item span { display:block; line-height:1.5; }.lr-gallery-item span { font-size:12px; }
+.lr-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media(min-width:1600px) { .lr-main { width:1300px; }.lr-display { grid-template-columns:700px 340px; gap:64px; } }
+@media(max-width:1000px) { .lr-display { grid-template-columns:minmax(0,1fr) 280px; gap:30px; }.lr-card { padding:18px; }.lr-card dd { font-size:13px; }.lr-thoughts p { font-size:14px; } }
+@media(max-width:700px) { .listening-room-page { background-attachment:scroll; background-size:auto 1100px; background-position:center top; }.lr-nav nav { gap:14px; font-size:8px; }.lr-heading { padding:28px 0; }.lr-heading>p:last-child { font-size:14px; }.lr-heading .lr-eyebrow { font-size:8px; letter-spacing:.25em; }.lr-display { display:flex; flex-direction:column; gap:30px; }.lr-record-column { width:min(540px,94%); }.lr-arrow { width:36px; height:36px; }.lr-arrow-prev { left:-15px; }.lr-arrow-next { right:-6px; }.lr-card { width:min(340px,95%); }.lr-crate { margin-top:34px; }.lr-sleeves { gap:8px; padding:0 6px; min-height:70px; }.lr-sleeve { width:90px; flex-basis:90px; }.lr-crate-front { gap:12px; flex-wrap:wrap; padding:15px 10px; }.lr-brass-button,.lr-category-label { font-size:9px!important; }.lr-gallery { padding:26px 18px; } }
+@media(prefers-reduced-motion:reduce) { .lr-album-cover.lr-changing { animation:none; }.lr-sleeve { transition:none; } }
+
+/* FIXED MOCKUP COMPOSITION — scales as one scene, at every screen size. */
+body.listening-room-page {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100dvh;
+  min-height:0;
+  overflow:hidden;
+  background:#e5d8bf;
+}
+.listening-room-page .lr-scene {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:1536px;
+  height:1024px;
+  overflow:hidden;
+  transform:translate(-50%,-50%) scale(var(--lr-scene-scale, 0));
+  transform-origin:center;
+  background:#e5d8bf url('../images/listening-room-background.png') center / cover no-repeat;
+}
+.listening-room-page .lr-scene .lr-nav {
+  position:absolute; top:0; left:106px; width:1324px; height:50px;
+  margin:0; padding:10px 36px;
+}
+.listening-room-page .lr-scene .lr-nav nav { gap:40px; font-size:10px; }
+.listening-room-page .lr-scene .lr-main { position:absolute; inset:50px 0 0; width:1536px; margin:0; }
+.listening-room-page .lr-scene .lr-heading { position:absolute; top:32px; left:0; width:100%; padding:0; }
+.listening-room-page .lr-scene .lr-heading h1 { font-size:76px; }
+.listening-room-page .lr-scene .lr-heading .lr-eyebrow { font-size:10px; letter-spacing:.45em; margin-bottom:18px; }
+.listening-room-page .lr-scene .lr-heading>p:last-child { font-size:20px; margin-top:14px; }
+.listening-room-page .lr-scene .lr-display {
+  position:absolute; top:214px; left:360px; width:1034px;
+  display:grid; grid-template-columns:640px 370px; gap:24px;
+  align-items:start; justify-content:start;
+}
+.listening-room-page .lr-scene .lr-record-column { width:640px; }
+.listening-room-page .lr-scene .lr-record-stage { width:640px; height:460px; padding:0; }
+.listening-room-page .lr-scene .lr-album-cover { width:460px; height:460px; }
+.listening-room-page .lr-scene .lr-vinyl { top:8px; right:0; width:444px; }
+.listening-room-page .lr-scene .lr-arrow { width:48px; height:48px; top:50%; font-size:35px!important; }
+.listening-room-page .lr-scene .lr-arrow-prev { left:-52px; }
+.listening-room-page .lr-scene .lr-arrow-next { right:-12px; }
+.listening-room-page .lr-scene .lr-browse-bar { width:564px; height:50px; margin:12px auto 0; padding:12px 16px; }
+.listening-room-page .lr-scene .lr-browse-hint { margin:8px 0 0; font-size:13px; }
+.listening-room-page .lr-scene .lr-card { width:370px; height:414px; margin-top:18px; padding:20px 24px 18px; transform:rotate(4deg); }
+.listening-room-page .lr-scene .lr-stamp { width:150px; height:auto; margin:-10px auto 6px; }
+.listening-room-page .lr-scene .lr-card dl>div { padding:8px 0; }
+.listening-room-page .lr-scene .lr-card dd { font-size:14px; line-height:1.5; }
+.listening-room-page .lr-scene .lr-thoughts { margin-top:14px; }
+.listening-room-page .lr-scene .lr-thoughts p { height:108px; min-height:0; overflow:auto; font-size:15px; line-height:27px; }
+.listening-room-page .lr-scene .lr-card-footer { margin-top:18px; }
+.listening-room-page .lr-scene .lr-crate { position:absolute; top:718px; left:280px; width:890px; margin:0; }
+.listening-room-page .lr-scene .lr-sleeves { height:144px; min-height:0; padding:0 22px; gap:12px; }
+.listening-room-page .lr-scene .lr-sleeve { width:138px; height:138px; flex:0 0 138px; }
+.listening-room-page .lr-scene .lr-crate-front { height:102px; padding:22px 16px; gap:30px; flex-wrap:nowrap; align-items:center; }
+.listening-room-page .lr-scene .lr-brass-button,
+.listening-room-page .lr-scene .lr-category-label { font-size:11px!important; }
+.listening-room-page .lr-scene .lr-demo-label { position:absolute; bottom:4px; left:0; width:100%; margin:0; }
+.listening-room-page .lr-gallery { overflow:auto; overscroll-behavior:contain; }
+
+
+/* Fill the screen behind the stationary layout */
+body.listening-room-page {
+    background:
+        #e5d8bf
+        url("../images/listening-room-background.png")
+        center / cover no-repeat;
+}
+
+/* Remove the rectangular background and beige side margins */
+.listening-room-page .lr-scene {
+    background: transparent;
+}
+
+/* Separate the thumbnail sleeves from the browsing controls */
+.listening-room-page .lr-scene .lr-crate {
+    top: 768px;
+}
+
+.listening-room-page .lr-scene .lr-sleeves {
+    height: 96px;
+    min-height: 0;
+}
+
+.listening-room-page .lr-scene .lr-sleeve {
+    width: 92px;
+    height: 92px;
+    flex: 0 0 92px;
+}
+
+.listening-room-page .lr-scene .lr-crate-front {
+    height: 80px;
+    padding: 14px 16px;
+}
+
+body.listening-room-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
+    background: none !important;
+}
+
+/* Full-screen background, with no cropping */
+body.listening-room-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("../images/listening-room-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Keep the album and controls on the transparent fixed scene */
+.listening-room-page .lr-scene {
+    background: transparent !important;
+}
+
+/* Colored vinyl with visible grooves */
+.listening-room-page .lr-vinyl {
+    background:
+        repeating-radial-gradient(
+            circle,
+            transparent 0 1px,
+            rgba(0, 0, 0, 0.22) 1px 2px,
+            rgba(255, 255, 255, 0.08) 2px 3px
+        ),
+        var(--vinyl-color, #171716);
+}
+
+/* Decorative splatter layer */
+.listening-room-page .lr-vinyl::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.85;
+
+    background:
+        radial-gradient(ellipse at 22% 28%,
+            var(--vinyl-splatter) 0 3%, transparent 3.5%),
+        radial-gradient(ellipse at 72% 20%,
+            var(--vinyl-splatter) 0 5%, transparent 5.5%),
+        radial-gradient(ellipse at 80% 65%,
+            var(--vinyl-splatter) 0 4%, transparent 4.5%),
+        radial-gradient(ellipse at 32% 78%,
+            var(--vinyl-splatter) 0 6%, transparent 6.5%),
+        repeating-conic-gradient(
+            from 18deg,
+            transparent 0deg 12deg,
+            var(--vinyl-splatter) 13deg 14deg,
+            transparent 15deg 38deg
+        );
+}
+
+.listening-room-page .lr-vinyl[data-design="solid"]::before {
+    display: none;
+}
+
+/* Center label */
+.listening-room-page .lr-vinyl span {
+    position: relative;
+    z-index: 1;
+    background: var(--vinyl-label, #635334);
+    color: var(--vinyl-label-ink, #d8bf88);
+}
+
+/* Use the realistic pressing image */
+.listening-room-page .lr-vinyl[data-image="true"] {
+    background: var(--vinyl-image) center / contain no-repeat;
+    box-shadow: none;
+    filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* The image already includes its label and reflections */
+.listening-room-page .lr-vinyl[data-image="true"]::before,
+.listening-room-page .lr-vinyl[data-image="true"]::after,
+.listening-room-page .lr-vinyl[data-image="true"] span {
+    display: none;
+}
+
+.lr-record-stage.lr-changing {
+    animation: lr-record-lift 0.45s ease-out both;
+}
+
+@keyframes lr-record-lift {
+    from {
+        opacity: 0;
+        transform: translateY(16px) rotate(-2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lr-record-stage.lr-changing {
+        animation: none;
+    }
+}
+
+/* Artist and runtime share one row */
+.listening-room-page .lr-card .lr-card-meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+}
+
+#album-runtime-field {
+    text-align: right;
+}
+
+#album-runtime {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Vintage gold sticker */
+.listening-room-page .lr-card {
+    position: relative;
+}
+
+.listening-room-page .lr-signed-sticker {
+    position: absolute;
+    top: -14px;
+    right: -12px;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    width: 76px;
+    height: 76px;
+    border: 3px double #80612c;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 25%, #f1dda3, #bd944b);
+    color: #49351b;
+    box-shadow:
+        inset 0 0 0 4px rgba(255, 244, 201, 0.25),
+        2px 4px 7px rgba(0, 0, 0, 0.2);
+
+    font-family: "Courier New", monospace;
+    text-align: center;
+    transform: rotate(-14deg);
+}
+
+.lr-signed-sticker span {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+}
+
+.lr-signed-sticker strong {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+}
+
+/* Ensure optional elements stay hidden */
+.listening-room-page .lr-signed-sticker[hidden],
+#album-runtime-field[hidden] {
+    display: none;
+}
+
+.listening-room-page .lr-signed-sticker {
+    top: -12px;
+    left: -16px;
+    right: auto;
+
+    width: 86px;
+    height: 48px;
+    gap: 2px;
+
+    border: 3px double #e8c9a7;
+    border-radius: 3px;
+
+    background:
+        radial-gradient(
+            circle at 25% 20%,
+            rgba(239, 209, 168, 0.2),
+            transparent 65%
+        ),
+        #9c3932;
+
+    color: #f0ddbd;
+    box-shadow:
+        inset 0 0 8px rgba(65, 19, 14, 0.25),
+        2px 3px 5px rgba(0, 0, 0, 0.18);
+
+    transform: rotate(-9deg);
+}
+
+.listening-room-page .lr-signed-sticker strong {
+    font-size: 14px;
+}
+
+.listening-room-page .lr-signed-sticker span {
+    font-size: 7px;
+}
+
+/* Atmosphere sits above the background, behind the content */
+.listening-room-page .lr-atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.listening-room-page .lr-scene {
+    z-index: 1;
+}
+
+#lr-dust {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Soft light drifting across the left side of the room */
+.lr-sunlight {
+    position: absolute;
+    inset: -8%;
+
+    background:
+        radial-gradient(
+            ellipse at 25% 35%,
+            rgba(255, 235, 180, 0.16),
+            transparent 55%
+        ),
+        linear-gradient(
+            115deg,
+            transparent 12%,
+            rgba(255, 244, 210, 0.07) 23%,
+            transparent 38%
+        );
+
+    animation: lr-sunlight-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes lr-sunlight-drift {
+    from {
+        transform: translate(-1%, -0.5%) rotate(-1deg);
+        opacity: 0.45;
+    }
+
+    to {
+        transform: translate(1.5%, 1%) rotate(1deg);
+        opacity: 0.9;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lr-atmosphere {
+        display: none;
+    }
+}
+
+.listening-room-page .lr-sunlight {
+    background:
+        radial-gradient(
+            ellipse at 25% 35%,
+            rgba(255, 235, 180, 0.28),
+            transparent 55%
+        ),
+        linear-gradient(
+            115deg,
+            transparent 12%,
+            rgba(255, 244, 210, 0.16) 23%,
+            transparent 38%
+        );
+
+    animation: lr-sunlight-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes lr-sunlight-drift {
+    from {
+        transform: translate(-3%, -1%) rotate(-2deg);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: translate(4%, 2%) rotate(2deg);
+        opacity: 0.95;
+    }
+}
+
+/* Tiny background movement; extra scale prevents exposed edges */
+body.listening-room-page::before {
+    transform:
+        translate(
+            var(--lr-parallax-x, 0px),
+            var(--lr-parallax-y, 0px)
+        )
+        scale(1.015);
+    transform-origin: center;
+}
+
+/* Faint moving leaf-shaped shadows on the left wall */
+.lr-leaf-shadows {
+    position: absolute;
+    left: 8%;
+    top: 18%;
+    width: 38%;
+    height: 48%;
+
+    background:
+        radial-gradient(
+            ellipse 22px 58px at 22% 25%,
+            rgba(48, 52, 29, 0.15) 65%,
+            transparent 75%
+        ),
+        radial-gradient(
+            ellipse 52px 20px at 35% 36%,
+            rgba(48, 52, 29, 0.13) 65%,
+            transparent 75%
+        ),
+        radial-gradient(
+            ellipse 20px 48px at 48% 22%,
+            rgba(48, 52, 29, 0.12) 65%,
+            transparent 75%
+        ),
+        radial-gradient(
+            ellipse 46px 18px at 54% 49%,
+            rgba(48, 52, 29, 0.14) 65%,
+            transparent 75%
+        ),
+        radial-gradient(
+            ellipse 19px 46px at 32% 62%,
+            rgba(48, 52, 29, 0.12) 65%,
+            transparent 75%
+        );
+
+    filter: blur(7px);
+    transform-origin: 15% 15%;
+    animation: lr-leaf-sway 12s ease-in-out infinite alternate;
+}
+
+@keyframes lr-leaf-sway {
+    from {
+        transform: translate(-25px, -10px) rotate(-8deg);
+        opacity: 0.35;
+    }
+
+    to {
+        transform: translate(35px, 20px) rotate(8deg);
+        opacity: 0.65;
+    }
+}
+
+/* Warm glow around the lamp on the left */
+.lr-lamp-glow {
+    position: absolute;
+    left: -3%;
+    top: 16%;
+    width: 23%;
+    height: 32%;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 207, 117, 0.18),
+        rgba(255, 219, 155, 0.06) 40%,
+        transparent 72%
+    );
+
+    animation: lr-lamp-breathe 18s ease-in-out infinite alternate;
+}
+
+@keyframes lr-lamp-breathe {
+    from {
+        opacity: 0.45;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: scale(1.03);
+    }
+}
+
+/* An occasional reflection across either CSS or image vinyl */
+.listening-room-page .lr-vinyl {
+    overflow: hidden;
+}
+
+.listening-room-page .lr-vinyl .lr-vinyl-reflection {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: 50%;
+    pointer-events: none;
+
+    background-image: linear-gradient(
+        115deg,
+        transparent 40%,
+        rgba(255, 245, 220, 0.03) 46%,
+        rgba(255, 245, 220, 0.09) 50%,
+        rgba(255, 245, 220, 0.03) 54%,
+        transparent 60%
+    );
+
+    background-size: 300% 100%;
+    background-repeat: no-repeat;
+
+    /* Keep the reflection off the center label */
+    -webkit-mask-image: radial-gradient(
+        circle,
+        transparent 0 17%,
+        black 18%
+    );
+    mask-image: radial-gradient(
+        circle,
+        transparent 0 17%,
+        black 18%
+    );
+
+    animation: lr-vinyl-glint 15s ease-in-out infinite;
+}
+
+@keyframes lr-vinyl-glint {
+    0%, 65% {
+        background-position: 100% 0;
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    86% {
+        opacity: 0.7;
+    }
+
+    90%, 100% {
+        background-position: 0% 0;
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.listening-room-page::before {
+        transform: none;
+    }
+
+    .lr-leaf-shadows,
+    .lr-lamp-glow,
+    .listening-room-page .lr-vinyl .lr-vinyl-reflection {
+        display: none;
+    }
+}
+
+body.listening-room-page::before {
+    transform: none !important;
+}
+
+/* NOTES CARD: soft entrance */
+.listening-room-page .lr-card.lr-card-enter {
+    animation: lr-card-arrive 0.65s ease-out both;
+}
+
+@keyframes lr-card-arrive {
+    from {
+        opacity: 0;
+        translate: 0 10px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+/* SLEEVES: lift and deepen the shadow */
+.listening-room-page .lr-sleeve {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+    .listening-room-page .lr-sleeve:hover {
+        transform: translateY(-14px) rotate(-2deg);
+        box-shadow: 0 14px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    .listening-room-page .lr-sleeve[aria-pressed="true"]:hover {
+        transform: translateY(-17px) rotate(-2deg);
+    }
+}
+
+/* VINYL: slide out while the sleeve and disc enter together */
+.listening-room-page .lr-record-stage.lr-changing .lr-vinyl {
+    animation: lr-disc-slide 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes lr-disc-slide {
+    from {
+        transform: translateX(-120px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* PAPER: subtle grain over the existing card background */
+.listening-room-page .lr-card {
+    isolation: isolate;
+}
+
+.listening-room-page .lr-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.45' filter='url(%23grain)'/%3E%3C/svg%3E"),
+        radial-gradient(
+            ellipse at top left,
+            rgba(115, 75, 32, 0.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            rgba(115, 75, 32, 0.12),
+            transparent 40%
+        );
+
+    background-size: 180px 180px, 100% 100%, 100% 100%;
+    opacity: 0.3;
+
+    box-shadow:
+        inset 0 0 16px rgba(106, 73, 35, 0.12),
+        inset 0 0 2px rgba(106, 73, 35, 0.3);
+}
+
+/* Reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .listening-room-page .lr-card.lr-card-enter,
+    .listening-room-page .lr-record-stage.lr-changing .lr-vinyl {
+        animation: none;
+    }
+
+    .listening-room-page .lr-sleeve {
+        transition: none;
+    }
+}
+
+/* Remove the separate wooden bar */
+.listening-room-page .lr-scene .lr-crate-front {
+    display: none;
+}
+
+/* Position controls relative to the full-screen background */
+.lr-background-controls {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7%;
+    height: 3.3%;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 1px;
+    background: rgba(75, 48, 19, 0.08);
+    color: #49341b;
+
+    box-shadow:
+        inset 1px 2px 4px rgba(48, 28, 10, 0.25),
+        inset 0 -1px 1px rgba(255, 235, 180, 0.3);
+
+    font-family: Georgia, serif;
+    font-size: clamp(8px, 0.55vw, 11px) !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Left brass label */
+.listening-room-page .lr-background-controls .lr-category-label {
+    left: 36.8%;
+    top: 90.2%;
+}
+
+/* Right brass label */
+.listening-room-page .lr-background-controls #view-all {
+    left: 67.5%;
+    top: 91.4%;
+}
+
+.lr-background-controls .lr-category-label select {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    padding: 0 3px;
+
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: inherit;
+
+    font: inherit;
+    letter-spacing: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.lr-background-controls #view-all:hover {
+    background: rgba(75, 48, 19, 0.16);
+}
+
+/* Fit the controls inside the photographed brass labels */
+.listening-room-page .lr-background-controls .lr-category-label {
+    left: 36.9%;
+    top: 90.6%;
+    width: 5.7%;
+    height: 2.8%;
+}
+
+.listening-room-page .lr-background-controls #view-all {
+    left: 66%;
+    top: 91.6%;
+    width: 5.9%;
+    height: 2.8%;
+}
+
+/* Use the background's existing inset instead of drawing another box */
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    background: transparent;
+    box-shadow: none;
+    color: #30200f;
+    font-weight: bold;
+    font-size: clamp(8px, 0.5vw, 10px) !important;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-shadow: 0 1px rgba(255, 230, 170, 0.25);
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    color: #fff0ca;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(10px, 0.62vw, 12px) !important;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.lr-background-controls .lr-category-label select {
+    color: inherit;
+    font: inherit;
+    text-shadow: inherit;
+}
+
+/* Keep the dropdown choices readable */
+.lr-background-controls select option {
+    background: #eee3ca;
+    color: #30200f;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 236, 185, 0.07) 0 1px,
+            rgba(74, 43, 15, 0.06) 1px 2px,
+            transparent 2px 4px
+        ),
+        linear-gradient(
+            165deg,
+            #c5a16a,
+            #b48b50 45%,
+            #a77b42 70%,
+            #be975c
+        );
+
+    border: 1px solid rgba(77, 48, 20, 0.6);
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 2px 3px rgba(53, 30, 10, 0.4),
+        inset 0 -1px 1px rgba(255, 232, 173, 0.5);
+
+    color: #392510;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: clamp(9px, 0.55vw, 11px) !important;
+    letter-spacing: 0.03em;
+
+    /* Light lower edge makes the lettering look engraved */
+    text-shadow: 0 1px 0 rgba(255, 228, 169, 0.65);
+}
+
+.lr-background-controls .lr-category-label select {
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-shadow: inherit;
+}
+
+/* Gentle change in the metal's lighting on hover */
+.listening-room-page .lr-background-controls #view-all:hover,
+.listening-room-page .lr-background-controls .lr-category-label:hover {
+    background-color: #c5a16a;
+    background-blend-mode: normal;
+    filter: brightness(1.08);
+}
+
+/* Left label */
+.listening-room-page .lr-background-controls .lr-category-label {
+    left: 36.9%;
+    top: 90.5%;
+    width: 5.8%;
+    height: 3%;
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+/* Right label */
+.listening-room-page .lr-background-controls #view-all {
+    left: 66%;
+    top: 91.4%;
+    width: 6%;
+    height: 3%;
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+/* Let the photographed brass texture show through */
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    border: none;
+    border-radius: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 224, 161, 0.12),
+        rgba(65, 37, 12, 0.08)
+    );
+
+    box-shadow: inset 0 1px 2px rgba(49, 29, 10, 0.18);
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    background: linear-gradient(
+        165deg,
+        #c7a875,
+        #b48c53
+    );
+
+    color: #24170b !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(10px, 0.65vw, 13px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
+
+    /* A small highlight makes the lettering feel pressed into brass. */
+    text-shadow: 0 1px 0 rgba(255, 235, 190, 0.55);
+
+    box-shadow:
+        inset 0 2px 3px rgba(48, 27, 10, 0.35),
+        inset 0 -1px 1px rgba(255, 232, 180, 0.4);
+}
+
+.listening-room-page .lr-background-controls .lr-category-label select {
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit;
+    text-shadow: inherit;
+    background: transparent;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    padding: 0 !important;
+
+    color: #291c0d !important;
+    font-family: Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(9px, 0.85vw, 12px) !important;
+    letter-spacing: 0 !important;
+    text-shadow: 0 1px 0 rgba(255, 235, 180, 0.45);
+}
+
+.listening-room-page .lr-background-controls .lr-category-label select {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+    font: inherit !important;
+    text-shadow: inherit;
+    text-align: center;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label,
+.listening-room-page .lr-background-controls #view-all {
+    color: #170f07 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0.7px 0 rgba(5, 5, 5, 0.7) !important;
+
+    animation: none !important;
+    transition: none !important;
+    translate: none !important;
+    scale: none !important;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label:hover,
+.listening-room-page .lr-background-controls #view-all:hover,
+.listening-room-page .lr-background-controls #view-all:active {
+    transform: translate(-50%, -50%) rotate(1deg) !important;
+    filter: none !important;
+}
+
+.listening-room-page .lr-background-controls .lr-category-label select {
+    color: inherit !important;
+    text-shadow: inherit !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Text sits inside the existing brass label. */
+.listening-room-page .lr-wishlist-button {
+    position: fixed;
+    left: 11%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    width: clamp(96px, 6.5vw, 140px);
+    height: clamp(28px, 4.2vh, 42px);
+    padding: 0;
+
+    border: none;
+    border-radius: 2px;
+    background: transparent;
+
+    color: #291b0c;
+    font: bold 11px Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 1px rgba(107, 106, 106, 0.95);
+
+    cursor: pointer;
+    animation: none;
+    transition: none;
+}
+
+.listening-room-page .lr-wishlist-button:hover {
+    color: #100b05;
+    background: rgba(55, 30, 8, 0.08);
+    transform: translate(-50%, -50%);
+}
+
+.lr-wishlist-button:focus-visible {
+    outline: 2px solid #ead4a2;
+    outline-offset: 3px;
+}
+
+#wishlist-search {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #b49b70;
+    background: #fbf6e9;
+    color: #382d20;
+    font: inherit;
+}
+
+.lr-wishlist-art {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 10px;
+    background: #ddd0b5;
+    box-shadow: 0 4px 10px #0003;
+    color: #706044;
+    font: italic 14px Georgia, serif;
+}
+
+.lr-wishlist-art img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+
+#wishlist-empty {
+    font: italic 16px Georgia, serif;
+    color: #756348;
+}
+
+.listening-room-page .lr-wishlist-button,
+.listening-room-page .lr-wishlist-button:hover {
+    transform: translate(
+        calc(-50% - 4px),
+        calc(-50% - 2px)
+    );
+}
+
+.listening-room-page .lr-category-label {
+    position: relative;
+}
+
+.listening-room-page .lr-category-label .lr-genre-text {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+
+    color: #291b0c;
+    font: bold 11px Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 1px rgba(41, 40, 40, 0.85);
+}
+
+.listening-room-page .lr-category-label select {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.listening-room-page .lr-category-label:focus-within {
+    outline: 2px solid #ead4a2;
+    outline-offset: 3px;
+}
+
+.listening-room-page .lr-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listening-room-page .lr-brand {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.listening-room-page .lr-brand img {
+    display: block;
+    width: 88px;
+    height: auto;
+    padding-top: 90px;
+}
+
+.listening-room-page .lr-nav nav {
+    margin-left: auto;
+}
+
+/* Remove the line beneath the top navigation. */
+.listening-room-page .lr-scene .lr-nav {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* Adjust the EW logo opacity. */
+.listening-room-page .lr-brand img {
+    opacity: 0.5;
+}
+
+.listening-room-page .lr-scene .lr-nav nav a {
+    font-size: 18px;
+    padding-top: 30px;
+    font-weight: 800;
+}
+
+.listening-room-page .lr-wishlist-button,
+.listening-room-page .lr-wishlist-button:hover {
+    animation: none !important;
+    transition: none !important;
+    background: transparent;
+    color: #291b0c;
+
+    transform: translate(
+        calc(-50% - 4px),
+        calc(-50% - 2px)
+    );
+}

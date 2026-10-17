@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ethan Wilson's personal vinyl collection and listening notes.">
+  <title>The Listening Room | Ethan Wilson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Your shared styles load first; this page's styles are scoped. -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/listening-room.css">
+  <script src="js/listening-room.js" defer></script>
+</head>
+<body class="listening-room-page">
+  <div class="reading-atmosphere" aria-hidden="true">
+    <div class="reading-sunlight"></div>
+    <canvas id="lr-dust"></canvas>
+</div>
+  <div class="lr-atmosphere" aria-hidden="true">
+    <div class="lr-leaf-shadows"></div>
+    <div class="lr-lamp-glow"></div>
+    <div class="lr-sunlight"></div>
+    <canvas id="lr-dust"></canvas>
+</div>
+  <div class="lr-scene" id="listening-scene">
+ <header class="lr-nav">
+    <a class="lr-brand" href="index.html" aria-label="Ethan Wilson home">
+        <img src="images/ew-logo.png" alt="Ethan Wilson">
+    </a>
+
+    <nav aria-label="Main navigation">
+        <a href="articles.html">← Back to Archive</a>
+    </nav>
+</header>
+  <main class="lr-main">
+    <header class="lr-heading">
+      <p class="lr-eyebrow">MY COLLECTION</p>
+      <h1>The Vinyl Room</h1>
+    </header>
+    <section class="lr-display" aria-label="Selected album">
+      <div class="lr-record-column">
+        <div class="lr-record-stage" id="record-stage">
+          <div class="lr-vinyl" aria-hidden="true"><span>EW<br>33⅓ RPM</span></div>
+          <img id="album-cover" class="lr-album-cover" alt="">
+          <button class="lr-arrow lr-arrow-prev" id="previous-album" aria-label="Previous album">‹</button>
+          <button class="lr-arrow lr-arrow-next" id="next-album" aria-label="Next album">›</button>
+        </div>
+        <div class="lr-browse-bar">
+          <button id="previous-text">← Previous</button>
+          <span id="album-counter" role="status" aria-live="polite"></span>
+          <button id="next-text">Next →</button>
+        </div>
+        <p class="lr-browse-hint">Swipe or use the arrow keys</p>
+      </div>
+      <aside class="lr-card" aria-label="Album details and thoughts">
+        <div id="signed-sticker" class="lr-signed-sticker" hidden>
+    <strong>SIGNED</strong>
+</div>
+        <img src="images/sig.png" class="lr-stamp" alt="From the library of Ethan Wilson">
+        <dl>
+          <div class="lr-card-meta">
+    <div>
+        <dt>Artist</dt>
+        <dd id="album-artist"></dd>
+    </div>
+
+    <div id="album-runtime-field" hidden>
+        <dt>Runtime</dt>
+        <dd id="album-runtime"></dd>
+    </div>
+</div>
+          <div><dt>Album <span id="album-year"></span></dt><dd id="album-title"></dd></div>
+          <div><dt>Favorite tracks</dt><dd id="album-tracks"></dd></div>
+        </dl>
+        <section class="lr-thoughts"><h2>notes</h2><p id="album-notes"></p></section>
+        <p class="lr-card-footer">FROM THE COLLECTION OF E. WILSON</p>
+      </aside>
+    </section>
+    <section class="lr-crate" aria-label="Browse record covers">
+      <div class="lr-sleeves" id="crate-sleeves"></div>
+      <div class="lr-crate-front">
+<label class="lr-category-label">
+    <span class="lr-genre-text" aria-hidden="true">Genre</span>
+
+    <select id="crate-filter" aria-label="Filter records by genre">
+        <option value="all">All records</option>
+    </select>
+</label>
+        <button
+    id="view-all"
+    class="lr-brass-button"
+    aria-haspopup="dialog"
+>
+    ALL VINYLS
+</button>
+      </div>
+    </section>
+    <p class="lr-demo-label" id="demo-label"></p>
+  </main>
+  </div>
+  <dialog class="lr-gallery" id="cover-gallery" aria-labelledby="gallery-title">
+    <form method="dialog"><button class="lr-gallery-close" aria-label="Close cover gallery">×</button></form>
+    <h2 id="gallery-title">The Collection</h2>
+    <label class="lr-search-label" for="album-search">Find an artist or album</label>
+    <input id="album-search" type="search" placeholder="Search the collection…">
+    <div class="lr-gallery-grid" id="gallery-grid"></div>
+    <p id="gallery-empty" hidden>No matching records.</p>
+  </dialog>
+
+  <button
+  id="view-wishlist"
+  class="lr-wishlist-button"
+  type="button"
+  aria-haspopup="dialog"
+  aria-controls="wishlist-gallery"
+>
+  Wishlist
+</button>
+
+<dialog
+    id="wishlist-gallery"
+    class="lr-gallery"
+    aria-labelledby="wishlist-title"
+>
+    <form method="dialog">
+        <button
+            class="lr-gallery-close"
+            aria-label="Close wishlist"
+        >×</button>
+    </form>
+
+    <h2 id="wishlist-title">Wishlist</h2>
+
+    <div id="wishlist-grid" class="lr-gallery-grid"></div>
+
+    <p id="wishlist-empty" hidden>
+        Your wishlist is waiting for its first record.
+    </p>
+</dialog>
+</body>
+</html>
