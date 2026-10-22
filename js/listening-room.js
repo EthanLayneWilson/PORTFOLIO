@@ -1145,6 +1145,12 @@ const shimmer =
 })();
 /* Add albums you want to collect inside this array. */
 const wishlistRecords = [
+
+        {
+        title: "People Watching (Deluxe)",
+        artist: "Sam Fender",
+        cover: "images/vinyl/people-watching.png"
+    },
     {
         title: "Heaven and Earth EP",
         artist: "Arcane Roots",
