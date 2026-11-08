@@ -1,0 +1,42 @@
+ articles.html                  |  101 [32m++[m[31m-[m
+ audio/blog2song.mp3            |  Bin [31m0[m -> [32m1822605[m bytes
+ audio/blog3song.mp3            |  Bin [31m0[m -> [32m5615000[m bytes
+ audio/blog4song.mp3            |  Bin [31m0[m -> [32m2608704[m bytes
+ audio/blog5song.mp3            |  Bin [31m0[m -> [32m12511260[m bytes
+ audio/song1.mp3                |  Bin [31m4479353[m -> [32m0[m bytes
+ blog/blog2.html                |  204 [32m+++++[m[31m-[m
+ blog/blog3.html                |  206 [32m+++++[m[31m-[m
+ blog/blog4.html                |  735 [32m++++++++++++++++++++[m
+ blog/blog5.html                |  580 [32m++++++++++++++++[m
+ css/style.css                  | 1477 [32m++++++++++++++++++++++++++++++++++++++++[m
+ images/blog4.png               |  Bin [31m0[m -> [32m2190172[m bytes
+ images/blog4a.png              |  Bin [31m0[m -> [32m2218135[m bytes
+ images/books/1984.png          |  Bin [31m0[m -> [32m594287[m bytes
+ images/books/DC.png            |  Bin [31m0[m -> [32m684699[m bytes
+ images/books/WE.png            |  Bin [31m0[m -> [32m54783[m bytes
+ images/books/courage.png       |  Bin [31m0[m -> [32m696100[m bytes
+ images/books/creatures.png     |  Bin [31m0[m -> [32m59814[m bytes
+ images/books/hegels.png        |  Bin [31m0[m -> [32m58587[m bytes
+ images/books/ikigai.png        |  Bin [31m0[m -> [32m95690[m bytes
+ images/books/kokoro.png        |  Bin [31m0[m -> [32m77979[m bytes
+ images/books/meditations.png   |  Bin [31m0[m -> [32m20272[m bytes
+ images/books/nightingale.png   |  Bin [31m0[m -> [32m43279[m bytes
+ images/books/odyssey.png       |  Bin [31m0[m -> [32m177617[m bytes
+ images/books/outsiders.png     |  Bin [31m0[m -> [32m208632[m bytes
+ images/books/poetry.png        |  Bin [31m0[m -> [32m57806[m bytes
+ images/books/setting-sun.png   |  Bin [31m0[m -> [32m12636[m bytes
+ images/books/silence.png       |  Bin [31m0[m -> [32m40854[m bytes
+ images/books/snail.png         |  Bin [31m0[m -> [32m33356[m bytes
+ images/books/sun-and-steel.png |  Bin [31m0[m -> [32m75087[m bytes
+ images/books/the-alchemist.png |  Bin [31m0[m -> [32m141608[m bytes
+ images/books/the-hunter.png    |  Bin [31m0[m -> [32m1354798[m bytes
+ images/books/tiger.png         |  Bin [31m0[m -> [32m28811[m bytes
+ images/books/wallflower.png    |  Bin [31m0[m -> [32m22424[m bytes
+ images/vinyl/eidola.png        |  Bin [31m0[m -> [32m378925[m bytes
+ images/vinyl/meteora.png       |  Bin [31m0[m -> [32m110355[m bytes
+ images/vinyl/nothing-more.png  |  Bin [31m0[m -> [32m2342435[m bytes
+ index.html                     |   16 [32m+[m[31m-[m
+ js/library.js                  |   61 [32m+[m[31m-[m
+ js/listening-room.js           |   16 [32m+[m
+ library.html                   |  235 [32m+++++[m[31m--[m
+ 41 files changed, 3482 insertions(+), 149 deletions(-)

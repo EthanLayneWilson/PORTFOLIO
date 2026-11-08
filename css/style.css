@@ -8191,3 +8191,1480 @@ html.reduce-motion .public-talks-page .postage-atmosphere {
 .stamp-notes-signature {
     flex-shrink: 0;
 }
+
+/* The Direct Line — Earl Nightingale */
+.shelf-book[data-book="nightingale"] {
+    background: linear-gradient(
+        to right,
+        #171431 0%,
+        #28215b 12%,
+        #383080 45%,
+        #322875 78%,
+        #1e1947 100%
+    );
+
+    color: #dfcc79;
+    border: 1px solid #211b4e;
+    border-radius: 3px 5px 3px 2px;
+
+    box-shadow:
+        inset 3px 0 5px rgba(0, 0, 0, 0.35),
+        inset -2px 0 3px rgba(0, 0, 0, 0.3),
+        inset 5px 0 2px rgba(255, 255, 255, 0.06);
+}
+
+.shelf-book[data-book="nightingale"] .book-spine-title,
+.shelf-book[data-book="nightingale"] .book-spine-author {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #dfcc79;
+
+    text-shadow:
+        0 1px 0 rgba(255, 238, 160, 0.2),
+        0 -1px 1px rgba(60, 42, 10, 0.35);
+}
+
+.shelf-book[data-book="nightingale"] .book-spine-title {
+    letter-spacing: 0.16em;
+}
+
+.shelf-book[data-book="nightingale"] .book-spine-author {
+    letter-spacing: 0.18em;
+}
+
+.shelf-book[data-book="nightingale"] {
+    width: 38px;
+    min-width: 38px;
+    height: 300px;
+    flex: 0 0 38px;
+    box-sizing: border-box;
+    padding: 20px 7px 16px;
+}
+
+.shelf-book[data-book="nightingale"] .book-spine-title {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+}
+
+.shelf-book[data-book="nightingale"] .book-spine-author {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+}
+
+/* Silence — Shūsaku Endō */
+.shelf-book[data-book="silence"] {
+    position: relative;
+    box-sizing: border-box;
+
+    width: 46px;
+    min-width: 46px;
+    height: 318px;
+    flex: 0 0 46px;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.35),
+            transparent 15%,
+            rgba(255, 255, 255, 0.07) 48%,
+            transparent 80%,
+            rgba(0, 0, 0, 0.4)
+        ),
+        linear-gradient(
+            to bottom,
+            #aa872d 0%,
+            #c4a347 33%,
+            #b5963a 34%,
+            #252525 34.5%,
+            #303030 100%
+        );
+
+    border: 1px solid #302a1f;
+    border-radius: 4px 5px 2px 2px;
+
+    box-shadow:
+        inset 3px 0 5px rgba(0, 0, 0, 0.3),
+        inset -2px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Large white title on the charcoal section */
+.shelf-book[data-book="silence"] .book-spine-title {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 27px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.14em;
+    line-height: 1;
+
+    text-transform: uppercase;
+    color: #eeeae2;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Black author lettering on the gold section */
+.shelf-book[data-book="silence"] .book-spine-author {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    line-height: 1;
+
+    text-transform: none;
+    color: #272015;
+    text-shadow: none;
+}
+
+/* Hegel’s Phenomenology of Spirit — Oxford / Miller */
+.shelf-book[data-book="hegels"] {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    width: 50px;
+    min-width: 50px;
+    height: 300px;
+    flex: 0 0 50px;
+    padding: 0;
+
+    background: linear-gradient(
+        to right,
+        #bca16b 0%,
+        #e8cb91 9%,
+        #f1d69e 35%,
+        #eed09a 80%,
+        #c8ab76 100%
+    );
+
+    color: #426c59;
+    border: 1px solid #baa074;
+    border-radius: 5px 6px 4px 4px;
+
+    box-shadow:
+        inset 3px 0 4px rgba(81, 55, 24, 0.25),
+        inset -2px 0 3px rgba(81, 55, 24, 0.18),
+        inset 0 2px 2px rgba(255, 249, 220, 0.5);
+}
+
+/* Orange rule near the top */
+.shelf-book[data-book="hegels"]::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: #d98b39;
+}
+
+/* Bold green HEGEL’S lettering */
+.shelf-book[data-book="hegels"] .book-spine-title {
+    position: absolute;
+    top: 24px;
+    right: 6px;
+    left: auto;
+    bottom: auto;
+    transform: none;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #426c59;
+    text-shadow: none;
+}
+
+/* Italic subtitle beside the main lettering */
+.shelf-book[data-book="hegels"] .hegel-subtitle {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #426c59;
+}
+
+/* Translator’s name between orange rules */
+.shelf-book[data-book="hegels"] .book-spine-author {
+    position: absolute;
+    top: 204px;
+    left: 8px;
+    right: 8px;
+    bottom: auto;
+    transform: none;
+
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 5px 0;
+
+    border-top: 4px solid #d98b39;
+    border-bottom: 4px solid #d98b39;
+
+    writing-mode: horizontal-tb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #426c59;
+    text-shadow: none;
+}
+
+
+.article-image-trigger.article-image-centered {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    width: min(540px, 100%);
+    margin: 26px auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.article-image-trigger.article-image-centered img {
+    display: block;
+    position: static;
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.blog-content .article-image-trigger.article-image-centered {
+    display: block;
+    position: static;
+    float: none;
+    clear: both;
+    width: min(540px, 100%);
+    margin: 26px auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.blog-content .article-image-centered > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.blog-content .article-image-trigger.article-image-centered {
+    box-sizing: border-box;
+    width: min(566px, 100%);
+    padding: 12px;
+    border: 1px solid #a9aa98;
+    background: #faf7ee;
+    box-shadow: 0 3px 8px rgb(45 43 32 / 10%);
+}
+
+.blog-content .article-image-centered > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+}
+
+.blog-content .article-image-centered > img {
+    filter: grayscale(100%);
+}
+
+.archive-masthead {
+    padding: clamp(3rem, 6vw, 6rem) 1rem clamp(2.5rem, 4vw, 4rem);
+    text-align: center;
+}
+
+.archive-masthead h1 {
+    margin: 1.5rem 0 1rem;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.75rem, 9vw, 9rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+}
+
+.archive-masthead-label {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.archive-masthead-description {
+    max-width: 38rem;
+    margin: 0 auto;
+    color: #4c4942;
+    line-height: 1.65;
+}
+
+.archive-collection {
+    margin-top: 2.5rem;
+}
+
+.archive-collection ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+}
+
+.archive-collection li + li {
+    border-inline-start: 1px solid #b3ada1;
+}
+
+.archive-collection a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65em;
+    padding: 0.35rem clamp(0.75rem, 2.4vw, 2.25rem);
+    color: inherit;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.55rem);
+    text-decoration: none;
+}
+
+.archive-collection a:hover,
+.archive-collection a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+@media (max-width: 540px) {
+    .archive-collection ul {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .archive-collection li + li {
+        border-inline-start: 0;
+    }
+}
+
+.archive-page .article-list {
+    border-top: 1px solid #1e1d19;
+}
+
+
+.shelf-book.book-outsiders {
+    background:
+        linear-gradient(90deg, #211b1840, transparent 30%, #211b1825),
+        radial-gradient(circle, #211b1880 0.65px, transparent 0.95px)
+            0 0 / 4px 4px,
+        linear-gradient(
+            to bottom,
+            #e7dfcf 0 42%,
+            #28211e 42% 43%,
+            #a7192a 43% 100%
+        );
+}
+
+.book-outsiders .book-spine-title {
+    color: #211b18;
+    text-shadow: 0 0 2px #f4ecdc;
+    font-weight: 800;
+}
+
+.book-outsiders .book-spine-author {
+    color: #fff4df;
+}
+
+
+.shelf-book.book-cowboy-poetry {
+    position: relative;
+    box-sizing: border-box;
+    width: 42px;
+    min-width: 42px;
+    height: 238px;
+    flex: 0 0 42px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        to right,
+        #a47957,
+        #d9b88f 15%,
+        #e8cda8 50%,
+        #c49b75
+    );
+    border: 1px solid #9b7355;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 3px 0 5px rgb(73 44 27 / 25%);
+}
+
+.shelf-book.book-cowboy-poetry::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 7px;
+    right: 7px;
+    height: 1px;
+    background: #9c5b40;
+}
+
+.shelf-book.book-cowboy-poetry .book-spine-title {
+    position: absolute;
+    inset: 20px 6px 78px;
+    margin: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: normal;
+    font: 600 14px/1.05 Georgia, serif;
+    color: #6f3023;
+    text-shadow: none;
+}
+
+.shelf-book.book-cowboy-poetry .book-spine-author {
+    position: absolute;
+    inset: auto 4px 14px;
+    margin: 0;
+    transform: none;
+    writing-mode: horizontal-tb;
+    font: 600 8px/1.3 Arial, sans-serif;
+    text-align: center;
+    white-space: normal;
+    color: #56392a;
+    text-shadow: none;
+}
+
+.shelf-book.book-courage-to-be-disliked {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 270px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #d4d4c8,
+        #f8f7f0 18%,
+        #fffefa 65%,
+        #e4e4d9
+    );
+    border: 1px solid #c8c9be;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(29 42 52 / 12%);
+}
+
+.shelf-book.book-courage-to-be-disliked::before,
+.shelf-book.book-courage-to-be-disliked::after {
+    content: "";
+    position: absolute;
+    inset-inline: 6px;
+    height: 4px;
+    pointer-events: none;
+}
+
+.shelf-book.book-courage-to-be-disliked::before {
+    top: 10px;
+    border-top: 1px solid #233457;
+    border-bottom: 1px solid #587589;
+}
+
+.shelf-book.book-courage-to-be-disliked::after {
+    bottom: 10px;
+    border-top: 1px solid #54795e;
+    border-bottom: 1px solid #233457;
+}
+
+.shelf-book.book-courage-to-be-disliked .book-spine-title {
+    position: absolute;
+    inset: 22px 6px 84px;
+    margin: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    text-align: start;
+    white-space: normal;
+    font: 500 14px/1.05 "Playfair Display", Georgia, serif;
+    color: #233457;
+    text-shadow: none;
+}
+
+.shelf-book.book-courage-to-be-disliked .book-spine-author {
+    position: absolute;
+    inset: auto 4px 24px;
+    margin: 0;
+    transform: none;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    white-space: normal;
+    font: 600 8px/1.3 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.02em;
+    color: #38624a;
+    text-shadow: none;
+}
+
+.shelf-book.book-setting-sun {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 258px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #2d4675,
+        #3c5d98 20%,
+        #42639e 65%,
+        #304e82
+    );
+    border: 1px solid #2b426d;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(22 32 55 / 25%);
+}
+
+.shelf-book.book-setting-sun .book-spine-title {
+    position: absolute;
+    inset: 18px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: 400 13px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #f0f1e8;
+    text-shadow: none;
+}
+
+.shelf-book.book-setting-sun::before {
+    content: "";
+    position: absolute;
+    bottom: 46px;
+    left: 50%;
+    width: 22px;
+    height: 11px;
+    transform: translateX(-50%);
+    border-radius: 22px 22px 0 0;
+    background: #292b33;
+    box-shadow: 0 4px 0 -2px #292b33;
+    pointer-events: none;
+}
+
+.shelf-book.book-setting-sun .book-spine-author {
+    position: absolute;
+    inset: auto 3px 10px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    transform: none;
+
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    text-align: center;
+    font: 400 8px/1.2 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.09em;
+    color: #f0f1e8;
+    text-shadow: none;
+}
+
+.shelf-book.book-alchemist {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 252px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #a42224,
+        #dc4b1e 16%,
+        #ef641e 58%,
+        #d7431d 88%,
+        #9f2024
+    );
+    border: 1px solid #8e211e;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(70 21 15 / 25%);
+}
+
+.shelf-book.book-alchemist::before,
+.shelf-book.book-alchemist::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #ffd45b;
+    transform: translateX(-50%) rotate(45deg);
+    pointer-events: none;
+}
+
+.shelf-book.book-alchemist::before {
+    top: 13px;
+}
+
+.shelf-book.book-alchemist::after {
+    bottom: 13px;
+}
+
+.shelf-book.book-alchemist .book-spine-title {
+    position: absolute;
+    inset: 34px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: 700 15px/1 "Cinzel Decorative", Georgia, serif;
+    letter-spacing: 0.02em;
+    color: #29150d;
+    text-shadow: 1px 0 #ffc34f;
+}
+
+.shelf-book.book-alchemist .book-spine-author {
+    position: absolute;
+    inset: auto 3px 33px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    transform: none;
+
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    text-align: center;
+    font: 600 8px/1.25 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.05em;
+    color: #ffe19a;
+    text-shadow: 0 1px #7c251c;
+}
+
+.shelf-book.book-ikigai {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 40px;
+    width: 40px;
+    min-width: 40px;
+    height: 260px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #709fab,
+        #9acbd6 17%,
+        #a6d6df 60%,
+        #83b6c2
+    );
+    border: 1px solid #739eaa;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(24 48 54 / 20%);
+}
+
+.shelf-book.book-ikigai::before {
+    content: "✿";
+    position: absolute;
+    top: 12px;
+    inset-inline: 0;
+    color: #fffdf5;
+    font: 18px/1 Georgia, serif;
+    text-align: center;
+    pointer-events: none;
+}
+
+.shelf-book.book-ikigai .book-spine-title,
+.shelf-book.book-ikigai .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    color: #182323;
+    text-shadow: none;
+}
+
+.shelf-book.book-ikigai .book-spine-title {
+    top: 43px;
+    bottom: auto;
+    font: 700 18px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.shelf-book.book-ikigai .book-spine-author {
+    top: auto;
+    bottom: 13px;
+    font: 600 6px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.07em;
+}
+
+.shelf-book.book-kokoro {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 38px;
+    width: 38px;
+    min-width: 38px;
+    height: 258px;
+    padding: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, #172b2533, transparent 25%, #ffffff12 65%, #172b2526),
+        linear-gradient(to bottom, #214b38 0 73%, #e9dec4 73% 100%);
+    border: 1px solid #34483a;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(16 32 24 / 20%);
+}
+
+.shelf-book.book-kokoro::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 7px;
+    right: 7px;
+    height: 1px;
+    background: #c8b88d;
+    pointer-events: none;
+}
+
+.shelf-book.book-kokoro .book-spine-title {
+    position: absolute;
+    inset: 26px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: italic 400 21px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: #f5ead0;
+    text-shadow: none;
+}
+
+.shelf-book.book-kokoro .book-spine-author {
+    position: absolute;
+    inset: auto 3px 23px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    text-align: center;
+    font: 600 7px/1.35 Georgia, serif;
+    letter-spacing: 0.02em;
+    color: #284535;
+    text-shadow: none;
+}
+
+.shelf-book.book-sun-and-steel {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 38px;
+    width: 38px;
+    min-width: 38px;
+    height: 260px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #d3bd9f,
+        #f8e9d4 20%,
+        #fff1df 66%,
+        #e4cfb5
+    );
+    border: 1px solid #bca488;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(56 36 25 / 18%);
+}
+
+.shelf-book.book-sun-and-steel::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        #df4037 0 2px,
+        #b62927 2px 3px
+    );
+    pointer-events: none;
+}
+
+.shelf-book.book-sun-and-steel .book-spine-title,
+.shelf-book.book-sun-and-steel .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #211c18;
+    text-shadow: none;
+}
+
+.shelf-book.book-sun-and-steel .book-spine-title {
+    top: 46px;
+    bottom: auto;
+    font: 700 14px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.shelf-book.book-sun-and-steel .book-spine-author {
+    top: auto;
+    bottom: 14px;
+    font: 600 8px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.09em;
+}
+
+.shelf-book.book-wallflower {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 40px;
+    width: 40px;
+    min-width: 40px;
+    height: 260px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #82720e,
+        #afa019 16%,
+        #b9a91b 58%,
+        #9b8913
+    );
+    border: 1px solid #79670d;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(54 44 8 / 24%);
+}
+
+.shelf-book.book-wallflower::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 11px;
+    height: 15px;
+    background: #30271e;
+    pointer-events: none;
+}
+
+.shelf-book.book-wallflower .book-spine-title,
+.shelf-book.book-wallflower .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    text-shadow: none;
+}
+
+.shelf-book.book-wallflower .book-spine-title {
+    top: 34px;
+    bottom: auto;
+    font: 700 11px/1 "DM Sans", Arial, sans-serif;
+    color: #201b10;
+}
+
+.shelf-book.book-wallflower .book-spine-author {
+    top: auto;
+    bottom: 12px;
+    font: 600 9px/1 "DM Sans", Arial, sans-serif;
+    color: #f4ebc9;
+    text-shadow: 0 1px 1px #5c4d12;
+}
+
+.shelf-book.book-the-hunter {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 48px;
+    width: 48px;
+    min-width: 48px;
+    height: 272px;
+    padding: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, #54250e55, transparent 25%, #ffd78722 60%, #54250e44),
+        linear-gradient(175deg, #dc922e, #bd5d20 48%, #96371c 100%);
+    border: 1px solid #89391d;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(70 28 12 / 22%);
+}
+
+.shelf-book.book-the-hunter .book-spine-title,
+.shelf-book.book-the-hunter .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    color: #fff7e6;
+    text-shadow: 0 1px 1px #54250e80;
+}
+
+.shelf-book.book-the-hunter .book-spine-title {
+    top: 24px;
+    bottom: auto;
+    font: 600 17px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.shelf-book.book-the-hunter .book-spine-author {
+    top: auto;
+    bottom: 43px;
+    font: 700 10px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.16em;
+}
+
+.shelf-book.book-the-hunter::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    width: 20px;
+    height: 11px;
+    transform: translateX(-50%);
+    background: #fff0ce;
+    clip-path: polygon(
+        0 55%, 34% 0, 63% 38%, 82% 38%,
+        100% 62%, 100% 100%, 0 100%
+    );
+    pointer-events: none;
+}
+
+.shelf-book.book-wild-snail {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 260px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #4b6745,
+        #66865b 20%,
+        #769567 60%,
+        #587650
+    );
+    border: 1px solid #496144;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(29 49 24 / 22%);
+}
+
+.shelf-book.book-wild-snail::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle at 44% 44%,
+        #d39a60 0 2px,
+        #9a6036 2px 3px
+    );
+    pointer-events: none;
+}
+
+.shelf-book.book-wild-snail .book-spine-title {
+    position: absolute;
+    inset: 36px 5px 57px;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    text-align: start;
+    white-space: normal;
+    font: 500 14px/1.05 "Playfair Display", Georgia, serif;
+    color: #fff8e7;
+    text-shadow: 0 1px 1px #34482e;
+}
+
+.shelf-book.book-wild-snail .book-spine-author {
+    position: absolute;
+    inset: auto 4px 12px;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    text-align: center;
+    font: 600 8px/1.3 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.04em;
+    color: #fff8e7;
+    text-shadow: 0 1px 1px #34482e;
+}
+
+.shelf-book.book-meditations {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 270px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #08090a, #1a1c1d 48%, #0b0d0e);
+    border: 1px solid #08090a;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(255 255 255 / 8%);
+}
+
+.shelf-book.book-meditations::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    width: 27px;
+    height: 35px;
+    background: #b92d2e;
+    clip-path: polygon(
+        0 21%, 27% 10%, 38% 0, 58% 3%, 70% 15%,
+        86% 31%, 91% 56%, 100% 96%, 80% 84%, 73% 100%,
+        57% 73%, 39% 61%, 31% 39%, 29% 22%
+    );
+    pointer-events: none;
+}
+
+.shelf-book.book-meditations .book-spine-title {
+    position: absolute;
+    inset: 57px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 4px;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: none;
+    font: 400 16px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 0.02em;
+    color: #171819;
+    background: #f5f1e9;
+    border-radius: 50% 8% 44% 10% / 7% 3% 8% 3%;
+    text-shadow: none;
+}
+
+.shelf-book.book-meditations .book-spine-author {
+    position: absolute;
+    inset: auto 0 12px;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: 700 8px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.10em;
+    color: #f1726c;
+    text-shadow: none;
+}
+
+.shelf-book.book-12-rules {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 54px;
+    width: 54px;
+    min-width: 54px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #d8d6ce, #fcfbf7 22%, #fffefb 65%, #e5e3db);
+    border: 1px solid #bdbbb3;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(35 36 31 / 14%);
+}
+
+.shelf-book.book-12-rules::before,
+.shelf-book.book-12-rules::after {
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    color: #252b26;
+    font: 18px/1 Georgia, serif;
+    text-align: center;
+    pointer-events: none;
+}
+
+.shelf-book.book-12-rules .book-spine-title,
+.shelf-book.book-12-rules .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+.shelf-book.book-12-rules .book-spine-title {
+    top: 38px;
+    bottom: auto;
+    font: 700 15px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    color: #955d35;
+}
+
+.shelf-book.book-12-rules .book-spine-author {
+    top: auto;
+    bottom: 36px;
+    font: 500 5.5px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 0.09em;
+    color: #252b26;
+}
+
+.shelf-book.book-beyond-order {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 54px;
+    width: 54px;
+    min-width: 54px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #131b17, #25332a 45%, #1b241f);
+    border: 1px solid #101713;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(0 0 0 / 25%);
+}
+
+.shelf-book.book-beyond-order::before,
+.shelf-book.book-beyond-order::after {
+    position: absolute;
+    inset-inline: 9px;
+    color: #f4eee2;
+    font: 18px/1 Georgia, serif;
+    text-align: center;
+    pointer-events: none;
+}
+
+.shelf-book.book-beyond-order .book-spine-title,
+.shelf-book.book-beyond-order .book-spine-author {
+    position: absolute;
+    inset-inline: 0;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+.shelf-book.book-beyond-order .book-spine-title {
+    top: 38px;
+    bottom: auto;
+    font: 700 15px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    color: #d49b6c;
+}
+
+.shelf-book.book-beyond-order .book-spine-author {
+    top: auto;
+    bottom: 36px;
+    font: 500 5.5px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 0.09em;
+    color: #f4eee2;
+}
+
+.shelf-book.book-principles {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 56px;
+    width: 56px;
+    min-width: 56px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, #0005, transparent 20%, #fff1 70%, #0003),
+        linear-gradient(
+            to bottom,
+            #111113 0 76%,
+            #aa2637 76% 77%,
+            #f6f3ee 77% 96%,
+            #aa2637 96% 97%,
+            #f6f3ee 97% 100%
+        );
+    border: 1px solid #171719;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(0 0 0 / 25%);
+}
+
+.shelf-book.book-principles .book-spine-title {
+    position: absolute;
+    inset: 24px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: 700 17px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.16em;
+    color: #faf8f4;
+    text-shadow: none;
+}
+
+.shelf-book.book-principles .book-spine-author {
+    position: absolute;
+    inset: auto 3px 25px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: none;
+
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    text-align: center;
+    font: 700 8px/1.2 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    color: #a62336;
+    text-shadow: none;
+}
+
+.shelf-book.book-never-split {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 46px;
+    width: 46px;
+    min-width: 46px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, #0003, transparent 24%, #fff2 65%, #0002),
+        linear-gradient(to bottom, #fff9ec 0 8%, #f7c318 8% 73%, #c82e24 73%);
+    border: 1px solid #9a641a;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 2px 0 4px rgb(50 30 10 / 22%);
+}
+
+.shelf-book.book-never-split::before {
+    content: "";
+    position: absolute;
+    top: 71%;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: #fff9ec;
+    clip-path: polygon(
+        0 45%, 20% 32%, 37% 42%, 58% 22%, 75% 25%, 100% 0,
+        100% 58%, 77% 82%, 57% 72%, 38% 96%, 19% 87%, 0 100%
+    );
+    pointer-events: none;
+}
+
+.shelf-book.book-never-split .book-spine-title {
+    position: absolute;
+    inset: 34px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font: 700 11px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.02em;
+    color: #191511;
+    text-shadow: none;
+}
+
+.shelf-book.book-never-split .book-spine-author {
+    position: absolute;
+    inset: auto 3px 22px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: none;
+
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    text-align: center;
+    font: 700 6px/1.5 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.02em;
+    color: #fff9ec;
+    text-shadow: none;
+}
+
+.shelf-book.book-storyteller {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 48px;
+    width: 48px;
+    min-width: 48px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #101522,
+        #1c253b 20%,
+        #2c3854 68%,
+        #222d45
+    );
+    border: 1px solid #171d2b;
+    border-radius: 4px 5px 3px 3px;
+    box-shadow: inset 3px 0 5px #0005, inset -1px 0 2px #ffffff18;
+}
+
+.shelf-book.book-storyteller .book-spine-title {
+    position: absolute;
+    inset: 20px 0 auto;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font: 700 17px/1 Georgia, serif;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: #c6cad4;
+    text-shadow: 1px 1px #0c101a, -1px 0 #e0e2e940;
+}
+
+/* Use the existing author span for the accessible text. */
+.shelf-book.book-storyteller .book-spine-author {
+    position: absolute;
+    inset: 225px 0 auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    font-size: 0;
+}
+
+.shelf-book.book-storyteller .book-spine-author::before {
+    content: "DAVE\A GROHL";
+    white-space: pre;
+    font: italic 700 8px/1.3 "Segoe Print", "Bradley Hand", cursive;
+    letter-spacing: 0.12em;
+    color: #c6cad4;
+}

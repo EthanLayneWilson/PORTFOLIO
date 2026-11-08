@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Thoughts on software engineering, continuous learning, and turning ideas into reliable digital experiences."
+    >
+
+    <title>FEAR CALLER</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div id="edition-shutter" class="edition-shutter"></div>
+    <article class="blog-article" aria-labelledby="article-title"></article>
+
+    <!-- NEWSPAPER HEADER -->
+
+    <header class="newspaper-header">
+
+        <div class="top-nav">
+
+            <nav aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../portfolio.html">Portfolio</a>
+                <a href="../articles.html" class="active">Archive</a>
+            </nav>
+
+            <div class="header-right">
+
+                <button
+                    type="button"
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Switch to night mode"
+                >
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+
+                <div class="brand-mark">
+                    <strong>EW</strong>
+                    <span class="divider"></span>
+                    <span>EST. 2022</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="newspaper-info">
+            <span>Fear Caller</span>
+            <h3>THE ARCHIVE</h3>
+            <details class="accessibility-menu">
+    <summary>Accessibility</summary>
+
+    <div class="accessibility-panel">
+        <p>Reading preferences</p>
+
+        <label>
+            <input type="checkbox" id="larger-text">
+            Larger text
+        </label>
+
+        <label>
+            <input type="checkbox" id="reduce-motion">
+            Reduce motion
+        </label>
+    </div>
+</details>
+        </div>
+
+    </header>
+
+    <!-- BLOG ARTICLE -->
+
+    <main class="archive-page blog-page">
+
+        <article class="blog-article" aria-labelledby="article-title">
+
+            <header class="archive-heading blog-heading">
+
+                <a href="../articles.html" class="back-to-archive">
+                    ← BACK TO THE ARCHIVE
+                </a>
+
+                <p class="archive-label">SOFTWARE ENGINEERING</p>
+
+                <h1 id="article-title" class="blog-title">
+  FEAR CALLER
+</h1>
+
+                <p class="archive-description">
+                    On reading carefully, working through difficult problems,
+            and giving understanding its needed time to develop.
+                </p>
+
+                <p class="archive-meta">
+                    BY ETHAN WILSON /
+                    <time datetime="2026-08">November 8 2026</time>
+                </p>
+
+            </header>
+
+            <div class="article-music" aria-label="Article soundtrack">
+    <div class="article-music-info">
+        <span class="article-music-label">ACCOMPANYING TRACK</span>
+        <span class="article-music-title">Clarity</span>
+        <span class="article-music-artist">Northlane</span>
+    </div>
+
+    <audio id="article-audio" controls preload="metadata">
+        <source src="../audio/blog5song.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <div class="article-music-controls" id="music-controls" hidden>
+        <input
+            id="music-progress"
+            class="music-progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Seek through song"
+            disabled
+        >
+
+        <span class="music-time" id="music-time">0:00 / 0:00</span>
+
+        <button
+            id="music-play"
+            class="music-play"
+            type="button"
+            aria-label="Play song"
+        >
+            <span aria-hidden="true">▶</span>
+        </button>
+
+        <label class="music-volume">
+            <span>VOL</span>
+
+            <input
+                id="music-volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+                aria-label="Volume"
+            >
+        </label>
+    </div>
+
+    <span id="music-status" class="music-status" role="status"></span>
+</div>
+
+           <div class="article-content">
+        <p>
+            I'm 26, and even now there can be a particular kind of frustration that comes with
+            learning something new. 
+        </p>
+
+        <p>
+Rational Fear: A direct, logical response to an actual, imminent threat.
+Irrational Fear: An intense anxiety about something that poses little to no actual danger.
+Primal/Innate Fear: Hardwired survival instincts programmed into the human brain.
+        </p>
+
+        <p>
+            Sometimes the most valuable work occurs on the very problem
+            that keeps me from moving on.
+        </p>
+
+        <h2>Giving a Problem Enough Attention</h2>
+
+        <div class="article-photo-wrap">
+    <img
+src="../images/polaroid2.png"
+        class="article-polaroid"
+        alt="Writing study notes beside my laptop under a desk lamp."
+        loading="lazy"
+    >
+
+        <p>
+            • False Evidence Appearing Real: A popular motivational acronym describing how fear often tricks the mind into treating unverified worries as absolute facts.
+• Two Choices of Action: Often summarized as either Forget Everything And Run or Face Everything And Rise
+        </p>
+
+        <p>
+            
+Fear as a "Calling" or Compass
+
+• A Sign of Growth: Rather than a permanent stop sign, fear frequently appears right at the edge of personal expansion, new challenges, or important life changes (such as starting a business or setting boundaries).
+• A Indicator of What Matters: We rarely feel deep fear over things we are indifferent to; fear often highlights what we care about most.
+• Spiritual or Vocation Context: In faith or calling-based contexts, experiencing fear does not mean you missed your calling or that God/purpose isn't with you; it simply means you are stepping into something larger than your own immediate
+        </p>
+
+        <p>
+            An algorithm can look simple on a slide. Working through
+            it by hand reveals the decisions hidden inside that
+            simplicity. Each comparison, each repeated step, each
+            change to a value has a purpose.
+        </p>
+
+        <p>
+            Taking the time to understand those details gives me
+            something I can use again. The next problem may look
+            different, but I have a better place to start.
+        </p>
+
+        <h2>Fear, and its Caller</h2>
+
+        <p>
+            Reading offers a quieter version of the same experience.
+        </p>
+
+        <p>
+            A page can be easy to finish and difficult to absorb.
+            I can recognize every word in a paragraph and still need
+            time to consider what the author is saying. A passage
+            might deserve a second reading, a note in the margin,
+            or a few minutes with the book closed.
+        </p>
+
+       <div class="article-photo-wrap">
+    <img
+src="../images/polaroid.png"
+        class="article-polaroid"
+        alt="My study desk with an open notebook, keyboard, and monitors."
+    >
+
+    <p>
+        I like having a collection of books I can return to.
+        It leaves room for a different kind of relationship
+        with reading: remembering an idea, reconsidering it,
+        and finding something useful that I missed before.
+    </p>
+
+    <p>
+        There’s satisfaction in finishing a book, sure,
+        but there’s also satisfaction in carrying one good
+        thought away from it and continuing to work through
+        that thought afterward.
+    </p>
+</div>
+
+        <h2>A Beginner, Again</h2>
+
+
+        <p>
+I once worked with an older man who told me that what he disliked most about being young was how much he didn’t understand. I can see what he meant. Experience gives you perspective that’s difficult to have when you’re just starting out. Still, I see it a little differently. At any age or stage of life, there’s more to learn and an opportunity to apply yourself. Taking initiative as an initiate- that's a yearning I never want to lose.
+        </p>
+
+        <p>
+That takes a willingness to admit when an explanation didn’t stick, ask a "dumb" question, or revisiting a familiar concept. Sometimes it means spending another evening on something you expected to understand already.
+        </p>
+
+        <p>
+Those moments can feel discouraging, especially when everyone else’s progress seems so visible. Finished projects and polished work are easy to share. The hours spent confused usually stay out of sight.
+        </p>
+        <p>
+            I’m trying to give those hours a fairer place in how I think about learning. Recognizing what I don’t understand helps me figure out where to put my effort. Being able to explain something more clearly than I could yesterday gives me a reason to keep going.
+        </p>
+
+    </div>
+
+</section>
+
+                        <div class="archive-bookplate">
+    <img src="../images/sig.png" alt="From the library of Ethan Wilson">
+</div>
+
+            <div class="article-end" aria-hidden="true">◆ ◆ ◆</div>
+
+
+
+            <div class="archive-bookplate">
+
+
+            <nav class="blog-navigation" aria-label="Article navigation">
+                <a href="../articles.html">← RETURN TO THE ARCHIVE</a>
+            </nav>
+
+            
+
+        </article>
+
+
+    </main>
+
+    <!-- FOOTER -->
+
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <img
+                    src="../images/ew-logo.png"
+                    alt="Ethan Wilson Logo"
+                    class="footer-logo-img"
+                >
+            </div>
+
+            <nav class="footer-column">
+                <span class="footer-label">NAVIGATION</span>
+
+    <a href="../index.html">Home</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../articles.html">Archive</a>
+            </nav>
+
+            <div class="footer-column">
+                <span class="footer-label">CONNECT</span>
+
+                <a href="https://github.com/EthanLayneWilson">GitHub</a>
+                <a href="https://www.linkedin.com/in/ethan-wilson-20b9181aa/">LinkedIn</a>
+                <a href="https://www.instagram.com/ewilsonranch/">Instagram</a>
+                <a href="ewilsonranch@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>© 2026 ETHAN WILSON</span>
+
+            <span>BUILT WITH HTML, CSS & JAVASCRIPT</span>
+
+            <a href="#top" class="back-to-top">
+                <span class="back-to-top-text">BACK TO TOP</span>
+                <span class="top-arrow">↑</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="../js/script.js"></script>
+
+    <dialog id="article-image-viewer" class="image-viewer"
+        aria-label="Expanded photograph">
+    <button
+        type="button"
+        class="image-viewer-close"
+        aria-label="Close expanded photograph"
+        autofocus
+    >
+        &times;
+    </button>
+
+    <img
+        src="../images/blog1.png"
+        alt="Handwritten artwork on a wall"
+    >
+</dialog>
+
+<script>
+    const imageViewer = document.getElementById("article-image-viewer");
+    const expandedImage = imageViewer.querySelector("img");
+    const closeImage = imageViewer.querySelector(".image-viewer-close");
+
+    document.querySelectorAll(".article-image-trigger").forEach((button) => {
+        button.addEventListener("click", () => {
+            const photo = button.querySelector("img");
+
+            expandedImage.src = photo.currentSrc || photo.src;
+            expandedImage.alt = photo.alt;
+
+            imageViewer.showModal();
+        });
+    });
+
+    closeImage.addEventListener("click", () => {
+        imageViewer.close();
+    });
+
+    imageViewer.addEventListener("click", (event) => {
+        if (event.target === imageViewer) {
+            const bounds = imageViewer.getBoundingClientRect();
+
+            if (
+                event.clientX < bounds.left ||
+                event.clientX > bounds.right ||
+                event.clientY < bounds.top ||
+                event.clientY > bounds.bottom
+            ) {
+                imageViewer.close();
+            }
+        }
+    });
+</script>
+
+<script>
+(() => {
+    const largerText = document.getElementById("larger-text");
+    const reduceMotion = document.getElementById("reduce-motion");
+
+    function applyPreferences() {
+        document.body.classList.toggle(
+            "larger-text", largerText.checked
+        );
+
+        document.documentElement.classList.toggle(
+            "reduce-motion", reduceMotion.checked
+        );
+    }
+
+    try {
+        largerText.checked =
+            localStorage.getItem("ew-larger-text") === "true";
+
+        reduceMotion.checked =
+            localStorage.getItem("ew-reduce-motion") === "true";
+    } catch {
+        // Controls still work when browser storage is unavailable.
+    }
+
+    applyPreferences();
+
+    [largerText, reduceMotion].forEach((control) => {
+        control.addEventListener("change", () => {
+            applyPreferences();
+
+            try {
+                localStorage.setItem(
+                    "ew-larger-text", String(largerText.checked)
+                );
+
+                localStorage.setItem(
+                    "ew-reduce-motion", String(reduceMotion.checked)
+                );
+            } catch {
+                // Keep the selected settings for this page.
+            }
+        });
+    });
+})();
+</script>
+
+<script>
+(() => {
+    const audio = document.getElementById("article-audio");
+    const controls = document.getElementById("music-controls");
+    const play = document.getElementById("music-play");
+    const progress = document.getElementById("music-progress");
+    const volume = document.getElementById("music-volume");
+    const time = document.getElementById("music-time");
+    const status = document.getElementById("music-status");
+
+    if (!audio || !controls || !play || !progress ||
+        !volume || !time || !status) return;
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainder = Math.floor(seconds % 60);
+
+        return `${minutes}:${String(remainder).padStart(2, "0")}`;
+    }
+
+    function updateProgress() {
+        const ready =
+            Number.isFinite(audio.duration) && audio.duration > 0;
+
+        progress.disabled = !ready;
+
+        if (ready) {
+            progress.max = audio.duration;
+            progress.value = audio.currentTime;
+        }
+
+        time.textContent =
+            `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+
+        progress.setAttribute(
+            "aria-valuetext",
+            `${formatTime(audio.currentTime)} of ${formatTime(audio.duration)}`
+        );
+    }
+
+    function updatePlayButton() {
+        const playing = !audio.paused && !audio.ended;
+
+        play.querySelector("span").textContent = playing ? "❚❚" : "▶";
+        play.setAttribute(
+            "aria-label",
+            playing ? "Pause song" : "Play song"
+        );
+    }
+
+    function updateVolume() {
+        const level = audio.muted ? 0 : audio.volume;
+
+        volume.value = level;
+        volume.setAttribute(
+            "aria-valuetext",
+            `${Math.round(level * 100)} percent`
+        );
+    }
+
+    play.addEventListener("click", async () => {
+        if (!audio.paused) {
+            audio.pause();
+            return;
+        }
+
+        status.textContent = "";
+
+        try {
+            if (audio.ended) audio.currentTime = 0;
+            await audio.play();
+        } catch {
+            status.textContent =
+                "Unable to play the track. Check the audio file.";
+        }
+    });
+
+    progress.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            audio.currentTime = Number(progress.value);
+            updateProgress();
+        }
+    });
+
+    volume.addEventListener("input", () => {
+        audio.volume = Number(volume.value);
+        audio.muted = false;
+    });
+
+    ["loadedmetadata", "durationchange", "timeupdate"].forEach(event => {
+        audio.addEventListener(event, updateProgress);
+    });
+
+    ["play", "pause", "ended"].forEach(event => {
+        audio.addEventListener(event, updatePlayButton);
+    });
+
+    audio.addEventListener("volumechange", updateVolume);
+
+    audio.addEventListener("error", () => {
+        status.textContent =
+            "The audio file could not be loaded.";
+    });
+
+    audio.volume = Number(volume.value);
+    audio.controls = false;
+    audio.hidden = true;
+    controls.hidden = false;
+
+    updateProgress();
+    updatePlayButton();
+    updateVolume();
+})();
+</script>
+
+</body>
+
+</html>

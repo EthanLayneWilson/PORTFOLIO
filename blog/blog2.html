@@ -10,7 +10,7 @@
         content="Thoughts on software engineering, continuous learning, and turning ideas into reliable digital experiences."
     >
 
-    <title>The Compiler Said Yes</title>
+    <title>COMPILERS</title>
 
 <link rel="stylesheet" href="../css/style.css">
 
@@ -62,7 +62,7 @@
         </div>
 
         <div class="newspaper-info">
-            <span>The Compiler Said Yes</span>
+            <span>COMPILERS</span>
             <span>THE ARCHIVE</span>
             <details class="accessibility-menu">
     <summary>Accessibility</summary>
@@ -85,6 +85,8 @@
 
     </header>
 
+    
+
     <!-- BLOG ARTICLE -->
 
     <main class="archive-page blog-page">
@@ -100,11 +102,11 @@
                 <p class="archive-label">SOFTWARE ENGINEERING</p>
 
                 <h1 id="article-title" class="blog-title">
-  The Compiler Said Yes
+  COMPILERS
 </h1>
 
                 <p class="archive-description">
-                    Compiler messages and their cryptic, occasionally amusing clues—and how learning to interpret them makes debugging a little less mysterious.
+                    Compiler messages and their cryptic, gormless clues—and how learning to interpret them makes debugging a little less mysterious.
                 </p>
 
                 <p class="archive-meta">
@@ -114,8 +116,63 @@
 
             </header>
 
+                  
+    <div class="article-music" aria-label="Article soundtrack">
+    <div class="article-music-info">
+        <span class="article-music-label">ACCOMPANYING TRACK</span>
+        <span class="article-music-title">Higher</span>
+        <span class="article-music-artist">Ernie Banks</span>
+    </div>
+
+    <audio id="article-audio" controls preload="metadata">
+        <source src="../audio/blog2song.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <div class="article-music-controls" id="music-controls" hidden>
+        <input
+            id="music-progress"
+            class="music-progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Seek through song"
+            disabled
+        >
+
+        <span class="music-time" id="music-time">0:00 / 0:00</span>
+
+        <button
+            id="music-play"
+            class="music-play"
+            type="button"
+            aria-label="Play song"
+        >
+            <span aria-hidden="true">▶</span>
+        </button>
+
+        <label class="music-volume">
+            <span>VOL</span>
+
+            <input
+                id="music-volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+                aria-label="Volume"
+            >
+        </label>
+    </div>
+
+    <span id="music-status" class="music-status" role="status"></span>
+</div>
+
             <p class="article-intro">
-    There is a particular satisfaction in watching a program compile
+    You would agree that there is a particular satisfaction in watching a program compile
     after spending time trying to understand why it would not. The
     errors disappear, the build finishes, and for a moment, it feels
     like everything has fallen into place.
@@ -124,19 +181,19 @@
 <p>Then you run it.</p>
 
 <p>
-    The result might be correct. It might also be completely unexpected.
+    The result might be correct. It might also be completely unexpected. <em>Yowch!</em>
     A calculation produces the wrong number, a loop skips something it
     should have included, or the program confidently does something you
     never intended.
 </p>
 
 <p>
-    The compiler said yes. Apparently, I had asked the wrong question.
-    The oversized “T” opening this article is doing its best to make itself impossible to miss. Bugs rarely extend the same courtesy. A single character can change a program’s behavior without attracting much attention—and sometimes without a complaint from the compiler.
+    These compilers <small>(hard r)</small> allegedely said yes. But apparently, I had just asked the wrong question.
+    The oversized “Y” opening this article is doing its best to make itself impossible to miss. Bugs on the other hand, rarely extend that same courtesy. A single character can change a program’s behavior without attracting much attention—and sometimes without even a complaint from the compiler.
 </p>
 
 <section aria-labelledby="reading-clues">
-    <h2 id="reading-clues">The Compiler Wants To Speak To The Manager</h2>
+    <h2 id="reading-clues">Clearer Concepts</h2>
 
     <p>
     Starting with C++ meant learning to read code and compiler messages at the same time. Neither was especially familiar. An error could identify a line, name the offense, and STILL leave me wondering what I had done. Basically, the compiler wanted to speak to the manager. Unfortunately, the manager was also the trainee, and his training consisted largely of investigating the incident he had just caused. I was responsible for the program’s decisions while still learning how to make them—simultaneously heading the inquiry and appearing as its principal suspect. There was nobody higher up to escalate the complaint to, so I held a brief meeting with myself. <em>Management requested answers.</em> The trainee requested an example. Both agreed to look up what “undeclared identifier” meant.
@@ -145,7 +202,7 @@
     <p>
         Sometimes the message is straightforward: a name has not
         been declared, or a statement needs a semicolon. Other times,
-        the compiler reports a problem farther down than the mistake
+        the compiler<small> but i hardly know her</small> reports a problem farther down than the mistake
         that caused it. A missing brace can change how it interprets
         everything that follows, leaving what looks like a collection
         of separate problems. Apparently, even punctuation can have
@@ -160,7 +217,7 @@
         I am learning to begin with the first reported error and
         inspect the surrounding code, including the lines before it.
         Fixing one cause can clear several messages. Trying to solve
-        every message independently can mean chasing problems that
+        every message independently can mean chasing each of those problems that
         disappear as soon as the original mistake is corrected.
         Before convening a full inquiry, it helps to check whether someone left a brace open.
         And by someone I mean no one else other than me.
@@ -174,10 +231,12 @@
         accusation gradually becomes a clue. I disect the correspondence and try my best not to take it personally.
     </p>
 
-    <p>
-        The compiler does not always explain things in the way I would
+    <mark>
+        Compilers don't always explain things in the way I would
         prefer, but it usually has a reason for objecting.
-    </p>
+    </mark>
+
+
 </section>
 
 </section>
@@ -356,6 +415,123 @@
             }
         });
     });
+})();
+</script>
+
+<script>
+(() => {
+    const audio = document.getElementById("article-audio");
+    const controls = document.getElementById("music-controls");
+    const play = document.getElementById("music-play");
+    const progress = document.getElementById("music-progress");
+    const volume = document.getElementById("music-volume");
+    const time = document.getElementById("music-time");
+    const status = document.getElementById("music-status");
+
+    if (!audio || !controls || !play || !progress ||
+        !volume || !time || !status) return;
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainder = Math.floor(seconds % 60);
+
+        return `${minutes}:${String(remainder).padStart(2, "0")}`;
+    }
+
+    function updateProgress() {
+        const ready =
+            Number.isFinite(audio.duration) && audio.duration > 0;
+
+        progress.disabled = !ready;
+
+        if (ready) {
+            progress.max = audio.duration;
+            progress.value = audio.currentTime;
+        }
+
+        time.textContent =
+            `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+
+        progress.setAttribute(
+            "aria-valuetext",
+            `${formatTime(audio.currentTime)} of ${formatTime(audio.duration)}`
+        );
+    }
+
+    function updatePlayButton() {
+        const playing = !audio.paused && !audio.ended;
+
+        play.querySelector("span").textContent = playing ? "❚❚" : "▶";
+        play.setAttribute(
+            "aria-label",
+            playing ? "Pause song" : "Play song"
+        );
+    }
+
+    function updateVolume() {
+        const level = audio.muted ? 0 : audio.volume;
+
+        volume.value = level;
+        volume.setAttribute(
+            "aria-valuetext",
+            `${Math.round(level * 100)} percent`
+        );
+    }
+
+    play.addEventListener("click", async () => {
+        if (!audio.paused) {
+            audio.pause();
+            return;
+        }
+
+        status.textContent = "";
+
+        try {
+            if (audio.ended) audio.currentTime = 0;
+            await audio.play();
+        } catch {
+            status.textContent =
+                "Unable to play the track. Check the audio file.";
+        }
+    });
+
+    progress.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            audio.currentTime = Number(progress.value);
+            updateProgress();
+        }
+    });
+
+    volume.addEventListener("input", () => {
+        audio.volume = Number(volume.value);
+        audio.muted = false;
+    });
+
+    ["loadedmetadata", "durationchange", "timeupdate"].forEach(event => {
+        audio.addEventListener(event, updateProgress);
+    });
+
+    ["play", "pause", "ended"].forEach(event => {
+        audio.addEventListener(event, updatePlayButton);
+    });
+
+    audio.addEventListener("volumechange", updateVolume);
+
+    audio.addEventListener("error", () => {
+        status.textContent =
+            "The audio file could not be loaded.";
+    });
+
+    audio.volume = Number(volume.value);
+    audio.controls = false;
+    audio.hidden = true;
+    controls.hidden = false;
+
+    updateProgress();
+    updatePlayButton();
+    updateVolume();
 })();
 </script>
 

@@ -70,12 +70,21 @@ An essential reference for animal care—one I'll return to time and again.`
     title: "12 Rules for Life",
     author: "Jordan B. Peterson",
     cover: "images/books/12.png",
-  },
-  {
+    notes: ` It's not the most entertaining read, but it does have great content.
+
+He uses biblical references a lot but it's because there's a lot of really good philosophical content in the Bible. It gets a lot right about human nature which is why it's been covered by so many great thinkers over the centuries.
+
+It's neat to hear the secular value of religion. That is, explain why the stories and beliefs of Christianity provide some benefit to a society.`
+    
+    },
+    {
     id: "beyond-order",
     title: "Beyond Order: 12 More Rules for Life",
     author: "Jordan B. Peterson",
     cover: "images/books/12-2.png",
+    notes: `When Peterson wants to, his advice can be brilliant. 
+    Certain chapters, like Rule 6 and Rule 10, are very effective at teaching me their relevant principles. Especially when Peterson used personal stories to cement a point.
+The principles in his book can improve your life if you can internalize them, and I have learned things that improved mine, but I think the lack of clarity and its boring writing makes it a tough read.`
   },
   {
     id: "atomic-habits",
@@ -146,12 +155,14 @@ An essential reference for animal care—one I'll return to time and again.`
   {
     id: "outsider",
     title: "The Odyssey",
-    author: "Homer"
+    author: "Homer",
+    cover: "images/books/odyssey.png",
   },
   {
     id: "win-friends",
     title: "How to Win Friends & Influence People",
-    author: "Dale Carnegie"
+    author: "Dale Carnegie",
+    cover: "images/books/DC.png",
   },
   {
     id: "exactly-what-to-say-second",
@@ -161,23 +172,55 @@ An essential reference for animal care—one I'll return to time and again.`
   {
     id: "nineteen-eighty-four",
     title: "1984",
-    author: "George Orwell"
+    author: "George Orwell",
+    cover: "images/books/1984.png",
   },
   {
     id: "tiger-in-the-well",
     title: "The Tiger in the Well",
-    author: "Philip Pullman"
+    author: "Philip Pullman",
+    cover: "images/books/tiger.png",
   },
   {
     id: "wilderness-essays",
     title: "Wilderness Essays",
-    author: "John Muir"
+    author: "John Muir",
+    cover: "images/books/WE.png",
   },
   {
     id: "all-creatures",
     title: "All Creatures Great and Small",
-    author: "James Herriot"
-  }
+    author: "James Herriot",
+    cover: "images/books/creatures.png",
+  },
+
+{
+    title: "The Outsiders",
+    author: "S. E. Hinton",
+    cover: "images/outsiders.png"
+},
+
+    {
+    id: "silence",
+    title: "Silence",
+    author: "Shusaku Endo",
+    cover: "images/books/silence.png",
+  },
+    {
+    id: "nightingale",
+    title: "The Direct Line",
+    author: "Earl Nightingale",
+    cover: "images/books/nightingale.png",
+  },
+
+      {
+    id: "hegels",
+    title: "Phenomenology of Spirit",
+    author: "Georg Wilhelm Friedrich Hegel",
+    cover: "images/books/hegels.png",
+    notes: `It is a complex work. The content of the text ranges from poorly explained (and unnecessarily complex) to multifaceted beyond compare.
+    Part of the journey in this book is realizing most of it is not to be understood but rather a definitive introduction to his thought(just read the Preface), extraordinarily detailed and occasionally redundant.`
+  },
   
 ];
 

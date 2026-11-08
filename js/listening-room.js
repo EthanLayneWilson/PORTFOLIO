@@ -1162,10 +1162,21 @@ const wishlistRecords = [
         cover: "images/vinyl/dissonants.png"
     },
     {
+        title: "Meteora 20th Anniversary Edition",
+        artist: "Linkin Park",
+        cover: "images/vinyl/meteora.png"
+    },
+        {
         title: "Higher",
         artist: "Chris Stapleton",
         cover: "images/vinyl/higher.png"
     },
+
+    {
+    title: "Deluxe Vinyl Box Set",
+    artist: "NOTHING MORE",
+    cover: "images/vinyl/nothing-more.png"
+},
         {
         title: "The Alchemy Index",
         artist: "Thrice",
@@ -1176,6 +1187,11 @@ const wishlistRecords = [
         artist: "Dream State",
         cover: "images/vinyl/primrose.png"
     },
+        {
+    title: "Mend",
+    artist: "Eidola",
+    cover: "images/vinyl/eidola.png"
+},
     {
     title: "Time Time Time(I'm in the Palm of your Hand)",
     artist: "Yndling",

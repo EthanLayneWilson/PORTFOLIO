@@ -62,7 +62,7 @@
         </div>
 
         <div class="newspaper-info">
-            <span>Further Than Yesterday</span>
+            <span>FURTHER THAN YESTERDAY</span>
             <h3>THE ARCHIVE</h3>
             <details class="accessibility-menu">
     <summary>Accessibility</summary>
@@ -115,6 +115,60 @@
 
             </header>
 
+            <div class="article-music" aria-label="Article soundtrack">
+    <div class="article-music-info">
+        <span class="article-music-label">ACCOMPANYING TRACK</span>
+        <span class="article-music-title">Sanctuary</span>
+        <span class="article-music-artist">Electronic Gems, YOUTH 83</span>
+    </div>
+
+    <audio id="article-audio" controls preload="metadata">
+        <source src="../audio/blog3song.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <div class="article-music-controls" id="music-controls" hidden>
+        <input
+            id="music-progress"
+            class="music-progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Seek through song"
+            disabled
+        >
+
+        <span class="music-time" id="music-time">0:00 / 0:00</span>
+
+        <button
+            id="music-play"
+            class="music-play"
+            type="button"
+            aria-label="Play song"
+        >
+            <span aria-hidden="true">▶</span>
+        </button>
+
+        <label class="music-volume">
+            <span>VOL</span>
+
+            <input
+                id="music-volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+                aria-label="Volume"
+            >
+        </label>
+    </div>
+
+    <span id="music-status" class="music-status" role="status"></span>
+</div>
+
            <div class="article-content">
         <p>
             I'm 26, and even now there can be a particular kind of frustration that comes with
@@ -154,14 +208,12 @@ src="../images/polaroid2.png"
 
         <p>
             I want to be able to explain why a solution works, what
-            assumptions it makes, and what would happen if the input
-            changed. Those questions ask more of me than following
-            an example. They require me to slow down, trace the steps,
-            and notice where my explanation becomes uncertain.
+            assumptions it makes, and if the input changes, what is the result of it. Those questions are what insist upon me to study deeper. What they also require of me is to slow down, trace the steps,
+            and notice where my explanation could perhaps become uncertain.
         </p>
 
         <p>
-            An algorithm can look simple on a slide. Working through
+            On a PowerPoint slide, an algorithm can look simple. Working through
             it by hand reveals the decisions hidden inside that
             simplicity. Each comparison, each repeated step, each
             change to a value has a purpose.
@@ -170,21 +222,21 @@ src="../images/polaroid2.png"
         <p>
             Taking the time to understand those details gives me
             something I can use again. The next problem may look
-            different, but I have a better place to start.
+            different, sure, but I have a better place to start.
         </p>
 
         <h2>Reading, but with Room to Pause</h2>
 
         <p>
-            Reading offers a quieter version of the same experience.
+           A page can be easy to finish and difficult to absorb.
         </p>
 
         <p>
-            A page can be easy to finish and difficult to absorb.
-            I can recognize every word in a paragraph and still need
-            time to consider what the author is saying. A passage
+            
+            I can recognize every word in a paragraph, but you can bet that I'm still going to need
+            time to consider what the author is saying. That's where the value is found. You undoubtedly may hear it well, <em>but are you listening? </em>A passage
             might deserve a second reading, a note in the margin,
-            or a few minutes with the book closed.
+            or a few minutes with the book closed. <em>Now's your chance to really listen.</em>
         </p>
 
        <div class="article-photo-wrap">
@@ -195,7 +247,7 @@ src="../images/polaroid.png"
     >
 
     <p>
-        I like having a collection of books I can return to.
+        For me, I like having a collection of books I can return to.
         It leaves room for a different kind of relationship
         with reading: remembering an idea, reconsidering it,
         and finding something useful that I missed before.
@@ -203,9 +255,8 @@ src="../images/polaroid.png"
 
     <p>
         There’s satisfaction in finishing a book, sure,
-        but there’s also satisfaction in carrying one good
-        thought away from it and continuing to work through
-        that thought afterward.
+        but there’s <em>also</em> satisfaction in carrying one good
+        thought away from it and continuing to carry that thought through aftwerward.
     </p>
 </div>
 
@@ -213,15 +264,15 @@ src="../images/polaroid.png"
 
 
         <p>
-I once worked with an older man who told me that what he disliked most about being young was how much he didn’t understand. I can see what he meant. Experience gives you perspective that’s difficult to have when you’re just starting out. Still, I see it a little differently. At any age or stage of life, there’s more to learn and an opportunity to apply yourself. Taking initiative as an initiate- that's a yearning I never want to lose.
+15 years ago, I worked with an older man who told me that what he disliked most about being young was how much he didn’t understand. A lack of knowledge you could say. I can see what he meant. Experience does give you perspective that’s difficult to have when you’re just starting out. Still, I see it a little differently. At any age or stage of life, there’s more to learn and an opportunity to apply yourself. Taking initiative as an initiate- that's a yearning I never want to lose.
         </p>
 
         <p>
-That takes a willingness to admit when an explanation didn’t stick, ask a "dumb" question, or revisiting a familiar concept. Sometimes it means spending another evening on something you expected to understand already.
+What is required for that? It takes a willingness to admit when an explanation didn’t stick, ask a "dumb" question, or revisiting a familiar concept. Sometimes it means spending another evening on something you expected to understand already. You should never distance yourself from this mindset, welcome it. Understand the value of it.
         </p>
 
         <p>
-Those moments can feel discouraging, especially when everyone else’s progress seems so visible. Finished projects and polished work are easy to share. The hours spent confused usually stay out of sight.
+It's true, in those moments it can feel discouraging, especially when everyone else’s progress seems so visible. Finished projects and polished work are easy to share. But real novelty comes from the steady acquisition of knowledge, think of all those hours worth reframing toward learning something new.
         </p>
         <p>
             I’m trying to give those hours a fairer place in how I think about learning. Recognizing what I don’t understand helps me figure out where to put my effort. Being able to explain something more clearly than I could yesterday gives me a reason to keep going.
@@ -405,6 +456,123 @@ Those moments can feel discouraging, especially when everyone else’s progress 
             }
         });
     });
+})();
+</script>
+
+<script>
+(() => {
+    const audio = document.getElementById("article-audio");
+    const controls = document.getElementById("music-controls");
+    const play = document.getElementById("music-play");
+    const progress = document.getElementById("music-progress");
+    const volume = document.getElementById("music-volume");
+    const time = document.getElementById("music-time");
+    const status = document.getElementById("music-status");
+
+    if (!audio || !controls || !play || !progress ||
+        !volume || !time || !status) return;
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainder = Math.floor(seconds % 60);
+
+        return `${minutes}:${String(remainder).padStart(2, "0")}`;
+    }
+
+    function updateProgress() {
+        const ready =
+            Number.isFinite(audio.duration) && audio.duration > 0;
+
+        progress.disabled = !ready;
+
+        if (ready) {
+            progress.max = audio.duration;
+            progress.value = audio.currentTime;
+        }
+
+        time.textContent =
+            `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+
+        progress.setAttribute(
+            "aria-valuetext",
+            `${formatTime(audio.currentTime)} of ${formatTime(audio.duration)}`
+        );
+    }
+
+    function updatePlayButton() {
+        const playing = !audio.paused && !audio.ended;
+
+        play.querySelector("span").textContent = playing ? "❚❚" : "▶";
+        play.setAttribute(
+            "aria-label",
+            playing ? "Pause song" : "Play song"
+        );
+    }
+
+    function updateVolume() {
+        const level = audio.muted ? 0 : audio.volume;
+
+        volume.value = level;
+        volume.setAttribute(
+            "aria-valuetext",
+            `${Math.round(level * 100)} percent`
+        );
+    }
+
+    play.addEventListener("click", async () => {
+        if (!audio.paused) {
+            audio.pause();
+            return;
+        }
+
+        status.textContent = "";
+
+        try {
+            if (audio.ended) audio.currentTime = 0;
+            await audio.play();
+        } catch {
+            status.textContent =
+                "Unable to play the track. Check the audio file.";
+        }
+    });
+
+    progress.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            audio.currentTime = Number(progress.value);
+            updateProgress();
+        }
+    });
+
+    volume.addEventListener("input", () => {
+        audio.volume = Number(volume.value);
+        audio.muted = false;
+    });
+
+    ["loadedmetadata", "durationchange", "timeupdate"].forEach(event => {
+        audio.addEventListener(event, updateProgress);
+    });
+
+    ["play", "pause", "ended"].forEach(event => {
+        audio.addEventListener(event, updatePlayButton);
+    });
+
+    audio.addEventListener("volumechange", updateVolume);
+
+    audio.addEventListener("error", () => {
+        status.textContent =
+            "The audio file could not be loaded.";
+    });
+
+    audio.volume = Number(volume.value);
+    audio.controls = false;
+    audio.hidden = true;
+    controls.hidden = false;
+
+    updateProgress();
+    updatePlayButton();
+    updateVolume();
 })();
 </script>
 
