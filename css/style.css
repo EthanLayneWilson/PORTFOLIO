@@ -12052,3 +12052,10 @@ body.public-talks-page .top-nav.site-nav :is(a, button):is(:hover, :focus-visibl
         box-shadow: 0 5px 8px #0006;
     }
 }
+
+@media (max-width: 700px) {
+    .reading-room-page .rr-shelf-navigation {
+        position: relative;
+        top: -22px;
+    }
+}
