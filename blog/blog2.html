@@ -25,19 +25,24 @@
 
 <body>
 
+<body id="top" class="mobile-editorial blog-page">
+    <div id="edition-shutter" class="edition-shutter"></div>
+
+<body>
+
     <div id="edition-shutter" class="edition-shutter"></div>
     <article class="blog-article" aria-labelledby="article-title"></article>
 
     <!-- NEWSPAPER HEADER -->
 
-    <header class="newspaper-header">
+    <header class="newspaper-header blog-mobile-nav">
 
         <div class="top-nav">
 
             <nav aria-label="Main navigation">
                 <a href="../index.html">Home</a>
                 <a href="../portfolio.html">Portfolio</a>
-                <a href="../articles.html" class="active">Archive</a>
+                <a href="../articles.html">Archive</a>
             </nav>
 
             <div class="header-right">
@@ -64,6 +69,7 @@
         <div class="newspaper-info">
             <span>COMPILERS</span>
             <span>THE ARCHIVE</span>
+            <span id="current-date" class="blog-mobile-date"></span>
             <details class="accessibility-menu">
     <summary>Accessibility</summary>
 
@@ -99,19 +105,19 @@
                     ← BACK TO THE ARCHIVE
                 </a>
 
-                <p class="archive-label">SOFTWARE ENGINEERING</p>
+                <p class="archive-label"></p>
 
                 <h1 id="article-title" class="blog-title">
   COMPILERS
 </h1>
 
                 <p class="archive-description">
-                    Compiler messages and their cryptic, gormless clues—and how learning to interpret them makes debugging a little less mysterious.
+                    Compiler messages and their cryptic clues—and how learning to interpret them makes debugging a little less mysterious.
                 </p>
 
                 <p class="archive-meta">
                     BY ETHAN WILSON /
-                    <time datetime="2026-08">OCTOBER 9 2026</time>
+                    <time datetime="2026-08">October 9 2026</time>
                 </p>
 
             </header>
@@ -162,7 +168,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                value="0.7"
+                value="0.6"
                 aria-label="Volume"
             >
         </label>

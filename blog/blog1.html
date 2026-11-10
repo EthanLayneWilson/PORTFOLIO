@@ -25,19 +25,24 @@
 
 <body>
 
+<body id="top" class="mobile-editorial blog-page">
+    <div id="edition-shutter" class="edition-shutter"></div>
+
+<body>
+
     <div id="edition-shutter" class="edition-shutter"></div>
     <article class="blog-article" aria-labelledby="article-title"></article>
 
     <!-- NEWSPAPER HEADER -->
 
-    <header class="newspaper-header">
+    <header class="newspaper-header blog-mobile-nav">
 
         <div class="top-nav">
 
             <nav aria-label="Main navigation">
                 <a href="../index.html">Home</a>
                 <a href="../portfolio.html">Portfolio</a>
-                <a href="../articles.html" class="active">Archive</a>
+                <a href="../articles.html">Archive</a>
             </nav>
 
             <div class="header-right">
@@ -64,6 +69,7 @@
         <div class="newspaper-info">
             <span>MEMOIZATION</span>
             <span>THE ARCHIVE</span>
+            <span id="current-date" class="blog-mobile-date"></span>
             <details class="accessibility-menu">
     <summary>Accessibility</summary>
 
@@ -85,6 +91,7 @@
 
     </header>
 
+    
 
     <!-- BLOG ARTICLE -->
 
@@ -98,11 +105,9 @@
                     ← BACK TO THE ARCHIVE
                 </a>
 
-                <p class="archive-label">SOFTWARE ENGINEERING</p>
+                <p class="archive-label"></p>
 
-                <h1 id="article-title" class="blog-title">
-  MEMOIZATION
-</h1>
+<h1 id="article-title" class="blog-title memoization-title">MEMOIZATION</h1>
 
                 <p class="archive-description">
                     Becoming a developer—and preserving the lessons that make each new project possible.
@@ -110,12 +115,12 @@
 
                 <p class="archive-meta">
                     BY ETHAN WILSON /
-                    <time datetime="2026-08">AUGUST 12 2026</time>
+                    <time datetime="2026-08">August 12 2026</time>
                 </p>
 
             </header>
 
-            
+                  
     <div class="article-music" aria-label="Article soundtrack">
     <div class="article-music-info">
         <span class="article-music-label">ACCOMPANYING TRACK</span>
@@ -161,7 +166,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                value="0.7"
+                value="0.6"
                 aria-label="Volume"
             >
         </label>

@@ -60,19 +60,13 @@
 
     </header>
 
-    <section aria-labelledby="shelf-title">
+<section aria-labelledby="shelf-title">
+    <span id="bookshelf-status" class="bookshelf-status" role="status"></span>
 
-      <h2 id="shelf-title" class="shelf-label">
-        ALL BOOKS READ
-      </h2>
+    <div class="rr-shelf-scroll" role="region" aria-labelledby="shelf-title" tabindex="0">
+        <h2 id="shelf-title" class="shelf-label">ALL BOOKS READ</h2>
 
-  <span
-    id="bookshelf-status"
-    class="bookshelf-status"
-    role="status"
-  ></span>
-
-      <div class="bookshelf" id="bookshelf">
+        <div class="bookshelf">
 
 <button
     class="shelf-book book-being-and-time"
@@ -1275,7 +1269,11 @@ data-cover="images/books/volsunga-saga.png"
   <span class="book-spine-author">LEMONY SNICKET</span>
 </button>
 
-      </div>
+    </div>
+</div>
+
+<p class="rr-mobile-hint">Swipe to browse · Tap a book to open it</p>
+      
 
     </section>
 
@@ -1330,6 +1328,57 @@ data-cover="images/books/volsunga-saga.png"
 </aside>
 
 </dialog>
+
+<script>
+document.querySelectorAll(".rr-shelf-scroll").forEach((shelf) => {
+    const panel = document.createElement("label");
+    panel.className = "rr-shelf-navigation";
+    panel.hidden = true;
+    panel.textContent = "Browse the shelf  ←  →";
+
+    const slider = document.createElement("input");
+    slider.type = "range";
+    slider.min = "0";
+    slider.max = "100";
+    slider.value = "0";
+    panel.append(slider);
+let ledge = shelf.nextElementSibling;
+
+if (!ledge?.matches(".rr-walnut-ledge")) {
+    ledge = document.createElement("div");
+    ledge.className = "rr-walnut-ledge";
+    ledge.setAttribute("aria-hidden", "true");
+    shelf.after(ledge);
+}
+
+ledge.after(panel);
+
+    const scrollDistance = () => shelf.scrollWidth - shelf.clientWidth;
+
+    function syncSlider() {
+        const distance = scrollDistance();
+        panel.hidden = distance <= 1;
+
+        if (!panel.hidden) {
+            slider.value = Math.round(100 * shelf.scrollLeft / distance);
+        }
+    }
+
+    slider.addEventListener("input", () => {
+        shelf.scrollLeft = scrollDistance() * Number(slider.value) / 100;
+    });
+
+    shelf.addEventListener("scroll", syncSlider, { passive: true });
+
+    const observer = new ResizeObserver(syncSlider);
+    observer.observe(shelf);
+
+    const row = shelf.querySelector(".bookshelf");
+    if (row) observer.observe(row);
+
+    syncSlider();
+});
+</script>
 
 </body>
 </html>

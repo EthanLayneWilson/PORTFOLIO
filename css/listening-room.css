@@ -1179,3 +1179,540 @@ body.listening-room-page::before {
         calc(-50% - 2px)
     );
 }
+
+@media (max-width: 700px) {
+    html:has(body.listening-room-page),
+    body.listening-room-page {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    body.listening-room-page #listening-scene {
+        position: relative;
+        inset: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 100svh;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        padding: 20px 16px 32px;
+    }
+
+    /* Reset desktop positioning on the outer sections only. */
+    #listening-scene :is(
+        .lr-mobile-heading,
+        .lr-mobile-art,
+        .lr-mobile-actions,
+        .lr-mobile-notes
+    ) {
+        position: relative;
+        inset: auto;
+        transform: none;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    #listening-scene .lr-mobile-heading { order: 1; }
+    #listening-scene .lr-mobile-art     { order: 2; }
+    #listening-scene .lr-mobile-actions { order: 3; }
+    #listening-scene .lr-mobile-notes   { order: 4; }
+
+    #listening-scene #record-stage {
+        position: relative;
+        inset: auto;
+        width: min(100%, 360px);
+        height: auto;
+        aspect-ratio: 5 / 4;
+        margin-inline: auto;
+    }
+
+    #listening-scene #album-cover {
+        max-width: 78%;
+        height: auto;
+    }
+
+    #listening-scene .lr-vinyl {
+        width: 72%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    #listening-scene .lr-mobile-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #listening-scene .lr-mobile-actions :is(button, select, a) {
+        min-height: 44px;
+    }
+
+    #listening-scene .lr-mobile-notes {
+        padding: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    body.listening-room-page :is(#cover-gallery, #wishlist-gallery) {
+        box-sizing: border-box;
+        width: calc(100% - 24px);
+        max-height: 90svh;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    html:has(body.listening-room-page),
+    body.listening-room-page {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    body.listening-room-page #listening-scene {
+        position: relative;
+        inset: auto;
+        transform: none;
+        translate: none;
+        scale: none;
+        zoom: 1;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: auto;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 16px;
+        overflow: visible;
+    }
+
+    #listening-scene :is(.lr-nav, .lr-main, .lr-heading, .lr-display,
+                         .lr-record-column, .lr-card, .lr-crate) {
+        position: relative;
+        inset: auto;
+        transform: none;
+        translate: none;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+    }
+
+    #listening-scene .lr-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    #listening-scene .lr-brand img {
+        display: block;
+        width: 42px;
+        height: auto;
+    }
+
+    #listening-scene .lr-nav nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    #listening-scene .lr-main,
+    #listening-scene .lr-display {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    #listening-scene .lr-main {
+        margin-top: 18px;
+    }
+
+    #listening-scene :is(.lr-heading, .lr-display, .lr-record-column,
+                         .lr-card, .lr-crate, .lr-demo-label) {
+        grid-area: auto;
+    }
+
+    #listening-scene .lr-heading {
+        text-align: center;
+    }
+
+    #listening-scene .lr-heading h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.05;
+    }
+
+    #listening-scene #record-stage {
+        position: relative;
+        inset: auto;
+        transform: none;
+        width: min(100%, 420px);
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 1.23;
+        margin: 0 auto;
+    }
+
+    #listening-scene #album-cover,
+    #listening-scene #record-stage > .lr-vinyl {
+        position: absolute;
+        inset: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        translate: none;
+        width: 72%;
+        max-width: none;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    #listening-scene #album-cover {
+        left: 5%;
+        z-index: 2;
+        object-fit: contain;
+    }
+
+    #listening-scene #record-stage > .lr-vinyl {
+        right: 4%;
+        z-index: 1;
+    }
+
+    /* Use the larger Previous/Next buttons below the cover. */
+    #listening-scene .lr-arrow,
+    #listening-scene .lr-browse-hint {
+        display: none;
+    }
+
+    #listening-scene .lr-browse-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    #listening-scene .lr-browse-bar button,
+    #listening-scene .lr-mobile-tools > * {
+        min-height: 44px;
+    }
+
+    #listening-scene .lr-mobile-tools {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    #listening-scene .lr-mobile-tools > * {
+        position: relative;
+        inset: auto;
+        transform: none;
+        translate: none;
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 8px 4px;
+        border: 1px solid #a77b4b;
+        background: #382719;
+        color: #fff0d2;
+        font: 600 0.75rem/1.2 "DM Sans", sans-serif;
+        text-align: center;
+    }
+
+    #listening-scene .lr-mobile-tools #crate-filter {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #listening-scene .lr-mobile-tools :is(button:focus-visible, label:focus-within) {
+        outline: 2px solid #fff0d2;
+        outline-offset: -4px;
+    }
+
+    #listening-scene .lr-card {
+        padding: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    #listening-scene .lr-sleeves {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    body.listening-room-page .lr-gallery {
+        box-sizing: border-box;
+        width: calc(100% - 24px);
+        max-height: 90dvh;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Keep Previous, the counter, and Next inside the viewport. */
+    #listening-scene .lr-browse-bar {
+        position: relative;
+        inset: auto;
+        transform: none;
+        translate: none;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        gap: 4px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0 6px;
+    }
+
+    #listening-scene .lr-browse-bar button {
+        position: static;
+        transform: none;
+        translate: none;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        margin: 0;
+        padding: 0 4px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    #listening-scene #album-counter {
+        position: static;
+        transform: none;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    /* Make Genre readable on the dark button. */
+    #listening-scene .lr-mobile-tools .lr-genre-text {
+        color: #fff0d2;
+        opacity: 1;
+    }
+
+    /* Align the logo and archive link on one row. */
+    #listening-scene .lr-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #listening-scene .lr-nav :is(.lr-brand, nav, nav a) {
+        position: static;
+        inset: auto;
+        transform: none;
+        translate: none;
+        margin: 0;
+    }
+
+    #listening-scene .lr-nav nav a {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene #record-stage > #album-cover,
+    #listening-scene #record-stage > .lr-vinyl {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 72%;
+        height: auto;
+        aspect-ratio: 1;
+        margin: auto 0;
+        transform: none;
+        translate: none;
+    }
+
+    #listening-scene #record-stage > #album-cover {
+        left: 5%;
+        right: auto;
+        z-index: 2;
+    }
+
+    #listening-scene #record-stage > .lr-vinyl {
+        left: auto;
+        right: 4%;
+        z-index: 1;
+    }
+}
+
+
+.lr-mobile-backdrop {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    body.listening-room-page {
+        isolation: isolate;
+        background: #302318;
+    }
+
+    .listening-room-page .lr-mobile-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: #302318 url("COPY-YOUR-EXISTING-ROOM-IMAGE-PATH-HERE")
+            center bottom / cover no-repeat;
+    }
+
+    .listening-room-page #listening-scene,
+    .listening-room-page #listening-scene .lr-main {
+        background: transparent;
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene .lr-heading h1,
+    #listening-scene .lr-heading .lr-eyebrow {
+        color: #fff1d6;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 45%);
+    }
+
+    #listening-scene .lr-nav nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 48px;
+        padding: 10px 16px;
+
+        border: 1px solid #c99c61;
+        border-radius: 5px;
+        background: #382719;
+        color: #fff1d6;
+
+        font: 600 0.95rem/1.2 "DM Sans", sans-serif;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    }
+
+    #listening-scene .lr-nav nav a:focus-visible {
+        outline: 2px solid #fff1d6;
+        outline-offset: 3px;
+    }
+
+    #listening-scene .lr-nav nav a:active {
+        background: #543a24;
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene .lr-nav {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    #listening-scene .lr-nav > .lr-brand {
+        grid-area: 1 / 1;
+        justify-self: start;
+    }
+
+    #listening-scene .lr-nav > nav {
+        grid-area: 1 / 2;
+        justify-self: center;
+        width: auto;
+        margin: 0;
+    }
+
+    #listening-scene .lr-nav > nav > a {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene .lr-nav {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        row-gap: 14px;
+    }
+
+    #listening-scene .lr-nav > nav {
+        grid-area: 1 / 1;
+        justify-self: center;
+    }
+
+    #listening-scene .lr-nav > .lr-brand {
+        grid-area: 2 / 1;
+        justify-self: center;
+        width: fit-content;
+        opacity: 1;
+    }
+
+    #listening-scene .lr-nav > .lr-brand img {
+        display: block;
+        width: 66px;
+        height: auto;
+        margin: 0;
+        opacity: 1;
+        filter: brightness(0) invert(1) sepia(0.3);
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene .lr-nav {
+        row-gap: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        min-height: 0;
+    }
+
+    #listening-scene .lr-nav > .lr-brand {
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+        line-height: 0;
+    }
+
+    #listening-scene .lr-nav > .lr-brand img {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    #listening-scene .lr-main,
+    #listening-scene .lr-heading {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #listening-scene .lr-eyebrow {
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 700px) {
+    #listening-scene .lr-nav > .lr-brand {
+        position: relative;
+        top: 12px;
+    }
+}

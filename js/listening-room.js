@@ -1151,11 +1151,29 @@ const wishlistRecords = [
         artist: "Sam Fender",
         cover: "images/vinyl/people-watching.png"
     },
+
+                {
+    title: "AMERICAN MOTOR SPORTS (420CC EDITION)",
+    artist: "Bilmuri",
+    cover: "images/vinyl/420.png"
+},
+
+                {
+    title: "Leave This Town",
+    artist: "Daughtry",
+    cover: "images/vinyl/daughtry.png"
+},
     {
         title: "Heaven and Earth EP",
         artist: "Arcane Roots",
         cover: "images/vinyl/heaven-and-earth.png"
     },
+
+                {
+    title: "Pelléas et Mélisande",
+    artist: "Alexander Litvinovsky",
+    cover: "images/vinyl/pel.png"
+},
     {
         title: "Dissonants",
         artist: "Hands Like Houses",
@@ -1171,6 +1189,12 @@ const wishlistRecords = [
         artist: "Chris Stapleton",
         cover: "images/vinyl/higher.png"
     },
+
+            {
+    title: "Dark Horses",
+    artist: "The Getaway Plan",
+    cover: "images/vinyl/dark-horses.png"
+},
 
     {
     title: "Deluxe Vinyl Box Set",
@@ -1191,6 +1215,12 @@ const wishlistRecords = [
     title: "Mend",
     artist: "Eidola",
     cover: "images/vinyl/eidola.png"
+},
+
+            {
+    title: "Folie à Deux",
+    artist: "Fall Out Boy",
+    cover: "images/vinyl/fb.png"
 },
     {
     title: "Time Time Time(I'm in the Palm of your Hand)",
@@ -1281,4 +1311,67 @@ const wishlistRecords = [
     } else {
         initializeWishlist();
     }
+})();
+
+(() => {
+    const mobile = window.matchMedia("(max-width: 700px)");
+    const target = document.querySelector(".lr-mobile-actions");
+
+    if (!target) return;
+
+    const buttons = ["view-all", "view-wishlist"]
+        .map(id => document.getElementById(id))
+        .filter(Boolean)
+        .map(button => {
+            const marker = document.createComment("Desktop button position");
+            button.before(marker);
+            return { button, marker };
+        });
+
+    function placeButtons() {
+        buttons.forEach(({ button, marker }) => {
+            if (mobile.matches) {
+                target.append(button);
+            } else {
+                marker.after(button);
+            }
+        });
+    }
+
+    placeButtons();
+    mobile.addEventListener("change", placeButtons);
+})();
+
+(() => {
+    const mobile = matchMedia("(max-width: 700px)");
+    const column = document.querySelector("#listening-scene .lr-record-column");
+    if (!column) return;
+
+    const controls = [
+        document.querySelector("#crate-filter")?.closest("label"),
+        document.getElementById("view-all"),
+        document.getElementById("view-wishlist")
+    ].filter(Boolean);
+
+    const tools = document.createElement("div");
+    tools.className = "lr-mobile-tools";
+
+    const positions = controls.map(control => {
+        const marker = document.createComment("Desktop control position");
+        control.before(marker);
+        return { control, marker };
+    });
+
+    function placeControls() {
+        if (mobile.matches) {
+            column.append(tools);
+            controls.forEach(control => tools.append(control));
+        } else {
+            positions.forEach(({ control, marker }) => marker.after(control));
+            tools.remove();
+        }
+    }
+
+    placeControls();
+    mobile.addEventListener("change", placeControls);
 })();
