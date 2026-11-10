@@ -1380,5 +1380,51 @@ ledge.after(panel);
 });
 </script>
 
+<script>
+(() => {
+    const desktop = matchMedia("(min-width: 701px)");
+
+    document.querySelectorAll(".reading-room-page .bookshelf").forEach((shelf) => {
+        const books = [...shelf.querySelectorAll(":scope > .shelf-book")];
+        let frame = 0;
+
+        function drawLedges() {
+            shelf.querySelectorAll(":scope > .rr-desktop-ledge")
+                .forEach((ledge) => ledge.remove());
+
+            if (!desktop.matches) return;
+
+            const shelfTop = shelf.getBoundingClientRect().top + shelf.clientTop;
+            const rowBottoms = new Set();
+
+            for (const book of books) {
+                if (!book.getClientRects().length) continue;
+                rowBottoms.add(Math.round(
+                    book.getBoundingClientRect().bottom - shelfTop
+                ));
+            }
+
+            for (const bottom of rowBottoms) {
+                const ledge = document.createElement("div");
+                ledge.className = "rr-desktop-ledge";
+                ledge.setAttribute("aria-hidden", "true");
+                ledge.style.top = `${bottom}px`;
+                shelf.append(ledge);
+            }
+        }
+
+        function refresh() {
+            cancelAnimationFrame(frame);
+            frame = requestAnimationFrame(drawLedges);
+        }
+
+        new ResizeObserver(refresh).observe(shelf);
+        desktop.addEventListener("change", refresh);
+        document.fonts.ready.then(refresh);
+        refresh();
+    });
+})();
+</script>
+
 </body>
 </html>
